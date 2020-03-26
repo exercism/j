@@ -1,0 +1,10 @@
+{
+  "track_id": "j",
+  "language": "J",
+  "active": false,
+  "blurb": "",
+  "ignore_pattern": "[Ee]xample",
+  "solution_pattern": "[Ee]xample",
+  "test_pattern": "[Tt]est",
+  "exercises": null
+}
