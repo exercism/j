@@ -1,15 +1,11 @@
-#!/Applications/j901/bin/jconsole
-
 test=: monad define
 try.
-  echo 'loading ',]sol=. 2{::ARGV,<'example.ijs'
-  load sol
+  load 1{::ARGV,<'hello_world.ijs'
+  echo '1 checking hello_world matches ''Hello, World!'''
   assert. hello_world -: 'Hello, World!'
-  echo 'OK'
-  exit 0
+  echo 'Good'
 catch.
   echo 'Tests Failed'
-  exit 1
 end.
 )
 
