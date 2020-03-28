@@ -1,9 +1,5 @@
 
-
-# Resources
-
-
-## Books
+# Books
 
 There are several books written by experienced J programmers that I
 highly recommend exploring.
@@ -32,7 +28,7 @@ These are available in HTML on the net and also are included with your
 visualize various mathematical concepts.
 
 
-## NuVoc
+# NuVoc
 
 The [NuVoc](https://code.jsoftware.com/wiki/NuVoc) is the definitive J reference. It is a highly concise and
 information dense overview of the J primitives, which is perfect once
@@ -43,4 +39,18 @@ it's not always easy to know where to look.
 Nonetheless, I strongly recommend keeping it in mind and using it to
 quickly recall useful primitives like square/power `*:` or Matrix
 inverse/divide `%.` when writing your programs or reading other's.
+
+
+# Rosetta Code
+
+Many rosetta code problems have contributed `J` solutions. It's a good
+place to find examples to study.
+
+Some examples contributed by Roger Hui (one of the principal designers
+of J):
+
+-   [Forward Difference](https://rosettacode.org/wiki/Forward_difference#J)
+-   [Quick Sort](https://rosettacode.org/wiki/Sorting_algorithms/Quicksort#J)
+-   [Sudoku](https://rosettacode.org/wiki/Sudoku#J)
+-   [FizzBuzz](https://rosettacode.org/wiki/FizzBuzz#J)
 
