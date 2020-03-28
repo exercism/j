@@ -1,5 +1,5 @@
 language: bash
 
 script:
-  - bin/fetch-configlet
+  - script/fetch-configlet
   - bin/configlet lint --track-id j .
