@@ -43,11 +43,10 @@ inverse/divide `%.` when writing your programs or reading other's.
 
 # Rosetta Code
 
-Many rosetta code problems have contributed `J` solutions. It's a good
-place to find examples to study.
+Many rosetta tasks have `J` solutions. It's a good resource to find J
+programs to study.
 
-Some examples contributed by Roger Hui (one of the principal designers
-of J):
+Some solutions contributed by Roger Hui himself:
 
 -   [Forward Difference](https://rosettacode.org/wiki/Forward_difference#J)
 -   [Quick Sort](https://rosettacode.org/wiki/Sorting_algorithms/Quicksort#J)

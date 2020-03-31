@@ -14,8 +14,6 @@ bin/configlet :
 
 # build track
 track : $(track-requirements)
-	./bin/configlet generate .
-	./bin/configlet fmt .
 	./bin/configlet lint .
 
 clean :

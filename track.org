@@ -57,11 +57,10 @@ inverse/divide ~%.~ when writing your programs or reading other's.
 
 *** Rosetta Code
 
-Many rosetta code problems have contributed ~J~ solutions. It's a good
-place to find examples to study.
+Many rosetta tasks have ~J~ solutions. It's a good resource to find J
+programs to study.
 
-Some examples contributed by Roger Hui (one of the principal designers
-of J):
+Some solutions contributed by Roger Hui himself:
 
 - [[https://rosettacode.org/wiki/Forward_difference#J][Forward Difference]]
 - [[https://rosettacode.org/wiki/Sorting_algorithms/Quicksort#J][Quick Sort]]
@@ -97,12 +96,4 @@ Caution: the ~jconsole~ name can conflict with a java performance
 monitor, in which case it's best to rename ~jconsole~ to ~ijconsole~.
 
 
-** J Snippet
 
-Showing off J for track code snippet:
-
-#+BEGIN_SRC j :session :exports code :tangle docs/SNIPPET.txt
-floyd_warshall=: <./ .+ ~ ^: _
-page_rank=: ([: %. =@i.@#@] - *) +/ .* ((]$-.@[%])#@])
-game_of_life=: (3=])`(e.&3 4)@.["0 0[:+/^:2(,"0/~i:1)&(|.!.0)
-#+END_SRC
