@@ -96,12 +96,4 @@ Caution: the ~jconsole~ name can conflict with a java performance
 monitor, in which case it's best to rename ~jconsole~ to ~ijconsole~.
 
 
-** J Snippet
 
-Showing off J for track code snippet:
-
-#+BEGIN_SRC j :session :exports code :tangle docs/SNIPPET.txt
-floyd_warshall=: <./ .+ ~ ^: _
-page_rank=: ([: %. =@i.@#@] - *) +/ .* ((]$-.@[%])#@])
-game_of_life=: (3=])`(e.&3 4)@.["0 0[:+/^:2(,"0/~i:1)&(|.!.0)
-#+END_SRC
