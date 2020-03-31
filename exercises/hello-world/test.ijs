@@ -5,5 +5,6 @@ try.
   echo 'Good'
 catch.
   echo 'Tests Failed'
+  exit 1
 end.
 )
