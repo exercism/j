@@ -1,19 +1,14 @@
 # -*- mode: org -*-
-
-#+title: J Track Documentation
+#+title: Track Documentation
 #+options: toc:nil
 
-* Contributing
+* Tests
 
-TBD
+todo: decide if mainly through jconsole/terminal or setup jqt/jhs
+project. as well, setup test runner which may inform this decision
 
-* TBD
 
-TBD
-
-* Student facing doc files.
-
-** Resources
+* Resources
 
 *** Books
 
@@ -68,7 +63,7 @@ Some solutions contributed by Roger Hui himself:
 - [[https://rosettacode.org/wiki/FizzBuzz#J][FizzBuzz]]
 
 
-** Installing J
+* Installing J
 
 J available accross a wide variety of operating systems including
 Windows, macOS, GNU/Linux, Android, Raspberry Pi, and iOS. The core ~J
