@@ -18,9 +18,8 @@ highly recommend exploring.
     really a high level introduction. Instead, it presents a wide range
     of `J` programs and idioms which are great for learning how to read
     J and seeing it used for practical tasks.
--   [J Dictionary](https://www.jsoftware.com/help/dictionary/contents.htm) is similar to **J Phrases** in that it's more descriptive
-    and example-based than the other books. It has many helpful
-    exercises as well.
+-   [J Dictionary](https://www.jsoftware.com/help/dictionary/contents.htm) presents `J` thourgh example sessions. It has many
+    exercises and is designed to be an accessible introduction.
 
 These are available in HTML on the net and also are included with your
 `J` system when you download it. Another great book (for purchase) is
@@ -44,12 +43,4 @@ inverse/divide `%.` when writing your programs or reading other's.
 # Rosetta Code
 
 Many rosetta tasks have `J` solutions. It's a good resource to find J
-programs to study.
-
-Some solutions contributed by Roger Hui himself:
-
--   [Forward Difference](https://rosettacode.org/wiki/Forward_difference#J)
--   [Quick Sort](https://rosettacode.org/wiki/Sorting_algorithms/Quicksort#J)
--   [Sudoku](https://rosettacode.org/wiki/Sudoku#J)
--   [FizzBuzz](https://rosettacode.org/wiki/FizzBuzz#J)
-
+programs to study. [Here](https://rosettacode.org/wiki/Sudoku#J) is a sudoku solver by Roger Hui.
