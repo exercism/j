@@ -1,23 +1,15 @@
-J available accross a wide variety of operating systems including
-Windows, macOS, GNU/Linux, Android, Raspberry Pi, and iOS. The core `J
-Engine` is a shared library that interprets `J` programs. There are a
-number of `J front ends` including the terminal based `jconsole`, a
-browser based ide `JHS`, and a `Qt`-based ide.
-
-Please refer to [System/Installation](https://code.jsoftware.com/wiki/System/Installation) for instructions on how to get
-things set up on your system.
+Refer to [System/Installation](https://code.jsoftware.com/wiki/System/Installation) for instructions on how to get things set
+up on your system.
 
 After installing, I'd suggest using the package manager (called
 `pacman`) to grab available addons. These include facilities for
-testing, working with graphics, images, json, linear algebra,
-interfacing with other languages including python, r, java, and much
-else. The whole of it about 40Mb.
+testing, graphics, images, json, linear algebra, interfacing with
+other languages including python, r, java, and much else. The whole of
+it about 40Mb.
 
-To do this, start a `J` console session using `jconsole` 
+To do this, start a `J` console session by typing `jconsole`. Then
+enter:
 
     load 'pacman'
     'install' jpkg '*'
-
-Caution: the `jconsole` name can conflict with a java performance
-monitor, in which case it's best to rename `jconsole` to `ijconsole`.
 

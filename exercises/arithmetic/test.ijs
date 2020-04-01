@@ -1,5 +1,3 @@
-ops=: '+-%*'
-
 check_24=: dyad define
 echo LF,'checking'
 echo x;y
@@ -7,7 +5,7 @@ echo x;y
 echo 'evaulates to 24'
 assert. 24 = ".y
 echo 'uses allowed ops'
-assert. *./ ops e.~ f,g,h
+assert. *./ '+-%*' e.~ f,g,h
 echo 'uses given numbers'
 assert. (< ;._1 ' ',x) (-: & (/:~)) (a;b;c;d)
 )
