@@ -29,9 +29,8 @@ highly recommend exploring.
   really a high level introduction. Instead, it presents a wide range
   of ~J~ programs and idioms which are great for learning how to read
   J and seeing it used for practical tasks.
-- [[https://www.jsoftware.com/help/dictionary/contents.htm][J Dictionary]] is similar to *J Phrases* in that it's more descriptive
-  and example-based than the other books. It has many helpful
-  exercises as well.
+- [[https://www.jsoftware.com/help/dictionary/contents.htm][J Dictionary]] presents ~J~ thourgh example sessions. It has many
+  exercises and is designed to be an accessible introduction.
 
 These are available in HTML on the net and also are included with your
 ~J~ system when you download it. Another great book (for purchase) is
@@ -53,16 +52,8 @@ inverse/divide ~%.~ when writing your programs or reading other's.
 *** Rosetta Code
 
 Many rosetta tasks have ~J~ solutions. It's a good resource to find J
-programs to study.
-
-Some solutions contributed by Roger Hui himself:
-
-- [[https://rosettacode.org/wiki/Forward_difference#J][Forward Difference]]
-- [[https://rosettacode.org/wiki/Sorting_algorithms/Quicksort#J][Quick Sort]]
-- [[https://rosettacode.org/wiki/Sudoku#J][Sudoku]]
-- [[https://rosettacode.org/wiki/FizzBuzz#J][FizzBuzz]]
-
-
+programs to study. [[https://rosettacode.org/wiki/Sudoku#J][Here]] is a sudoku solver by Roger Hui.
+  
 * Installing J
 
 Refer to [[https://code.jsoftware.com/wiki/System/Installation][System/Installation]] for instructions on how to get things set
