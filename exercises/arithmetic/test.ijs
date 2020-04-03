@@ -34,3 +34,5 @@ test_e6=: monad define
 test_e7=: monad define
 '2 8 10 13'check_24 e7
 )
+
+REP=: e1;e2;e3;e4;e5;e6;e7
