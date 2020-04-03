@@ -1,4 +1,4 @@
-load'nucleotide-count.ijs'
+load'example.ijs'
 
 test_nuc_cnt1=: monad define
 assert 0 0 0 0-:nuc_cnt''
