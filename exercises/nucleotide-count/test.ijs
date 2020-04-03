@@ -5,7 +5,7 @@ assert 0 0 0 0-:nuc_cnt''
 )
 
 test_nuc_cnt2=: monad define
-assert 0 0 1 0-:nuc_cnt 1$'G'
+assert 0 0 1 0-:nuc_cnt ,:'G'
 )
 
 test_nuc_cnt3=: monad define
