@@ -25,7 +25,7 @@ load'pacman'
 
 * Resources
 
-*** Books
+** Books
 
 There are several books written by experienced J programmers that I
 highly recommend exploring.
@@ -38,12 +38,10 @@ highly recommend exploring.
   starting out.
 - [[https://www.jsoftware.com/help/jforc/contents.htm][J For C Programmers]] introduces J assuming a background in ~C~. It
   contrasts ~C~ approaches with ~J~ ones and teaches more features of
-  ~J~ than the previous two books. It covers more real world topics
-  and introduces some of ~J~'s great facilities for plotting.
-- [[https://www.jsoftware.com/help/phrases/contents.htm][J Phrases]] is a collection of ~J~ sentences and phrases. It isn't
-  really a high level introduction. Instead, it presents a wide range
-  of ~J~ programs and idioms which are great for learning how to read
-  J and seeing it used for practical tasks.
+  ~J~ than the previous two books.
+- [[https://www.jsoftware.com/help/phrases/contents.htm][J Phrases]] is a collection of ~J~ sentences and phrases. It presents
+  a wide range of ~J~ programs and idioms which are great for learning
+  how to read and write J.
 - [[https://www.jsoftware.com/help/dictionary/contents.htm][J Dictionary]] presents ~J~ thourgh example sessions. It has many
   exercises and is designed to be an accessible introduction.
 
@@ -52,19 +50,13 @@ These are available in HTML on the net and also are included with your
 [[https://books.google.ca/books?id=Qs2kCwAAQBAJ&printsec=frontcover&source=gbs_ge_summary_r&cad=0#v=onepage&q&f=false][Fractals Visualization and J]] which emphasis using ~J~ to explore and
 visualize various mathematical concepts.
 
-*** NuVoc
+** NuVoc
 
 The [[https://code.jsoftware.com/wiki/NuVoc][NuVoc]] is the definitive J reference. It is a highly concise and
 information dense overview of the J primitives, which is perfect once
-you have found your bearings, but is hard to navigate at first. It's
-overwhelming to have the whole collection laid out out on one page and
-it's not always easy to know where to look.
+you have found your bearings, but is hard to navigate at first.
 
-Nonetheless, I strongly recommend keeping it in mind and using it to
-quickly recall useful primitives like square/power ~*:~ or Matrix
-inverse/divide ~%.~ when writing your programs or reading other's.
-
-*** Rosetta Code
+** Rosetta Code
 
 Many rosetta tasks have ~J~ solutions. It's a good resource to find J
 programs to study. [[https://rosettacode.org/wiki/Sudoku#J][Here]] is a sudoku solver by Roger Hui.

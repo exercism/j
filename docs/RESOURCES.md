@@ -12,12 +12,10 @@ highly recommend exploring.
     starting out.
 -   [J For C Programmers](https://www.jsoftware.com/help/jforc/contents.htm) introduces J assuming a background in `C`. It
     contrasts `C` approaches with `J` ones and teaches more features of
-    `J` than the previous two books. It covers more real world topics
-    and introduces some of `J`'s great facilities for plotting.
--   [J Phrases](https://www.jsoftware.com/help/phrases/contents.htm) is a collection of `J` sentences and phrases. It isn't
-    really a high level introduction. Instead, it presents a wide range
-    of `J` programs and idioms which are great for learning how to read
-    J and seeing it used for practical tasks.
+    `J` than the previous two books.
+-   [J Phrases](https://www.jsoftware.com/help/phrases/contents.htm) is a collection of `J` sentences and phrases. It presents
+    a wide range of `J` programs and idioms which are great for learning
+    how to read and write J.
 -   [J Dictionary](https://www.jsoftware.com/help/dictionary/contents.htm) presents `J` thourgh example sessions. It has many
     exercises and is designed to be an accessible introduction.
 
@@ -31,16 +29,11 @@ visualize various mathematical concepts.
 
 The [NuVoc](https://code.jsoftware.com/wiki/NuVoc) is the definitive J reference. It is a highly concise and
 information dense overview of the J primitives, which is perfect once
-you have found your bearings, but is hard to navigate at first. It's
-overwhelming to have the whole collection laid out out on one page and
-it's not always easy to know where to look.
-
-Nonetheless, I strongly recommend keeping it in mind and using it to
-quickly recall useful primitives like square/power `*:` or Matrix
-inverse/divide `%.` when writing your programs or reading other's.
+you have found your bearings, but is hard to navigate at first.
 
 
 # Rosetta Code
 
 Many rosetta tasks have `J` solutions. It's a good resource to find J
 programs to study. [Here](https://rosettacode.org/wiki/Sudoku#J) is a sudoku solver by Roger Hui.
+
