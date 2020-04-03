@@ -4,8 +4,23 @@
 
 * Tests
 
-todo: decide if mainly through jconsole/terminal or setup jqt/jhs
-project. as well, setup test runner which may inform this decision
+** Terminal (jconsole)
+
+Make sure you have used J's package manager to install J's unit
+testing library. This can be done by entering ~jconsole~ at the
+command line followed by these commands:
+
+#+BEGIN_SRC j :session :exports code
+load'pacman'
+'update'jpkg''
+'install'jpkg'general/unittest'
+#+END_SRC
+
+- To run the tests go to the directory for the given exercism
+  problem. Start a ~jconsole~ session. Enter
+  ~require'general/unittest.ijs'~.
+- Develop your solution in ~problem.ijs~ (eg ~hello-world.ijs~).
+- Whenever you'd like to test the program, run ~unittest'test.ijs'~.
 
 
 * Resources
@@ -54,21 +69,23 @@ inverse/divide ~%.~ when writing your programs or reading other's.
 Many rosetta tasks have ~J~ solutions. It's a good resource to find J
 programs to study. [[https://rosettacode.org/wiki/Sudoku#J][Here]] is a sudoku solver by Roger Hui.
   
+
 * Installing J
 
 Refer to [[https://code.jsoftware.com/wiki/System/Installation][System/Installation]] for instructions on how to get things set
 up on your system.
 
 After installing, I'd suggest using the package manager (called
-~pacman~) to grab available addons. These include facilities for
-testing, graphics, images, json, linear algebra, interfacing with
-other languages including python, r, java, and much else. The whole of
-it about 40Mb.
-
-To do this, start a ~J~ console session by typing ~jconsole~. Then
-enter:
+~pacman~) to grab available addons. To do this, start a ~J~ console
+session by typing ~jconsole~. Then enter:
 
 #+BEGIN_SRC j :session :exports code
 load 'pacman'
+'update'jpkg''
 'install' jpkg '*'
 #+END_SRC
+
+To run the tests you'll need to run ~'install'jpkg'general/unittest'~
+at a minimum. The rest of the addons are highly useful and include
+frameworks for working with graphics, websockets, and much else and
+don't take up much space (should be around 40Mb).
