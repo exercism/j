@@ -1,39 +1,18 @@
 
-# Books
-
-There are several books written by experienced J programmers that I
-highly recommend exploring.
-
--   [J Primer](https://www.jsoftware.com/help/primer/contents.htm) is a tour of J. It's a great starting point that avoids
-    being overly concise and focused on the complex aspects of the
-    language.
--   [Learning J](https://www.jsoftware.com/help/learning/contents.htm) is another great introduction and overview of J. It goes
-    more into detail than the **J Primer** does, but is still suitable for
-    starting out.
--   [J For C Programmers](https://www.jsoftware.com/help/jforc/contents.htm) introduces J assuming a background in `C`. It
-    contrasts `C` approaches with `J` ones and teaches more features of
-    `J` than the previous two books.
--   [J Phrases](https://www.jsoftware.com/help/phrases/contents.htm) is a collection of `J` sentences and phrases. It presents
-    a wide range of `J` programs and idioms which are great for learning
-    how to read and write J.
--   [J Dictionary](https://www.jsoftware.com/help/dictionary/contents.htm) presents `J` thourgh example sessions. It has many
-    exercises and is designed to be an accessible introduction.
-
-These are available in HTML on the net and also are included with your
-`J` system when you download it. Another great book (for purchase) is
-[Fractals Visualization and J](https://books.google.ca/books?id=Qs2kCwAAQBAJ&printsec=frontcover&source=gbs_ge_summary_r&cad=0#v=onepage&q&f=false) which emphasis using `J` to explore and
-visualize various mathematical concepts.
-
-
 # NuVoc
 
 The [NuVoc](https://code.jsoftware.com/wiki/NuVoc) is the definitive J reference. It is a highly concise and
-information dense overview of the J primitives, which is perfect once
-you have found your bearings, but is hard to navigate at first.
+information dense overview of the J primitives and language.
+
+
+# Community
+
+-   <https://code.jsoftware.com/wiki/System/Forums> mailing lists
+-   <https://www.reddit.com/r/apljk/> subreddit
+-   [#jsoftware](http://webchat.freenode.net/?channels=jsoftware) irc channel
 
 
 # Rosetta Code
 
 Many rosetta tasks have `J` solutions. It's a good resource to find J
 programs to study. [Here](https://rosettacode.org/wiki/Sudoku#J) is a sudoku solver by Roger Hui.
-

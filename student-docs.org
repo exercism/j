@@ -23,38 +23,40 @@ load'pacman'
 - Whenever you'd like to test the program, run ~unittest'test.ijs'~.
 
 
-* Resources
+* Learning
 
 ** Books
 
-There are several books written by experienced J programmers that I
-highly recommend exploring.
-
-- [[https://www.jsoftware.com/help/primer/contents.htm][J Primer]] is a tour of J. It's a great starting point that avoids
-  being overly concise and focused on the complex aspects of the
+- [[https://www.jsoftware.com/help/primer/contents.htm][J Primer]] a tour of ~J~ and great starting point that avoids being
+  overly concise and focused on the complex aspects of the language.
+- [[https://www.jsoftware.com/help/learning/contents.htm][Learning J]] a more in depth tour of ~J~ suitable for beginners as
+  well as experienced programmers.
+- [[https://www.jsoftware.com/help/jforc/contents.htm][J For C Programmers]] a more detailed introduction to ~J~ assuming
+  familiarity with ~C~.
+- [[https://www.jsoftware.com/help/phrases/contents.htm][J Phrases]] a collection of ~J~ sentences and phrases. Helpful for
+  learning ~J~ idioms, developing ~J~ reading comprehension, and
+  looking up approaches to common tasks.
+- [[https://www.jsoftware.com/help/dictionary/contents.htm][J Dictionary]] ~J~ thourgh sessions, covering a good breadth of the
   language.
-- [[https://www.jsoftware.com/help/learning/contents.htm][Learning J]] is another great introduction and overview of J. It goes
-  more into detail than the *J Primer* does, but is still suitable for
-  starting out.
-- [[https://www.jsoftware.com/help/jforc/contents.htm][J For C Programmers]] introduces J assuming a background in ~C~. It
-  contrasts ~C~ approaches with ~J~ ones and teaches more features of
-  ~J~ than the previous two books.
-- [[https://www.jsoftware.com/help/phrases/contents.htm][J Phrases]] is a collection of ~J~ sentences and phrases. It presents
-  a wide range of ~J~ programs and idioms which are great for learning
-  how to read and write J.
-- [[https://www.jsoftware.com/help/dictionary/contents.htm][J Dictionary]] presents ~J~ thourgh example sessions. It has many
-  exercises and is designed to be an accessible introduction.
 
 These are available in HTML on the net and also are included with your
 ~J~ system when you download it. Another great book (for purchase) is
-[[https://books.google.ca/books?id=Qs2kCwAAQBAJ&printsec=frontcover&source=gbs_ge_summary_r&cad=0#v=onepage&q&f=false][Fractals Visualization and J]] which emphasis using ~J~ to explore and
+[[https://books.google.ca/books?id=Qs2kCwAAQBAJ&printsec=frontcover&source=gbs_ge_summary_r&cad=0#v=onepage&q&f=false][Fractals Visualization and J]] which emphasises using ~J~ to explore and
 visualize various mathematical concepts.
+
+
+* Resources
 
 ** NuVoc
 
 The [[https://code.jsoftware.com/wiki/NuVoc][NuVoc]] is the definitive J reference. It is a highly concise and
-information dense overview of the J primitives, which is perfect once
-you have found your bearings, but is hard to navigate at first.
+information dense overview of the J primitives and language.
+
+** Community
+
+- https://code.jsoftware.com/wiki/System/Forums mailing lists
+- https://www.reddit.com/r/apljk/ subreddit
+- [[http://webchat.freenode.net/?channels=jsoftware][#jsoftware]] irc channel
 
 ** Rosetta Code
 

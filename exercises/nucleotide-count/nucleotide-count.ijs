@@ -1,1 +1,1 @@
-nuc_cnt=: 0:
+nuc_cnt=:
