@@ -1,5 +1,5 @@
 language: bash
 
 script:
-  - script/fetch-configlet
-  - bin/configlet lint --track-id j .
+  - echo "todo!"
+
