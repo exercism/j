@@ -1,16 +1,14 @@
 readme-splice := config/exercise-readme-insert.md
 
-student-doc-targets := TESTS INSTALLATION RESOURCES LEARNING
-student-docs := $(foreach doc,$(student-doc-targets),docs/$(doc).md)
+student-doc-targets := ABOUT TESTS INSTALLATION RESOURCES LEARNING
 
 track-requirements := \
-	$(student-docs)
+	$(foreach doc,$(student-doc-targets),docs/$(doc).md)
 
 default : track
 
 # build track
 track : $(track-requirements)
-
 
 docs/%.md : student-docs.org
 	emacs $< --batch \

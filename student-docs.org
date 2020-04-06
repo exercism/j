@@ -4,8 +4,11 @@
 
 * ABOUT 
 
-TODO
+#+BEGIN_VERSE
+ APL is a mistake, carried through to perfection. It is the language of the future for the programming techniques of the past: it creates a new generation of coding bums.
 
+    ---E.W. Dijkstra
+#+END_VERSE
 
 * TESTS
 
