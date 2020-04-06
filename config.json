@@ -2,25 +2,43 @@
   "track_id": "j",
   "language": "J",
   "version": 2,
+  "blurb": "J is a terse interpreted array language originally designed by Ken Iverson and Roger Hui. It is great for wholemeal functional programming, supports object orientation, and blazes through numerical vector computations.\n",
   "active": false,
-  "blurb": "J is a terse interpreted array language originally designed by Ken Iverson and Roger Hui. It's great for wholemeal functional programming, supports object orientation, and blazes through numerical vector computations.",
-    "online_editor": {
+  "online_editor": {
     "indent_style": "space",
     "indent_size": 0
   },
   "solution_pattern": "example.*[.]ijs",
   "exercises": [
-      {
-      "slug": "hello-world",
-      "uuid": "f2936612-edc4-44f9-a403-c60f7c6486e4",
-      "core": true,
-      "auto_approve": true,
-      "unlocked_by": null,
-      "difficulty": 1,
-      "topics": [
-        "warmup"
-      ]
+    {
+      "slug": "arithmetic",
+      "uuid": "d522f5ab-26c4-4ff6-88db-08573965b406",
+      "version": "0.0.0"
     },
-        
-    ]
+    {
+      "slug": "hello-world",
+      "uuid": "b59cd640-e925-4570-aa6e-3d903651e9f1",
+      "version": "1.1.0"
+    },
+    {
+      "slug": "nucleotide-count",
+      "uuid": "266be147-836e-42c7-91d0-6c577037c2ff",
+      "version": "1.3.0"
+    },
+    {
+      "slug": "pascals-triangle",
+      "uuid": "e044a725-8509-4978-ad3b-ab0546663986",
+      "version": "1.5.0"
+    },
+    {
+      "slug": "rna-transcription",
+      "uuid": "b6570e32-ed50-4ff9-bc9d-0202aa39b344",
+      "version": "1.3.0"
+    },
+    {
+      "slug": "sum-of-multiples",
+      "uuid": "14555b65-4f96-4d4b-bbb0-fcd0b21a1a15",
+      "version": "1.5.0"
+    }
+  ]
 }
