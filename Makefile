@@ -1,20 +1,20 @@
 readme-splice := config/exercise-readme-insert.md
 
+student-doc-targets := ABOUT TESTS INSTALLATION RESOURCES LEARNING
+
 track-requirements := \
-	Makefile \
-	config.json
-#	bin/configlet \
+	$(foreach doc,$(student-doc-targets),docs/$(doc).md)
 
 default : track
 
-# configlet binary
-bin/configlet :
-	mkdir -p bin
-	./script/fetch-configlet
-
 # build track
 track : $(track-requirements)
-	./bin/configlet lint .
+
+docs/%.md : student-docs.org
+	emacs $< --batch \
+		--eval "(progn (require 'package)(package-initialize)(require 'org)(require 'ox-gfm))" \
+		--eval "(progn (re-search-forward \"* $(@F:.md=)\") (org-gfm-export-to-markdown nil t nil))"
+	mv $(<F:.org=.md) $@
 
 clean :
 	find . -name "*~" -exec rm {} \;

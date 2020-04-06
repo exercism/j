@@ -1,19 +1,19 @@
 load'nucleotide-count.ijs'
 
-test_nc1=: monad define
-assert 0 0 0 0-:nc''
+test_ntc1=: monad define
+assert 0 0 0 0-:ntc''
 )
 
-test_nc2=: monad define
-assert 0 0 1 0-:nc ,:'G'
+test_ntc2=: monad define
+assert 0 0 1 0-:ntc ,:'G'
 )
 
-test_nc3=: monad define
-assert 0 0 7 0-:nc'GGGGGGG'
+test_ntc3=: monad define
+assert 0 0 7 0-:ntc'GGGGGGG'
 )
 
-test_nc4=: monad define
-assert 20 12 17 21-:nc'AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC'
+test_ntc4=: monad define
+assert 20 12 17 21-:ntc'AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC'
 )
 
-REP=: nc f.
+REP=: ntc f.

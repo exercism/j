@@ -1,8 +1,6 @@
-
 # NuVoc
 
-The [NuVoc](https://code.jsoftware.com/wiki/NuVoc) is the definitive J reference. It is a highly concise and
-information dense overview of the J primitives and language.
+The [NuVoc](https://code.jsoftware.com/wiki/NuVoc) is the definitive J reference. It is a highly concise and information dense overview of the J primitives and language.
 
 
 # Community
@@ -14,5 +12,4 @@ information dense overview of the J primitives and language.
 
 # Rosetta Code
 
-Many rosetta tasks have `J` solutions. It's a good resource to find J
-programs to study. [Here](https://rosettacode.org/wiki/Sudoku#J) is a sudoku solver by Roger Hui.
+Many rosetta tasks have `J` solutions. It's a good resource to find J programs to study. [Here](https://rosettacode.org/wiki/Sudoku#J) is a sudoku solver by Roger Hui.
