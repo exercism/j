@@ -1,0 +1,6 @@
+.PHONY : test
+
+jconsole=: jconsole
+
+test : test.ijs pascals-triangle.ijs
+	$(jconsole) -js "require'general/unittest'" "echo unittest'test.ijs'" "exit 0"

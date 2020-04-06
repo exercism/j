@@ -5,9 +5,6 @@ student-doc-targets := ABOUT TESTS INSTALLATION RESOURCES LEARNING
 track-requirements := \
 	$(foreach doc,$(student-doc-targets),docs/$(doc).md)
 
-default : track
-
-# build track
 track : $(track-requirements)
 
 docs/%.md : student-docs.org
