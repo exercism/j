@@ -2,7 +2,12 @@
 #+title: Track Documentation
 #+options: toc:nil
 
-* Tests
+* ABOUT 
+
+TODO
+
+
+* TESTS
 
 ** Terminal (jconsole)
 
@@ -23,7 +28,7 @@ load'pacman'
 - Whenever you'd like to test the program, run ~unittest'test.ijs'~.
 
 
-* Learning
+* LEARNING
 
 ** Books
 
@@ -45,7 +50,7 @@ These are available in HTML on the net and also are included with your
 visualize various mathematical concepts.
 
 
-* Resources
+* RESOURCES
 
 ** NuVoc
 
@@ -64,7 +69,7 @@ Many rosetta tasks have ~J~ solutions. It's a good resource to find J
 programs to study. [[https://rosettacode.org/wiki/Sudoku#J][Here]] is a sudoku solver by Roger Hui.
   
 
-* Installing J
+* INSTALLATION
 
 Refer to [[https://code.jsoftware.com/wiki/System/Installation][System/Installation]] for instructions on how to get things set
 up on your system.
