@@ -15,10 +15,9 @@ VERSION      =: 2
 ACTIVE       =: 'json_false'
 ONLINE_EDITOR=: (;:'indent_style indent_size'),:'space';0
 SOLUTION_PAT =: 'example.*[.]ijs'
-KEYS         =: ;:'track_id language version blurb active online_editor solution_pattern'
-CONFIG       =:    TRACK_ID;LANGUAGE;VERSION;BLURB;ACTIVE;ONLINE_EDITOR;SOLUTION_PAT
+KEYS         =: ;:'track_id language version blurb active online_editor solution_pattern exercises'
+CONFIG       =: TRACK_ID;LANGUAGE;VERSION;BLURB;ACTIVE;ONLINE_EDITOR;SOLUTION_PAT;<(<@|:)"_1 exercism_configs
 CONFIG       =: KEYS,:CONFIG
-CONFIG       =: CONFIG ,. |: ,: 'exercises' ; <(<@|:)"_1 exercism_configs
 
 write_config=: monad define
 'config.json' fwrites~ enc_json CONFIG
@@ -38,7 +37,7 @@ for_e. exercisms do. try. configlet_uuid 1 {:: <;._2 >e catch. end. end.
 setup=: monad define
 assert. 'j' = >{: <;._1 jcwdpath'' NB. make sure in j repo.
 for_e. exercisms do.
-  try. echo e NB. 'json_false' fwrites (>e),'.meta/config/deprecated'
+  try. echo e NB. 'json_null' fwrites (>e),'.meta/config/unlocked_by'
   catch. end.
 end.
 )
