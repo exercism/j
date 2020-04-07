@@ -1,9 +1,11 @@
 require'convert/json'
 
+CORE_SLUGS=:'hello-world';'nucleotide-count';'rna-transcription';'pascals-triangle';'sum-of-multiples'
+NB. ;'hamming-distance'
 exercisms=: 1 1 dir 'exercises'
-exercism_slugs  =: ('slug';[:{:<;._2)&.>
+SLUGS  =: ('slug';[:{:<;._2)&.> exercisms
 exercism_config =: [: > [: (>@{:@fpathname ; LF-.~freads) &.> 1 1 dir ,&'.meta/config'
-exercism_configs=: (exercism_slugs exercisms) (,&>) exercism_config &.> exercisms
+EXERCISMS=: < (<@|:)"_1 SLUGS (,&>) exercism_config &.> exercisms
 
 NB. Track Configuration
 BLURB=: noun define
@@ -16,7 +18,7 @@ ACTIVE       =: 'json_false'
 ONLINE_EDITOR=: (;:'indent_style indent_size'),:'space';0
 SOLUTION_PAT =: 'example.*[.]ijs'
 KEYS         =: ;:'track_id language version blurb active online_editor solution_pattern exercises'
-CONFIG       =: TRACK_ID;LANGUAGE;VERSION;BLURB;ACTIVE;ONLINE_EDITOR;SOLUTION_PAT;<(<@|:)"_1 exercism_configs
+CONFIG       =: TRACK_ID;LANGUAGE;VERSION;BLURB;ACTIVE;ONLINE_EDITOR;SOLUTION_PAT;EXERCISMS
 CONFIG       =: KEYS,:CONFIG
 
 write_config=: monad define
@@ -34,12 +36,18 @@ assert. 'j' = >{: <;._1 jcwdpath'' NB. make sure in j repo.
 for_e. exercisms do. try. configlet_uuid 1 {:: <;._2 >e catch. end. end.  
 )
 
-setup=: monad define
+skeleton=: monad define
+dir=. 'exercises/',y,'/'
+config=. dir,'.meta/config/'
 assert. 'j' = >{: <;._1 jcwdpath'' NB. make sure in j repo.
-for_e. exercisms do.
-  try. echo e NB. 'json_null' fwrites (>e),'.meta/config/unlocked_by'
-  catch. end.
-end.
+assert. -. fexist dir
+fpathcreate config
+configlet_uuid y
+'json_false' fwrites config,'auto_approve'
+'json_false' fwrites config,'core'
+'json_true' fwrites config,'deprecated'
+'null' fwrites config,'unlocked_by'
+'0.0.0' fwrites config,'version'
 )
 
-NB. write_config''
+write_config''

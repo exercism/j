@@ -20,6 +20,15 @@
       "version": "0.0.0"
     },
     {
+      "slug": "hamming-distance",
+      "auto_approve": false,
+      "core": false,
+      "deprecated": true,
+      "unlocked_by": "null",
+      "uuid": "53f22cbb-f666-43bb-a3bc-f62a41f618ff",
+      "version": "0.0.0"
+    },
+    {
       "slug": "hello-world",
       "auto_approve": true,
       "core": true,
