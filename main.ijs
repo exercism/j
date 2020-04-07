@@ -1,11 +1,10 @@
 require'convert/json'
 
-CORE_SLUGS=:'hello-world';'nucleotide-count';'rna-transcription';'pascals-triangle';'sum-of-multiples'
-NB. ;'hamming-distance'
-exercisms=: 1 1 dir 'exercises'
-SLUGS  =: ('slug';[:{:<;._2)&.> exercisms
-exercism_config =: [: > [: (>@{:@fpathname ; LF-.~freads) &.> 1 1 dir ,&'.meta/config'
-EXERCISMS=: < (<@|:)"_1 SLUGS (,&>) exercism_config &.> exercisms
+CORE_SLUGS=:'hello-world';'difference-of-squares';'hamming-distance';'nucleotide-count'
+CORE_SLUGS=: CORE_SLUGS,'rna-transcription';'pascals-triangle';'sum-of-multiples'
+slugs=: (/: CORE_SLUGS&i.) >([:{:<;._2)&.>1 1 dir 'exercises' NB. put core slugs first
+ex_config=: 'slug'&;,[:>[:(>@{:@fpathname;LF-.~freads)&.>1 1 dir('exercises/'&,@,&'/.meta/config')
+EXERCISMS=: <(|:@ex_config) &.> slugs
 
 NB. Track Configuration
 BLURB=: noun define
@@ -45,9 +44,14 @@ fpathcreate config
 configlet_uuid y
 'json_false' fwrites config,'auto_approve'
 'json_false' fwrites config,'core'
-'json_true' fwrites config,'deprecated'
-'null' fwrites config,'unlocked_by'
+'json_true'  fwrites config,'deprecated'
+'json_null'  fwrites config,'unlocked_by'
+(y,'=:')     fwrites dir   ,'example.ijs'
+(y,'=:')     fwrites dir   ,y,'.ijs'
+'require''general/unittest'''fwrites dir,'test.ijs'
 '0.0.0' fwrites config,'version'
 )
 
-write_config''
+rank_egs=: monad define
+(\:{:"1)}.,/>(;[:#[:1!:1[:<,&'example.ijs')&.> ,.exercisms
+)
