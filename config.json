@@ -29,6 +29,15 @@
       "version": "0.0.0"
     },
     {
+      "slug": "hamming-distance",
+      "auto_approve": false,
+      "core": false,
+      "deprecated": true,
+      "unlocked_by": null,
+      "uuid": "ab2c70c9-a1db-4be4-bd74-a08fe72ccba8",
+      "version": "0.0.0"
+    },
+    {
       "slug": "nucleotide-count",
       "auto_approve": false,
       "core": true,
@@ -71,15 +80,6 @@
       "deprecated": true,
       "unlocked_by": null,
       "uuid": "d522f5ab-26c4-4ff6-88db-08573965b406",
-      "version": "0.0.0"
-    },
-    {
-      "slug": "hamming-distance",
-      "auto_approve": false,
-      "core": false,
-      "deprecated": true,
-      "unlocked_by": null,
-      "uuid": "ab2c70c9-a1db-4be4-bd74-a08fe72ccba8",
       "version": "0.0.0"
     }
   ]
