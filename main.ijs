@@ -70,12 +70,15 @@ catch. result=. '' [ echo 'oops' end.
 result[ferase'test.ijs'[ferase'example.ijs'
 )
 
-verify_all =: monad define
-try.
-  result=. verify_exercism &.> slugs
-  assert. -. a: e. result
-  assert. -. +./ 'assertion failure' E. ;result
-  'OK'
+verify_all=: monad define
+try. result=. verify_exercism &.> slugs
+     assert. -.+./'assertion failure'E.;result NB. fail no test
+     assert. *./ 0<>([:+/'OK'E.;)&.>result NB. each exercism passes something
+     'OK'
 catch. 'FAIL' end.
 )
 
+verify_script=: monad define
+res=. verify_all y
+exit 'FAIL' -: res
+)
