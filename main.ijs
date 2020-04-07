@@ -1,6 +1,6 @@
 require'convert/json general/unittest'
 
-CORE_SLUGS=:'hello-world';'difference-of-squares';'hamming-distance';'nucleotide-count'
+CORE_SLUGS=:'hello-world';'hamming';'difference-of-squares';'nucleotide-count'
 CORE_SLUGS=: CORE_SLUGS,'rna-transcription';'pascals-triangle';'sum-of-multiples'
 slugs=: (/: CORE_SLUGS&i.) >([:{:<;._2)&.>1 1 dir 'exercises' NB. put core slugs first
 ex_config=: 'slug'&;,[:>[:(>@{:@fpathname;LF-.~freads)&.>1 1 dir('exercises/'&,@,&'/.meta/config')
@@ -58,21 +58,21 @@ rank_egs=: monad define
 
 verify_exercism=: monad define
 dir=. 'exercises/',y,'/'
-try.
-  test=. 'b'freads dir,'test.ijs'
-  assert. -. test = _1
-  'test.ijs' fwrites~ >'load ''example.ijs''';}.test
-  'example.ijs' fcopynew dir,'example.ijs'
-  assert. fexist'test.ijs'
-  assert. fexist'example.ijs'
-  ferase'example.ijs'[ferase'test.ijs'[result=. unittest'test.ijs'
-catch. result=. '' [ echo 'oops' end.
-result[ferase'test.ijs'[ferase'example.ijs'
+try. test=. 'b'freads dir,'test.ijs'
+     assert. -. test = _1
+     'test.ijs' fwrites~ >'load ''example.ijs''';}.test
+     'example.ijs' fcopynew dir,'example.ijs'
+     assert. fexist'test.ijs'
+     assert. fexist'example.ijs'
+     ferase'example.ijs'[ferase'test.ijs'[result=. unittest'test.ijs'
+catch. result=. '' [ echo 'oops' end. result[ferase'test.ijs'[ferase'example.ijs'
 )
 
 verify_all=: monad define
 try. result=. verify_exercism &.> slugs
+     assert. -. a: e. result
      assert. -.+./'assertion failure'E.;result NB. fail no test
+     assert. -.+./'oops'E.;result NB. fail no test
      assert. *./ 0<>([:+/'OK'E.;)&.>result NB. each exercism passes something
      'OK'
 catch. 'FAIL' end.

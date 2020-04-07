@@ -1,6 +1,6 @@
-readme-splice := config/exercise-readme-insert.md
-
+# /Applications/j901/bin/jconsole -js "load'main.ijs'" "verify_script 0"
 student-doc-targets := ABOUT TESTS INSTALLATION RESOURCES LEARNING
+jconsole:= jconsole
 
 track-requirements := \
 	$(foreach doc,$(student-doc-targets),docs/$(doc).md)
