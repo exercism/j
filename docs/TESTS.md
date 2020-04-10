@@ -8,6 +8,7 @@ load'pacman'
 'install'jpkg'general/unittest'
 ```
 
--   To run the tests go to the directory for the given exercism problem. Start a `jconsole` session. Enter `require'general/unittest.ijs'`.
--   Develop your solution in `problem.ijs` (eg `hello-world.ijs`).
--   Whenever you'd like to test the program, run `unittest'test.ijs'`.
+-   Head to the problem directory (eg `~/Exercism/hello-world`).
+-   Start a `jconsole` session (eg by typing `jconsole` in a terminal).
+-   Enter `require'general/unittest.ijs'` to import the unit test library.
+-   Test your solution by typing `unittest'test.ijs'`.
