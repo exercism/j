@@ -20,22 +20,22 @@
       "version": "1.1.0"
     },
     {
+      "slug": "hamming",
+      "auto_approve": false,
+      "core": true,
+      "deprecated": true,
+      "unlocked_by": null,
+      "uuid": "ab2c70c9-a1db-4be4-bd74-a08fe72ccba8",
+      "version": "2.3.0"
+    },
+    {
       "slug": "difference-of-squares",
       "auto_approve": false,
       "core": false,
       "deprecated": true,
       "unlocked_by": null,
       "uuid": "4cc22c3d-766e-4593-96fe-2e26e06682b8",
-      "version": "0.0.0"
-    },
-    {
-      "slug": "hamming-distance",
-      "auto_approve": false,
-      "core": false,
-      "deprecated": true,
-      "unlocked_by": null,
-      "uuid": "ab2c70c9-a1db-4be4-bd74-a08fe72ccba8",
-      "version": "0.0.0"
+      "version": "1.2.0"
     },
     {
       "slug": "nucleotide-count",
