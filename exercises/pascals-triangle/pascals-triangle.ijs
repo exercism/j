@@ -1,1 +1,1 @@
-pascal=:
+pascal=: ]

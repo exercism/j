@@ -1,7 +1,2 @@
-load'hello-world.ijs'
-
-test_hello=: monad define
-assert 'Hello, World!' -: hello_world
-)
-
-REP=: hello_world
+NB. "NB." is used to start a comment
+'Hello, World!' -: hello_world NB. -: checks if two nouns match
