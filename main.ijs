@@ -69,6 +69,7 @@ result return.
 NB. verify y. check all example solutions pass test suites
 verify=: 3 : 0
 failed=. slugs #~ -. > verify_exercism &.> slugs
-assert. a: -: < failed
-smoutput 'all exercises passed'
+try. assert. 0 = #failed
+     exit 0[smoutput 'all good'
+catch. exit 1[smoutput 'failed:',":failed end.
 )

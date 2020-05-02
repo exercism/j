@@ -1,6 +1,7 @@
-# /Applications/j901/bin/jconsole -js "load'main.ijs'" "verify_script 0"
 student-doc-targets := ABOUT TESTS INSTALLATION RESOURCES LEARNING
-jconsole:= jconsole
+J := jconsole
+JTR_REQS := j j-convert-pjson bash-minimal
+GUIX := ~/guix/pre-inst-env guix
 
 track-requirements := \
 	$(foreach doc,$(student-doc-targets),docs/$(doc).md)
@@ -13,8 +14,14 @@ docs/%.md : student-docs.org
 		--eval "(progn (re-search-forward \"* $(@F:.md=)\") (org-gfm-export-to-markdown nil t nil))"
 	mv $(<F:.org=.md) $@
 
+run-verify :
+	$(J) main.ijs -js "verify''"
+
+test-runner-docker :
+	$(GUIX) pack -r $@ -f docker $(JTR_REQS) # create gc root (-r)
+
 clean :
 	find . -name "*~" -exec rm {} \;
 	find . -name "*.html" -exec rm {} \;
 
-.PHONY : track clean
+.PHONY : track clean run-verify
