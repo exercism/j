@@ -1,4 +1,4 @@
-require'convert/json general/unittest'
+require'convert/json'
 
 CORE_SLUGS=:'hello-world';'hamming';'difference-of-squares';'nucleotide-count'
 CORE_SLUGS=: CORE_SLUGS,'rna-transcription';'pascals-triangle';'sum-of-multiples'
@@ -20,22 +20,22 @@ KEYS         =: ;:'track_id language version blurb active online_editor solution
 CONFIG       =: TRACK_ID;LANGUAGE;VERSION;BLURB;ACTIVE;ONLINE_EDITOR;SOLUTION_PAT;EXERCISMS
 CONFIG       =: KEYS,:CONFIG
 
-write_config=: monad define
+write_config=: 3 : 0
 'config.json' fwrites~ enc_json CONFIG
 )
 
-configlet_uuid=: monad define
+configlet_uuid=: 3 : 0
 pth=. 'exercises/',y,'/.meta/config/uuid'[cmd=. './bin/configlet uuid'
 if. #y do. cmd=. cmd,' > ',pth assert. -. fexist pth end.
 2!:1 cmd
 )
 
-setup_uuids=: monad define
+setup_uuids=: 3 : 0
 assert. 'j' = >{: <;._1 jcwdpath'' NB. make sure in j repo.
 for_e. exercisms do. try. configlet_uuid 1 {:: <;._2 >e catch. end. end.  
 )
 
-skeleton=: monad define
+skeleton=: 3 : 0
 dir=. 'exercises/',y,'/'
 config=. dir,'.meta/config/'
 assert. 'j' = >{: <;._1 jcwdpath'' NB. make sure in j repo.
@@ -46,39 +46,29 @@ configlet_uuid y
 'json_false' fwrites config,'core'
 'json_true'  fwrites config,'deprecated'
 'json_null'  fwrites config,'unlocked_by'
+'0.0.0'      fwrites config,'version' NB. todo: read id from problem-specs repo
 (y,'=:')     fwrites dir   ,'example.ijs'
 (y,'=:')     fwrites dir   ,y,'.ijs'
-'require''general/unittest'''fwrites dir,'test.ijs'
-'0.0.0' fwrites config,'version'
+'NB. tests'  fwrites dir,'test.ijs'
 )
 
-rank_egs=: monad define
+rank_egs=: 3 : 0
 (\:{:"1)}.,/>(;[:#[:1!:1[:<,&'example.ijs')&.> ,.exercisms
 )
 
-verify_exercism=: monad define
-dir=. 'exercises/',y,'/'
-try. test=. 'b'freads dir,'test.ijs'
-     assert. -. test = _1
-     'test.ijs' fwrites~ >'load ''example.ijs''';}.test
-     'example.ijs' fcopynew dir,'example.ijs'
-     assert. fexist'test.ijs'
-     assert. fexist'example.ijs'
-     ferase'example.ijs'[ferase'test.ijs'[result=. unittest'test.ijs'
-catch. result=. '' [ echo 'oops' end. result[ferase'test.ijs'[ferase'example.ijs'
+NB. run example solution against test suite
+verify_exercism=: 3 : 0
+1!:44 'exercises/',y,'/'        NB. exercise dir
+try. 0!:0 < 'example.ijs'       NB. load example script
+     result=. 0!:3 < 'test.ijs' NB. run tests silently
+catch. result=. 0 end.          NB. fail if exception
+1!:44 '../..'
+result return.
 )
 
-verify_all=: monad define
-try. result=. verify_exercism &.> slugs
-     assert. -. a: e. result
-     assert. -.+./'assertion failure'E.;result NB. fail no test
-     assert. -.+./'oops'E.;result NB. fail no test
-     assert. *./ 0<>([:+/'OK'E.;)&.>result NB. each exercism passes something
-     'OK'
-catch. 'FAIL' end.
-)
-
-verify_script=: monad define
-res=. verify_all y
-exit 'FAIL' -: res
+NB. verify y. check all example solutions pass test suites
+verify=: 3 : 0
+failed=. slugs #~ -. > verify_exercism &.> slugs
+assert. a: -: < failed
+smoutput 'all exercises passed'
 )
