@@ -1,4 +1,4 @@
-If you run in to any issues with running the tests at all please just submit your solution and a mentor will help ou figure out what's wrong. J is a language that few people use, so finding information can be brutal.
+If you run in to any issues with running the tests at all please just submit your solution and a mentor will help you figure out what's wrong. J is a language that few people use, so finding information can be brutal.
 
 
 # TLDR
