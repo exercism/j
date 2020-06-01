@@ -1,14 +1,30 @@
 # Terminal (jconsole)
 
-Make sure you have used J's package manager to install J's unit testing library. This can be done by entering `jconsole` at the command line followed by these commands:
+The way the tracks tests are set up is hoped to be as simple as possible. If you're working an exercise, say `hamming.ijs` here's how the work should flow. Edit `hamming.ijs` writing out your solution. Interactively build it up by first typing
 
 ```j
-load'pacman'
-'update'jpkg''
-'install'jpkg'general/unittest'
+NB. your j terminal binary may be ijconsole (eg. on Debian)
+jconsole 'hamming.ijs' NB. start a J console session with definitions loaded hamming.ijs
 ```
 
+From inside the J console, reload by typing
+
+```j
+load 'hamming.ijs'
+```
+
+from inside the J console. To run the tests &#x2013; after you have loaded your solution &#x2013; type
+
+```j
+0!:2 < 'test.ijs'
+```
+
+The verb (aka function) [0!:2](https://code.jsoftware.com/wiki/Vocabulary/Foreigns#m0) is an example of something called a *foreign*. It loads its argument and treats each line of it as an assertion which will be true or false (1 or 0) and prints out the line and the result of checking the assertion. Another option to test is using `0!:3` which won't print for each line but will return 1 if all assertions pass or 0 if something doesn't. `0!:2` and `0!:3` expect boxed strings as their arguments, that's the purpose of `<` above.
+
+
+# Recap
+
 -   Head to the problem directory (eg `~/Exercism/hello-world`).
--   Start a `jconsole` session (eg by typing `jconsole` in a terminal).
--   Enter `require'general/unittest.ijs'` to import the unit test library.
--   Test your solution by typing `unittest'test.ijs'`.
+-   Start a `jconsole` session (eg by typing `jconsole` or `ijconsole`) in a terminal.
+-   Load your solution file (eg `load 'hello-world.ijs'`)
+-   Test your solution by typing `0!:2 < 'test.ijs'`.
