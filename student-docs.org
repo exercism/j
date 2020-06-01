@@ -10,8 +10,13 @@
     ---E.W. Dijkstra
 #+END_VERSE
 
-... TODO
-
+J is a strange language that can challenge how you think about
+building programs. It talks in terms of speech -- the parts of which
+include nouns, verbs, adverbs, conjunctions, gerunds, copulas, and so
+on. It borrows terms from music and chemistry where verbs, adverbs,
+and conjunctions are monads or dyads depending on how they bond to
+their operands. J is also extremely concise; useful programs can be
+expressed in very few keystrokes.
 
 * TESTS
 ** Terminal (jconsole)
@@ -80,16 +85,12 @@ Refer to [[https://code.jsoftware.com/wiki/System/Installation][System/Installat
 up on your system.
 
 After installing, I'd suggest using the package manager (called
-~pacman~) to grab available addons. To do this, start a ~J~ console
-session by typing ~jconsole~. Then enter:
+~pacman~) to grab available addons. This includes fun bits like
+plotting, graphics, image manipulation, and much else. To do this, you
+can start a ~J~ console session by typing ~jconsole~ then enter:
 
 #+BEGIN_SRC j :session :exports code
 load 'pacman'
 'update'jpkg''
 'install' jpkg '*'
 #+END_SRC
-
-To run the tests you'll need to run ~'install'jpkg'general/unittest'~
-at a minimum. The rest of the addons are highly useful and include
-frameworks for working with graphics, websockets, and much else and
-don't take up much space (should be around 40Mb).
