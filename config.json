@@ -17,6 +17,7 @@
   },
   "solution_pattern": "example.*[.]ijs",
   "exercises": {
+    "concept": [],
     "practice": [
       {
         "slug": "hello-world",
