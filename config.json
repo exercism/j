@@ -33,7 +33,8 @@
       "deprecated": true,
       "unlocked_by": null,
       "uuid": "ab2c70c9-a1db-4be4-bd74-a08fe72ccba8",
-      "version": "2.3.0"
+      "version": "2.3.0",
+      "status": "deprecated"
     },
     {
       "slug": "difference-of-squares",
@@ -42,7 +43,8 @@
       "deprecated": true,
       "unlocked_by": null,
       "uuid": "4cc22c3d-766e-4593-96fe-2e26e06682b8",
-      "version": "1.2.0"
+      "version": "1.2.0",
+      "status": "deprecated"
     },
     {
       "slug": "nucleotide-count",
