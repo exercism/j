@@ -37,16 +37,6 @@
       "status": "deprecated"
     },
     {
-      "slug": "difference-of-squares",
-      "auto_approve": false,
-      "core": false,
-      "deprecated": true,
-      "unlocked_by": null,
-      "uuid": "4cc22c3d-766e-4593-96fe-2e26e06682b8",
-      "version": "1.2.0",
-      "status": "deprecated"
-    },
-    {
       "slug": "nucleotide-count",
       "auto_approve": false,
       "core": true,
@@ -81,6 +71,16 @@
       "unlocked_by": null,
       "uuid": "14555b65-4f96-4d4b-bbb0-fcd0b21a1a15",
       "version": "1.5.0"
+    },
+    {
+      "slug": "difference-of-squares",
+      "auto_approve": false,
+      "core": false,
+      "deprecated": true,
+      "unlocked_by": null,
+      "uuid": "4cc22c3d-766e-4593-96fe-2e26e06682b8",
+      "version": "1.2.0",
+      "status": "deprecated"
     }
   ]
 }
