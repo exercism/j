@@ -16,6 +16,20 @@
     "indent_size": 0
   },
   "solution_pattern": "example.*[.]ijs",
+  "files": {
+    "solution": [
+      "%{kebab_slug}.ijs"
+    ],
+    "test": [
+      "test.ijs"
+    ],
+    "example": [
+      "example.ijs"
+    ],
+    "exemplar": [
+      ".meta/exemplar.ijs"
+    ]
+  },
   "exercises": {
     "concept": [],
     "practice": [
