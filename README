@@ -2,7 +2,7 @@
 
 #+title: Exercism J Track
 
-[[https://travis-ci.org/exercism/j][https://travis-ci.org/exercism/j.svg?branch=master]]
+[![Configlet Status](https://github.com/exercism/j/workflows/configlet/badge.svg)]
 
 J Exercism.
 
