@@ -16,7 +16,6 @@
     "indent_size": 0,
     "highlightjs_language": "text"
   },
-  "solution_pattern": "example.*[.]ijs",
   "files": {
     "solution": [
       "%{kebab_slug}.ijs"
