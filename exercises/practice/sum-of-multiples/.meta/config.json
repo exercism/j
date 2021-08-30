@@ -14,7 +14,7 @@
       "test.ijs"
     ],
     "example": [
-      "example.ijs"
+      ".meta/example.ijs"
     ]
   },
   "source": "A variation on Problem 1 at Project Euler",
