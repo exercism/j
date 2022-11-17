@@ -1,28 +1,8 @@
 # -*- mode: org -*-
 
-#+title: Exercism J Track
+## Status
 
-[![Configlet Status](https://github.com/exercism/j/workflows/configlet/badge.svg)]
+A fair amount of work has been done to configure this track, including creating a test runner.
+There are 5 implemented exercises for this track.
 
-J Exercism.
-
-#+BEGIN_SRC j :session :exports code :tangle docs/SNIPPET.txt
-floyd_warshall=: <./ .+~ ^: _
-page_rank=: ([: %. =@i.@#@] - *) +/ .* ((]$-.@[%])#@])
-game_of_life=: (3=])`(e.&3 4)@.["0 0[:+/^:2(,"0/~i:1)&(|.!.0)
-#+END_SRC
-
-* Contributing
-
-TBD
-
-
-* TBD
-
-TBD
-
-
-
-* Student facing documentation
-
-[[/student-docs.org][student docs]]
+If you wish to work on this track, please post in the [Exercism Community Forum](https://forum.exercism.org/c/exercism/building-exercism/125) to discuss it with the team.
