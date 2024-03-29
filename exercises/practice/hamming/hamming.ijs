@@ -1,1 +1,1 @@
-hamming=: 'Please implement your verb here.'13!:8 (55)
+hamming=: 'You need to implement this verb.'13!:8 (55)
