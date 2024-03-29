@@ -16,8 +16,8 @@ test_empty_strand=: monad define
   assert 0 0 0 0 -: ntc ''
 )
 
-single_nucleotide_in_single_charachter_input_ignore=: 0
-test_single_nucleotide_in_single_charachter_input=: monad define
+single_nucleotide_in_single_char_input_ignore=: 0
+test_single_nucleotide_in_single_char_input=: monad define
   order=: order , 2
   assert 0 0 1 0 -: ntc 1$'G'
 )
