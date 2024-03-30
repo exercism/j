@@ -4,7 +4,7 @@
   "active": false,
   "status": {
     "concept_exercises": false,
-    "test_runner": false,
+    "test_runner": true,
     "representer": false,
     "analyzer": false
   },
@@ -12,8 +12,11 @@
   "version": 3,
   "online_editor": {
     "indent_style": "space",
-    "indent_size": 0,
+    "indent_size": 2,
     "highlightjs_language": "text"
+  },
+  "test_runner": {
+    "average_run_time": 20
   },
   "files": {
     "solution": [
@@ -23,7 +26,7 @@
       "test.ijs"
     ],
     "example": [
-      "example.ijs"
+      ".meta/example.ijs"
     ],
     "exemplar": [
       ".meta/exemplar.ijs"
@@ -45,7 +48,7 @@
         "uuid": "ab2c70c9-a1db-4be4-bd74-a08fe72ccba8",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 1,
+        "difficulty": 2,
         "status": "deprecated"
       },
       {
@@ -54,7 +57,7 @@
         "uuid": "266be147-836e-42c7-91d0-6c577037c2ff",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 1
+        "difficulty": 2
       },
       {
         "slug": "rna-transcription",
@@ -70,7 +73,7 @@
         "uuid": "e044a725-8509-4978-ad3b-ab0546663986",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 1
+        "difficulty": 4
       },
       {
         "slug": "sum-of-multiples",
@@ -88,14 +91,6 @@
         "prerequisites": [],
         "difficulty": 1,
         "status": "deprecated"
-      },
-      {
-        "slug": "reverse-string",
-        "name": "Reverse String",
-        "uuid": "e6d91fae-6032-4e88-be6a-f276ff210c2a",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 1
       }
     ]
   }
