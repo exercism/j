@@ -93,5 +93,21 @@
         "status": "deprecated"
       }
     ]
-  }
+  },
+  "tags": [
+    "paradigm/declarative",
+    "paradigm/functional",
+    "paradigm/object_oriented",
+    "platform/linux",
+    "platform/windows",
+    "platform/ios",
+    "platform/mac",
+    "platform/android",
+    "runtime/language_specific",
+    "runtime/standalone_executable",
+    "used_for/financial_systems",
+    "used_for/guis",
+    "used_for/scientific_calculations",
+    "used_for/scripts"
+  ]
 }
