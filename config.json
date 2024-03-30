@@ -91,6 +91,14 @@
         "prerequisites": [],
         "difficulty": 1,
         "status": "deprecated"
+      },
+      {
+        "slug": "leap",
+        "name": "Leap",
+        "uuid": "06e07ecf-3e7c-4ee4-8822-a086ad4b3da1",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
       }
     ]
   },
@@ -98,11 +106,11 @@
     "paradigm/declarative",
     "paradigm/functional",
     "paradigm/object_oriented",
-    "platform/linux",
-    "platform/windows",
-    "platform/ios",
-    "platform/mac",
     "platform/android",
+    "platform/ios",
+    "platform/linux",
+    "platform/mac",
+    "platform/windows",
     "runtime/language_specific",
     "runtime/standalone_executable",
     "used_for/financial_systems",
