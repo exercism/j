@@ -1,20 +1,22 @@
 {
-  "track_id": "j",
   "language": "J",
   "slug": "j",
-  "version": 3,
-  "blurb": "J is a terse interpreted array language originally designed by Ken Iverson and Roger Hui. It is great for wholemeal functional programming, supports object orientation, and blazes through numerical vector computations.\n",
   "active": false,
   "status": {
     "concept_exercises": false,
-    "test_runner": false,
+    "test_runner": true,
     "representer": false,
     "analyzer": false
   },
+  "blurb": "J is a terse interpreted array language originally designed by Ken Iverson and Roger Hui. It is great for wholemeal functional programming, supports object orientation, and blazes through numerical vector computations.\n",
+  "version": 3,
   "online_editor": {
     "indent_style": "space",
-    "indent_size": 0,
+    "indent_size": 2,
     "highlightjs_language": "text"
+  },
+  "test_runner": {
+    "average_run_time": 20
   },
   "files": {
     "solution": [
@@ -24,14 +26,13 @@
       "test.ijs"
     ],
     "example": [
-      "example.ijs"
+      ".meta/example.ijs"
     ],
     "exemplar": [
       ".meta/exemplar.ijs"
     ]
   },
   "exercises": {
-    "concept": [],
     "practice": [
       {
         "slug": "hello-world",
@@ -39,8 +40,7 @@
         "uuid": "b59cd640-e925-4570-aa6e-3d903651e9f1",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 1,
-        "version": "1.1.0"
+        "difficulty": 1
       },
       {
         "slug": "hamming",
@@ -48,8 +48,7 @@
         "uuid": "ab2c70c9-a1db-4be4-bd74-a08fe72ccba8",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 1,
-        "version": "2.3.0",
+        "difficulty": 2,
         "status": "deprecated"
       },
       {
@@ -58,8 +57,7 @@
         "uuid": "266be147-836e-42c7-91d0-6c577037c2ff",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 1,
-        "version": "1.3.0"
+        "difficulty": 2
       },
       {
         "slug": "rna-transcription",
@@ -67,8 +65,7 @@
         "uuid": "b6570e32-ed50-4ff9-bc9d-0202aa39b344",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 1,
-        "version": "1.3.0"
+        "difficulty": 1
       },
       {
         "slug": "pascals-triangle",
@@ -76,8 +73,7 @@
         "uuid": "e044a725-8509-4978-ad3b-ab0546663986",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 1,
-        "version": "1.5.0"
+        "difficulty": 4
       },
       {
         "slug": "sum-of-multiples",
@@ -85,8 +81,7 @@
         "uuid": "14555b65-4f96-4d4b-bbb0-fcd0b21a1a15",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 1,
-        "version": "1.5.0"
+        "difficulty": 1
       },
       {
         "slug": "difference-of-squares",
@@ -95,12 +90,24 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 1,
-        "version": "1.2.0",
         "status": "deprecated"
       }
     ]
   },
-  "concepts": [],
-  "key_features": [],
-  "tags": []
+  "tags": [
+    "paradigm/declarative",
+    "paradigm/functional",
+    "paradigm/object_oriented",
+    "platform/linux",
+    "platform/windows",
+    "platform/ios",
+    "platform/mac",
+    "platform/android",
+    "runtime/language_specific",
+    "runtime/standalone_executable",
+    "used_for/financial_systems",
+    "used_for/guis",
+    "used_for/scientific_calculations",
+    "used_for/scripts"
+  ]
 }

@@ -8,7 +8,8 @@ If you run in to any issues with running the tests at all please just submit you
 -   Head to the problem directory (eg `~/Exercism/hello-world`).
 -   Start a `jconsole` session (eg by typing `jconsole` or `ijconsole`) in a terminal.
 -   Load your solution file (eg `load 'hello-world.ijs'`)
--   Test your solution by typing `0!:2 < 'test.ijs'`.
+-   Load the unit test framework by typing `load  'general/unittest'`
+-   Test your solution by typing `unittest 'test.ijs'`.
 
 
 # Terminal
@@ -26,10 +27,14 @@ Then from inside the J console, reload by typing
 load 'hamming.ijs'
 ```
 
+Next Step is load the unit test framework by typing
+```j
+load 'general/unittest'
+```
 To run the tests &#x2013; after you have loaded your solution &#x2013; type
 
 ```j
-0!:2 < 'test.ijs'
+unittest 'test.ijs'
 ```
 
-The verb (aka function) [0!:2](https://code.jsoftware.com/wiki/Vocabulary/Foreigns#m0) is an example of something called a *foreign*. It loads its argument and treats each line of it as an assertion which will be true or false (1 or 0) and prints out the line and the result of checking the assertion. Another option to test is using `0!:3` which won't print for each line but will return 1 if all assertions pass or 0 if something doesn't. `0!:2` and `0!:3` expect boxed strings as their arguments, that's the purpose of `<` above.
+And the observe the results.
