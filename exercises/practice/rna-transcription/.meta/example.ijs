@@ -1,1 +1,1 @@
-rna=: 'UGCA' {~ 'ACGT'&i.
+to_rna=: 'UGCA' {~ 'ACGT'&i.
