@@ -1,1 +1,1 @@
-convert=: ": [^:('' -: ]) ;@(('Pling';'Plang';'Plong') #~ 0 = 3 5 7&|)
+convert=: ": [^:('' -: ]) [: ; ('Pling';'Plang';'Plong') #~ 0 = 3 5 7&|
