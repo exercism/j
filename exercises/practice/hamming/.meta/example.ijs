@@ -1,1 +1,1 @@
-hamming=: +/ .~:
+distance=: +/ . ~:
