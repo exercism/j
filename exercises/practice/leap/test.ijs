@@ -1,65 +1,99 @@
 load 'leap.ijs'
 
+
 before_all=: monad define  
-  order=: i.0
-  tasks=: 1
-)
-
-after_all=: monad define
-  (, LF ,~"1 ": order ,. tasks) 1!:2 < jpath '~temp/helper.txt'
+  (]Description =: (3 : 'descriptions=: i.0')`(3 : 'descriptions=: descriptions , < y'))@.0 ''
+  (]Order       =: (3 : 'order=: i.0')`(3 : 'order=: order , < y'))@.0 ''
+  (]Task        =: (3 : 'tasks=: i.0')`(3 : 'tasks=: tasks , < y'))@.0 '' 
 )
 
 
-not_divisible_by_4_in_common_year_ignore=: 0
-test_not_divisible_by_4_in_common_year  =: monad define
-  order=: order,1
-  assert 0 = leap 2015
+leap_test_01_ignore=: 0
+test_leap_test_01  =: monad define
+  Description@.1 ('year not divisible by 4 in common year')
+  Order@.1 (1)
+  
+  NB. inputs=: year=: 2015
+  NB. Expected=: 0
+  assert 0 = leapYear 2015
 )
 
-div_by_2_but_not_div_by_4_common_year_ignore=: 1 NB. Change this value to 0 to run this test
-test_div_by_2_but_not_div_by_4_common_year  =: monad define
-  order=: order,2
-  assert 0 = leap 1970
+leap_test_02_ignore=: 1 NB. Change this value to 0 to run this test
+test_leap_test_02  =: monad define
+  Description@.1 ('year divisible by 2, not divisible by 4 in common year')
+  Order@.1 (2)
+
+  NB. inputs=: year=: 1970
+  NB. Expected=: 0
+  assert 0 = leapYear 1970
 )
 
-div_by_4_but_not_div_by_100_leap_year_ignore=: 1 NB. Change this value to 0 to run this test
-test_div_by_4_but_not_div_by_100_leap_year  =: monad define
-  order=: order,3
-  assert 1 = leap 1996
+leap_test_03_ignore=: 1 NB. Change this value to 0 to run this test
+test_leap_test_03  =: monad define
+  Description@.1 ('year divisible by 4, not divisible by 100 in leap year')
+  Order@.1 (3)
+
+  NB. inputs=: year=: 1996
+  NB. Expecrted=: 1
+  assert 1 = leapYear 1996
 )
 
-div_by_4_and_5_is_a_leap_year_ignore=: 1 NB. Change this value to 0 to run this test
-test_div_by_4_and_5_is_a_leap_year  =: monad define
-  order=: order,4
-  assert 1 = leap 1960
+leap_test_04_ignore=: 1 NB. Change this value to 0 to run this test
+test_leap_test_04  =: monad define
+  Description@.1 ('year divisible by 4 and 5 is still a leap year')
+  Order@.1 (4)
+
+  NB. inputs=: year=: 1960
+  NB. Expected=: 1
+  assert 1 = leapYear 1960
 )
 
-div_by_100_but_not_div_by_400_common_yea_ignore=: 1 NB. Change this value to 0 to run this test
-test_div_by_100_but_not_div_by_400_common_yea  =: monad define
-  order=: order,5
-  assert 0 = leap 2100
+leap_test_05_ignore=: 1 NB. Change this value to 0 to run this test
+test_leap_test_05  =: monad define
+  Description@.1 ('year divisible by 100, not divisible by 400 in common year')
+  Order@.1 (5)
+
+  NB. inputs=: year=: 2100
+  NB. Expected=: 0
+  assert 0 = leapYear 2100
 )
 
-div_by_100_but_not_by_3_is_not_leap_year_ignore=: 1 NB. Change this value to 0 to run this test
-test_div_by_100_but_not_by_3_is_not_leap_year  =: monad define
-  order=: order,6
-  assert 0 = leap 1900
+leap_test_06_ignore=: 1 NB. Change this value to 0 to run this test
+test_leap_test_06  =: monad define
+  Description@.1 ('year divisible by 100 but not by 3 is still not a leap year')
+  Order@.1 (6)
+
+  NB. inputs=: year=: 1900
+  NB. Expected=: 0
+  assert 0 = leapYear 1900
 )
 
-divisible_by_400_is_leap_year_ignore=: 1 NB. Change this value to 0 to run this test
-test_divisible_by_400_is_leap_year  =: monad define
-  order=: order,7
-  assert 1 = leap 2000
+leap_test_07_ignore=: 1 NB. Change this value to 0 to run this test
+test_leap_test_07  =: monad define
+  Description@.1 ('year divisible by 400 is leap year')
+  Order@.1 (7)
+  
+  NB. inputs=: year=: 2000
+  NB. Expected=: 1
+  assert 1 = leapYear 2000
 )
 
-div_by_400_but_not_by_125_is_a_leap_year_ignore=: 1 NB. Change this value to 0 to run this test
-test_div_by_400_but_not_by_125_is_a_leap_year  =: monad define
-  order=: order,8
-  assert 1 = leap 2400
+leap_test_08_ignore=: 1 NB. Change this value to 0 to run this test
+test_leap_test_08  =: monad define
+  Description@.1 ('year divisible by 400 but not by 125 is still a leap year')
+  Order@.1 (8)
+
+  NB. inputs=: year=: 2400
+  NB. Expected=: 1
+  assert 1 = leapYear 2400
 )
 
-div_by_200_not_div_by_400_in_common_year_ignore=: 1 NB. Change this value to 0 to run this test
-test_div_by_200_not_div_by_400_in_common_year  =: monad define
-  order=: order,9
-  assert 0 = leap 1800
+leap_test_09_ignore=: 1 NB. Change this value to 0 to run this test
+test_leap_test_09  =: monad define
+  Description@.1 ('year divisible by 200, not divisible by 400 in common year')
+  Order@.1 (9)
+
+  NB. inputs=: year=: 1800
+  NB. Expected=: 0
+  assert 0 = leapYear 1800
 )
