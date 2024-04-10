@@ -1,95 +1,186 @@
-load'sum-of-multiples.ijs'
+load 'sum-of-multiples.ijs'
 
-before_all=: monad define
-  order=: i.0
-  tasks=: 1
+
+before_all=: monad define  
+  (]Description =: (3 : 'descriptions=: i.0')`(3 : 'descriptions=: descriptions , < y'))@.0 ''
+  (]Order       =: (3 : 'order=: i.0')`(3 : 'order=: order , < y'))@.0 ''
+  (]Task        =: (3 : 'tasks=: i.0')`(3 : 'tasks=: tasks , < y'))@.0 '' 
 )
 
-after_all=: monad define
-  (, LF ,~"1 ": order ,. tasks) 1!:2 < jpath '~temp/helper.txt'
+
+sum_of_multiples_test_01_ignore=: 0
+test_sum_of_multiples_test_01  =: monad define
+  Description@.1 ('no multiples within limit')
+  Order@.1 (1)
+
+  NB. factors=: 3 5
+  NB. limit=: 1
+  NB. expected=: 0
+  assert 0 = 3 5 sum_of_multiples 1
 )
 
+sum_of_multiples_test_02_ignore=: 1 NB. Change this value to 0 to run this test
+test_sum_of_multiples_test_02  =: monad define
+  Description@.1 ('one factor has multiples within limit')
+  Order@.1 (2)
 
-no_multiples_within_limit_ignore=: 0
-test_no_multiples_within_limit  =: monad define
-  order=: order, 1
-  assert 0 = 3 5 sm 1
+  NB. factors=: 3 5
+  NB. limit=: 4
+  NB. expected=: 3
+  assert 3 = 3 5  sum_of_multiples 4
 )
 
-one_factor_has_multiples_within_limit_ignore=: 1 NB. Change this value to 0 to run this test
-test_one_factor_has_multiples_within_limit  =: monad define
-  order=: order, 2
-  assert 3 = 3 5 sm 4
+sum_of_multiples_test_03_ignore=: 1 NB. Change this value to 0 to run this test
+test_sum_of_multiples_test_03  =: monad define
+  Description@.1 ('more than one multiple within limit')
+  Order@.1 (3)
+
+  NB. factors=: 1$3
+  NB. limit=: 7
+  NB. expected=: 9
+  assert 9 = (1$3) sum_of_multiples 7
 )
 
-more_than_one_multiple_within_limit_ignore=: 1 NB. Change this value to 0 to run this test
-test_more_than_one_multiple_within_limit  =: monad define
-  order=: order, 3
-  assert 9 = (1$3) sm 7
+sum_of_multiples_test_04_ignore=: 1 NB. Change this value to 0 to run this test
+test_sum_of_multiples_test_04  =: monad define
+  Description@.1 ('more than one factor with multiples within limit')
+  Order@.1 (4)
+
+  NB. factors=: 3 5
+  NB. limit=: 10
+  NB. expected=: 23
+  assert 23 = 3 5 sum_of_multiples 10
 )
 
-more_than_one_fact_w_multpl_within_lim_ignore=: 1 NB. Change this value to 0 to run this test
-test_more_than_one_fact_w_multpl_within_lim  =: monad define
-  order=: order, 4
-  assert 23 = 3 5 sm 10
+sum_of_multiples_test_05_ignore=: 1 NB. Change this value to 0 to run this test
+test_sum_of_multiples_test_05  =: monad define
+  Description@.1 ('each multiple is only counted once')
+  Order@.1 (5)
+
+  NB. factors=: 3 5
+  NB. limit=: 100
+  NB. expected=: 2318
+  assert 2318 = 3 5 sum_of_multiples 100
 )
 
-each_multiple_is_only_counted_once_ignore=: 1 NB. Change this value to 0 to run this test
-test_each_multiple_is_only_counted_once  =: monad define
-  order=: order, 5
-  assert 2318 = 3 5 sm 100
+sum_of_multiples_test_06_ignore=: 1 NB. Change this value to 0 to run this test
+test_sum_of_multiples_test_06  =: monad define
+  Description@.1 ('a much larger limit')
+  Order@.1 (6)
+
+  NB. factors=: 3 5
+  NB. limit=: 1000
+  NB. expected=: 233168
+  assert 233168 = 3 5 sum_of_multiples 100
 )
 
-a_much_larger_limit_ignore=: 1 NB. Change this value to 0 to run this test
-test_a_much_larger_limit  =: monad define
-  order=: order, 6
-  assert 233168 = 3 5 sm 1000
+sum_of_multiples_test_07_ignore=: 1 NB. Change this value to 0 to run this test
+test_sum_of_multiples_test_07  =: monad define
+  Description@.1 ('three factors')
+  Order@.1 (7)
+
+  NB. factors=: 7 13 17
+  NB. limit=: 20
+  NB. expected=: 51
+  assert 51 = 7 13 17 sum_of_multiples 20
 )
 
-three_factors_ignore=: 1 NB. Change this value to 0 to run this test
-test_three_factors  =: monad define
-  order=: order, 7
-  assert 51 = 7 13 17 sm 20
+sum_of_multiples_test_08_ignore=: 1 NB. Change this value to 0 to run this test
+test_sum_of_multiples_test_08  =: monad define
+  Description@.1 ('factors not relatively prime')
+  Order@.1 (8)
+
+  NB. factors=: 4 6
+  NB. limit=: 15
+  NB. expected=: 30
+  assert 30 = (1$15) sum_of_multiples 30
 )
 
-factors_not_relatively_prime_ignore=: 1 NB. Change this value to 0 to run this test
-test_factors_not_relatively_prime  =: monad define
-  order=: order, 8
-  assert 30 = 4 6 sm 15
+sum_of_multiples_test_09_ignore=: 1 NB. Change this value to 0 to run this test
+test_sum_of_multiples_test_09  =: monad define
+  Description@.1 ('some pairs of factors relatively prime and some not')
+  Order@.1 (9)
+
+  NB. factors=: 5 6 8
+  NB. limit=: 150
+  NB. expected=: 4419
+  assert 4419 = 5 6 8 sum_of_multiples 150
 )
 
-one_factor_is_a_multiple_of_another_ignore=: 1 NB. Change this value to 0 to run this test
-test_one_factor_is_a_multiple_of_another  =: monad define
-  order=: order, 9
-  assert 275 = 5 25 sm 51
+sum_of_multiples_test_10_ignore=: 1 NB. Change this value to 0 to run this test
+test_sum_of_multiples_test_10  =: monad define
+  Description@.1 ('one factor is a multiple of another')
+  Order@.1 (10)
+
+  NB. factors=: 5 25
+  NB. limit=: 51
+  NB. expected=: 275
+  assert 275 = 5 25 sum_of_multiples 275
 )
 
-much_larger_factors_ignore=: 1 NB. Change this value to 0 to run this test
-test_much_larger_factors  =: monad define
-  order=: order, 10
-  assert 2203160 = 43 47 sm 10000
+sum_of_multiples_test_11_ignore=: 1 NB. Change this value to 0 to run this test
+test_sum_of_multiples_test_11  =: monad define
+  Description@.1 ('much larger factors')
+  Order@.1 (11)
+
+  NB. factors=: 43 47
+  NB. limit=: 10000
+  NB. expected=: 2203160
+  assert 2203160 =  43 47 sum_of_multiples 10000
 )
 
-all_numbers_are_multiples_of_1_ignore=: 1 NB. Change this value to 0 to run this test
-test_all_numbers_are_multiples_of_1  =: monad define
-  order=: order, 11
-  assert 4950 = (1$1) sm 100
+sum_of_multiples_test_12_ignore=: 1 NB. Change this value to 0 to run this test
+test_sum_of_multiples_test_12  =: monad define
+  Description@.1 ('all numbers are multiples of 1')
+  Order@.1 (12)
+
+  NB. factors=: 1$1
+  NB. limit=: 100
+  NB. expected=: 4950
+  assert 4950 = (1$1) sum_of_multiples 100
 )
 
-the_only_multiple_of_0_is_0_ignore=: 1 NB. Change this value to 0 to run this test
-test_the_only_multiple_of_0_is_0  =: monad define
-  order=: order, 12
-  assert 0 = 0 sm 1
+sum_of_multiples_test_13_ignore=: 1 NB. Change this value to 0 to run this test
+test_sum_of_multiples_test_13  =: monad define
+  Description@.1 ('no factors means an empty sum')
+  Order@.1 (13)
+
+  NB. factors=: (1$'')
+  NB. limit=: 10000
+  NB. expected=: 0
+  assert 0 = (1$'') sum_of_multiples 10000
 )
 
-factor_0_not_affect_sum_of_other_factors_ignore=: 1 NB. Change this value to 0 to run this test
-test_factor_0_not_affect_sum_of_other_factors  =: monad define
-  order=: order, 13
-  assert 3 = 3 0 sm 4
+sum_of_multiples_test_14_ignore=: 1 NB. Change this value to 0 to run this test
+test_sum_of_multiples_test_14  =: monad define
+  Description@.1 ('the only multiple of 0 is 0')
+  Order@.1 (14)
+
+  NB. factors=: 1$0
+  NB. limit=: 1
+  NB. expected=: 0
+  assert 0 = (1$0) sum_of_multiples 1
 )
 
-items_set_has_cardinality_greater_than_3_ignore=: 1 NB. Change this value to 0 to run this test
-test_items_set_has_cardinality_greater_than_3  =: monad define
-  order=: order, 14
-  assert 39614537 = 2 3 5 7 11 sm 10000
+sum_of_multiples_test_15_ignore=: 1 NB. Change this value to 0 to run this test
+test_sum_of_multiples_test_15  =: monad define
+  Description@.1 ('the factor 0 does not affect the sum of multiples of other factors')
+  Order@.1 (15)
+
+  NB. factors=: 3 0
+  NB. limit=: 4
+  NB. expected=: 3
+  assert 3 = 3 0 sum_of_multiples 4
 )
+
+sum_of_multiples_test_16_ignore=: 1 NB. Change this value to 0 to run this test
+test_sum_of_multiples_test_16  =: monad define
+  Description@.1 ('solutions using include-exclude must extend to cardinality greater than 3')
+  Order@.1 (16)
+
+  NB. factors=: 2 3 5 7 11
+  NB. limit=: 10000
+  NB. expected=: 39614537
+  assert 39614537 = 2 3 5 7 11 sum_of_multiples 10000
+)
+
