@@ -16,7 +16,7 @@ test_sum_of_multiples_test_01  =: monad define
   NB. factors=. 3 5
   NB. limit=. 1
   NB. expected=. 0
-  assert 0 = 3 5 sum_of_multiples 1
+  assert 0 = 3 5 sum 1
 )
 
 sum_of_multiples_test_02_ignore=: 1 NB. Change this value to 0 to run this test
@@ -27,7 +27,7 @@ test_sum_of_multiples_test_02  =: monad define
   NB. factors=. 3 5
   NB. limit=. 4
   NB. expected=. 3
-  assert 3 = 3 5  sum_of_multiples 4
+  assert 3 = 3 5  sum 4
 )
 
 sum_of_multiples_test_03_ignore=: 1 NB. Change this value to 0 to run this test
@@ -38,7 +38,7 @@ test_sum_of_multiples_test_03  =: monad define
   NB. factors=. 1$3
   NB. limit=. 7
   NB. expected=. 9
-  assert 9 = (1$3) sum_of_multiples 7
+  assert 9 = (1$3) sum 7
 )
 
 sum_of_multiples_test_04_ignore=: 1 NB. Change this value to 0 to run this test
@@ -49,7 +49,7 @@ test_sum_of_multiples_test_04  =: monad define
   NB. factors=. 3 5
   NB. limit=. 10
   NB. expected=. 23
-  assert 23 = 3 5 sum_of_multiples 10
+  assert 23 = 3 5 sum 10
 )
 
 sum_of_multiples_test_05_ignore=: 1 NB. Change this value to 0 to run this test
@@ -60,7 +60,7 @@ test_sum_of_multiples_test_05  =: monad define
   NB. factors=. 3 5
   NB. limit=. 100
   NB. expected=. 2318
-  assert 2318 = 3 5 sum_of_multiples 100
+  assert 2318 = 3 5 sum 100
 )
 
 sum_of_multiples_test_06_ignore=: 1 NB. Change this value to 0 to run this test
@@ -71,7 +71,7 @@ test_sum_of_multiples_test_06  =: monad define
   NB. factors=. 3 5
   NB. limit=. 1000
   NB. expected=. 233168
-  assert 233168 = 3 5 sum_of_multiples 100
+  assert 233168 = 3 5 sum 100
 )
 
 sum_of_multiples_test_07_ignore=: 1 NB. Change this value to 0 to run this test
@@ -82,7 +82,7 @@ test_sum_of_multiples_test_07  =: monad define
   NB. factors=. 7 13 17
   NB. limit=. 20
   NB. expected=. 51
-  assert 51 = 7 13 17 sum_of_multiples 20
+  assert 51 = 7 13 17 sum 20
 )
 
 sum_of_multiples_test_08_ignore=: 1 NB. Change this value to 0 to run this test
@@ -93,7 +93,7 @@ test_sum_of_multiples_test_08  =: monad define
   NB. factors=. 4 6
   NB. limit=. 15
   NB. expected=. 30
-  assert 30 = (1$15) sum_of_multiples 30
+  assert 30 = (1$15) sum 30
 )
 
 sum_of_multiples_test_09_ignore=: 1 NB. Change this value to 0 to run this test
@@ -104,7 +104,7 @@ test_sum_of_multiples_test_09  =: monad define
   NB. factors=. 5 6 8
   NB. limit=. 150
   NB. expected=. 4419
-  assert 4419 = 5 6 8 sum_of_multiples 150
+  assert 4419 = 5 6 8 sum 150
 )
 
 sum_of_multiples_test_10_ignore=: 1 NB. Change this value to 0 to run this test
@@ -115,7 +115,7 @@ test_sum_of_multiples_test_10  =: monad define
   NB. factors=. 5 25
   NB. limit=. 51
   NB. expected=. 275
-  assert 275 = 5 25 sum_of_multiples 275
+  assert 275 = 5 25 sum 275
 )
 
 sum_of_multiples_test_11_ignore=: 1 NB. Change this value to 0 to run this test
@@ -126,7 +126,7 @@ test_sum_of_multiples_test_11  =: monad define
   NB. factors=. 43 47
   NB. limit=. 10000
   NB. expected=. 2203160
-  assert 2203160 =  43 47 sum_of_multiples 10000
+  assert 2203160 =  43 47 sum 10000
 )
 
 sum_of_multiples_test_12_ignore=: 1 NB. Change this value to 0 to run this test
@@ -137,7 +137,7 @@ test_sum_of_multiples_test_12  =: monad define
   NB. factors=. 1$1
   NB. limit=. 100
   NB. expected=. 4950
-  assert 4950 = (1$1) sum_of_multiples 100
+  assert 4950 = (1$1) sum 100
 )
 
 sum_of_multiples_test_13_ignore=: 1 NB. Change this value to 0 to run this test
@@ -148,7 +148,7 @@ test_sum_of_multiples_test_13  =: monad define
   NB. factors=. (1$'')
   NB. limit=. 10000
   NB. expected=. 0
-  assert 0 = (1$'') sum_of_multiples 10000
+  assert 0 = (1$'') sum 10000
 )
 
 sum_of_multiples_test_14_ignore=: 1 NB. Change this value to 0 to run this test
@@ -159,7 +159,7 @@ test_sum_of_multiples_test_14  =: monad define
   NB. factors=. 1$0
   NB. limit=. 1
   NB. expected=. 0
-  assert 0 = (1$0) sum_of_multiples 1
+  assert 0 = (1$0) sum 1
 )
 
 sum_of_multiples_test_15_ignore=: 1 NB. Change this value to 0 to run this test
@@ -170,7 +170,7 @@ test_sum_of_multiples_test_15  =: monad define
   NB. factors=. 3 0
   NB. limit=. 4
   NB. expected=. 3
-  assert 3 = 3 0 sum_of_multiples 4
+  assert 3 = 3 0 sum 4
 )
 
 sum_of_multiples_test_16_ignore=: 1 NB. Change this value to 0 to run this test
@@ -181,6 +181,6 @@ test_sum_of_multiples_test_16  =: monad define
   NB. factors=. 2 3 5 7 11
   NB. limit=. 10000
   NB. expected=. 39614537
-  assert 39614537 = 2 3 5 7 11 sum_of_multiples 10000
+  assert 39614537 = 2 3 5 7 11 sum 10000
 )
 
