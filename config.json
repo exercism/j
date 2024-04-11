@@ -48,8 +48,7 @@
         "uuid": "ab2c70c9-a1db-4be4-bd74-a08fe72ccba8",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 2,
-        "status": "deprecated"
+        "difficulty": 2
       },
       {
         "slug": "nucleotide-count",
@@ -89,8 +88,7 @@
         "uuid": "4cc22c3d-766e-4593-96fe-2e26e06682b8",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 1,
-        "status": "deprecated"
+        "difficulty": 1
       },
       {
         "slug": "leap",
