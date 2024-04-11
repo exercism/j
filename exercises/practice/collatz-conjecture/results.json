@@ -1,0 +1,42 @@
+{
+  "version": 3,
+  "status": "pass",
+  "tests": [
+    {
+      "status": "pass",
+      "name": "zero steps for one",
+      "message": "OK",
+      "task_id": "1"
+    },
+    {
+      "status": "pass",
+      "name": "divide if even",
+      "message": "OK",
+      "task_id": "1"
+    },
+    {
+      "status": "pass",
+      "name": "even and odd steps",
+      "message": "OK",
+      "task_id": "1"
+    },
+    {
+      "status": "pass",
+      "name": "large number of even and odd steps",
+      "message": "OK",
+      "task_id": "1"
+    },
+    {
+      "status": "pass",
+      "name": "zero is an error",
+      "message": "OK",
+      "task_id": "1"
+    },
+    {
+      "status": "pass",
+      "name": "negative value is an error",
+      "message": "OK",
+      "task_id": "1"
+    }
+  ]
+}
