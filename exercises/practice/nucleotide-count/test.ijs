@@ -56,5 +56,5 @@ test_nucleotide_counts_test_05  =: monad define
   
   strand=. 'AGXXACT'
   NB. expected=. 'domain error'
-  assert (>@{: 9!:8 '') -: nucleotide_counts strand
+  assert nucleotide_counts strand
 )

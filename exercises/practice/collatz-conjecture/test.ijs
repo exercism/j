@@ -56,17 +56,17 @@ test_collatz_conjecture_test_05  =: monad define
 
   NB. number=. 0
   NB. expected=. error=. 'Only positive integers are allowed: domain'
-  steps 0
+  assert steps 0
 )
 
 collatz_conjecture_test_06_ignore=: 1 NB. Change this value to 0 to run this test
-collatz_conjecture_test_06_expect=: 'domain error'
+collatz_conjecture_test_06_expect=: 'value error'
 test_collatz_conjecture_test_06  =: monad define
   Description@.1 ('negative value is an error')
   Order@.1 (6)
 
   NB. number=. _15
   NB. expected=. error=. 'Only positive integers are allowed: domain'
-  steps _15
+  assert steps _15
 )
 
