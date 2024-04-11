@@ -13,19 +13,16 @@
     * valentines-day
 
 * Easy exercises with basics in mind
-    * leap
-        - Could direct the user to try a tacit approach using operations on lists.
-    * raindrops 
-        - Several way of use conditionals in J: ```^:n```, ```{``` with boxed structures, ```if. ... elseif. ... else.```, etc.
-    * collatz-conjecture
-        - Can be a good introduction to ```^:_```.
+    * leap - **Done**
+    * raindrops **Done**
+    * collatz-conjecture **Done**
     * grade-school
         - operations using boxed structures.
     * twelve-days
 
 * 48in24
-    * spiral-matrix
-    * pangram
+    * spiral-matrix **Done**
+    * pangram **Done**
     * all-your-base
         - Seems trivial but it's not:
             - Solution can be constructed with combinations of `#.`, `#:`, `p.` and `while.`.
