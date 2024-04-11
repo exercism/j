@@ -14,8 +14,8 @@ test_square_of_sum_test_01  =: monad define
   Order@.1 (1)
   Task@.1 (1)
   
-  NB. Inputs=: 1
-  NB. Expected=: 1
+  NB. number=. 1
+  NB. expected=. 1
   assert 1 = square_of_sum 1
 )
 
@@ -25,8 +25,8 @@ test_square_of_sum_test_02  =: monad define
   Order@.1 (2)
   Task@.1 (1)
   
-  NB. Inputs=: 5
-  NB. Expected=: 225
+  NB. number=. 5
+  NB. expected=. 225
   assert 225 = square_of_sum 5
 )
 
@@ -36,8 +36,8 @@ test_square_of_sum_test_03  =: monad define
   Order@.1 (3)
   Task@.1 (1)
   
-  NB. Inputs=: 100
-  NB. Expected=: 25502500
+  NB. number=. 100
+  NB. expected=. 25502500
   assert 25502500 = square_of_sum 100
 )
 
@@ -47,8 +47,8 @@ test_sum_of_square_test_01  =: monad define
   Order@.1 (4)
   Task@.1 (2)
   
-  NB. Inputs=: 1
-  NB. Expected=: 1
+  NB. number=. 1
+  NB. expected=. 1
   assert 1 = sum_of_square 1
 )
 
@@ -58,8 +58,8 @@ test_sum_of_square_test_02  =: monad define
   Order@.1 (5)
   Task@.1 (2)
   
-  NB. Inputs=: 5
-  NB. Expected=: 55
+  NB. number=. 5
+  NB. expected=. 55
   assert 55 = sum_of_square 5
 )
 
@@ -69,8 +69,8 @@ test_sum_of_square_test_03  =: monad define
   Order@.1 (6)
   Task@.1 (2)
   
-  NB. Inputs=: 100
-  NB. Expected=: 338350
+  NB. number=. 100
+  NB. expected=. 338350
   assert 338350 = sum_of_square 100
 )
 
@@ -80,8 +80,8 @@ test_difference_of_squares_test_01  =: monad define
   Order@.1 (7)
   Task@.1 (3)
   
-  NB. Inputs=: 1
-  NB. Expected=: 0
+  NB. number=. 1
+  NB. expected=. 0
   assert 0 = difference_of_squares 1
 )
 
@@ -91,8 +91,8 @@ test_difference_of_squares_test_02  =: monad define
   Order@.1 (8)
   Task@.1 (3)
   
-  NB. Inputs=: 5
-  NB. Expected=: 170
+  NB. number=. 5
+  NB. expected=. 170
   assert 170 = difference_of_squares 5
 )
 
@@ -102,7 +102,7 @@ test_difference_of_squares_test_03  =: monad define
   Order@.1 (9)
   Task@.1 (3)
   
-  NB. Inputs=: 100
-  NB. Expected=: 25164150
+  NB. number=. 100
+  NB. expected=. 25164150
   assert 25164150 = difference_of_squares 100
 )

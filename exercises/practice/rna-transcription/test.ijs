@@ -13,7 +13,7 @@ test_rna_transcription_test_01  =: monad define
   Description@.1 ('Empty RNA sequence')
   Order@.1 (1)
   
-  NB. expected=: ''
+  NB. expected=. ''
   assert '' -: to_rna ''
 )
 
@@ -22,7 +22,7 @@ test_rna_transcription_test_02  =: monad define
   Description@.1 ('RNA complement of cytosine is guanine')
   Order@.1 (2)
   
-  NB. expected=: 'C'
+  NB. expected=. 'C'
   assert 'C' -: to_rna 'G'
 )
 
@@ -31,7 +31,7 @@ test_rna_transcription_test_03  =: monad define
   Description@.1 ('RNA complement of guanine is cytosine')
   Order@.1 (3)
   
-  NB. expected=: 'G'
+  NB. expected=. 'G'
   assert 'G' -: to_rna 'C'
 )
 
@@ -40,7 +40,7 @@ test_rna_transcription_test_04  =: monad define
   Description@.1 ('RNA complement of thymine is adenine')
   Order@.1 (4)
   
-  NB. expected=: 'A'
+  NB. expected=. 'A'
   assert 'A' -: to_rna'T'
 )
 
@@ -49,7 +49,7 @@ test_rna_transcription_test_05  =: monad define
   Description@.1 ('RNA complement of adenine is uracil')
   Order@.1 (5)
   
-  NB. expected=: 'U'
+  NB. expected=. 'U'
   assert 'U' -: to_rna'A'
 )
 
@@ -58,6 +58,6 @@ test_rna_transcription_test_06  =: monad define
   Description@.1 ('RNA complement')
   Order@.1 (6)
   
-  NB. expected=: 'UGCACCAGAAUU'
+  NB. expected=. 'UGCACCAGAAUU'
   assert 'UGCACCAGAAUU' -: to_rna 'ACGTGGTCTTAA'
 )
