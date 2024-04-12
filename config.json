@@ -48,8 +48,7 @@
         "uuid": "ab2c70c9-a1db-4be4-bd74-a08fe72ccba8",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 2,
-        "status": "deprecated"
+        "difficulty": 2
       },
       {
         "slug": "nucleotide-count",
@@ -57,7 +56,8 @@
         "uuid": "266be147-836e-42c7-91d0-6c577037c2ff",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 2
+        "difficulty": 2,
+        "status": "wip"
       },
       {
         "slug": "rna-transcription",
@@ -89,8 +89,48 @@
         "uuid": "4cc22c3d-766e-4593-96fe-2e26e06682b8",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 1,
-        "status": "deprecated"
+        "difficulty": 1
+      },
+      {
+        "slug": "leap",
+        "name": "Leap",
+        "uuid": "06e07ecf-3e7c-4ee4-8822-a086ad4b3da1",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
+      },
+      {
+        "slug": "raindrops",
+        "name": "Raindrops",
+        "uuid": "1cfddb90-7fe2-4fbf-9402-f80eeb7cd360",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
+      },
+      {
+        "slug": "collatz-conjecture",
+        "name": "Collatz Conjecture",
+        "uuid": "33b094c3-52e5-443b-b56d-63dadb74cb79",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3,
+        "status": "wip"
+      },
+      {
+        "slug": "spiral-matrix",
+        "name": "Spiral Matrix",
+        "uuid": "0d48ff89-6024-4a02-9fe7-b6a8238e6171",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 6
+      },
+      {
+        "slug": "pangram",
+        "name": "Pangram",
+        "uuid": "daffe95d-fce2-4199-bd43-f95d91fd16ee",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
       }
     ]
   },
@@ -98,11 +138,11 @@
     "paradigm/declarative",
     "paradigm/functional",
     "paradigm/object_oriented",
-    "platform/linux",
-    "platform/windows",
-    "platform/ios",
-    "platform/mac",
     "platform/android",
+    "platform/ios",
+    "platform/linux",
+    "platform/mac",
+    "platform/windows",
     "runtime/language_specific",
     "runtime/standalone_executable",
     "used_for/financial_systems",

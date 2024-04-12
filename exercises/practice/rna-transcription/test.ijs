@@ -1,47 +1,63 @@
-load'rna-transcription.ijs'
+load 'rna-transcription.ijs'
 
-before_all=: monad define
-  order=: i.0
-  tasks=: 1
+
+before_all=: monad define  
+  (]Description =: (3 : 'descriptions=: i.0')`(3 : 'descriptions=: descriptions , < y'))@.0 ''
+  (]Order       =: (3 : 'order=: i.0')`(3 : 'order=: order , < y'))@.0 ''
+  (]Task        =: (3 : 'tasks=: i.0')`(3 : 'tasks=: tasks , < y'))@.0 '' 
 )
 
-after_all=: monad define
-  (, LF ,~"1 ": order ,. tasks) 1!:2 < jpath '~temp/helper.txt'
+
+rna_transcription_test_01_ignore=: 0
+test_rna_transcription_test_01  =: monad define
+  Description@.1 ('Empty RNA sequence')
+  Order@.1 (1)
+  
+  NB. expected=. ''
+  assert '' -: to_rna ''
 )
 
-
-empty_rna_sequence_ignore=: 0
-test_empty_rna_sequence  =: monad define
-  order=: order, 1
-  assert '' -: rna''
+rna_transcription_test_02_ignore=: 1 NB. Change this value to 0 to run this test
+test_rna_transcription_test_02  =: monad define
+  Description@.1 ('RNA complement of cytosine is guanine')
+  Order@.1 (2)
+  
+  NB. expected=. 'C'
+  assert 'C' -: to_rna 'G'
 )
 
-rna_complement_of_cytosine_is_guanine_ignore=: 1 NB. Change this value to 0 to run this test
-test_rna_complement_of_cytosine_is_guanine  =: monad define
-  order=: order, 2
-  assert 'C' -: rna 'G'
+rna_transcription_test_03_ignore=: 1 NB. Change this value to 0 to run this test
+test_rna_transcription_test_03  =: monad define
+  Description@.1 ('RNA complement of guanine is cytosine')
+  Order@.1 (3)
+  
+  NB. expected=. 'G'
+  assert 'G' -: to_rna 'C'
 )
 
-rna_complement_of_guanine_is_cytosine_ignore=: 1 NB. Change this value to 0 to run this test
-test_rna_complement_of_guanine_is_cytosine  =: monad define
-  order=: order, 3
-  assert 'G' -: rna 'C'
+rna_transcription_test_04_ignore=: 1 NB. Change this value to 0 to run this test
+test_rna_transcription_test_04  =: monad define
+  Description@.1 ('RNA complement of thymine is adenine')
+  Order@.1 (4)
+  
+  NB. expected=. 'A'
+  assert 'A' -: to_rna'T'
 )
 
-rna_complement_of_thymine_is_adenine_ignore=: 1 NB. Change this value to 0 to run this test
-test_rna_complement_of_thymine_is_adenine  =: monad define
-  order=: order, 4
-  assert 'A' -: rna 'T'
+rna_transcription_test_05_ignore=: 1 NB. Change this value to 0 to run this test
+test_rna_transcription_test_05  =: monad define
+  Description@.1 ('RNA complement of adenine is uracil')
+  Order@.1 (5)
+  
+  NB. expected=. 'U'
+  assert 'U' -: to_rna'A'
 )
 
-rna_complement_of_adenine_is_uracil_ignore=: 1 NB. Change this value to 0 to run this test
-test_rna_complement_of_adenine_is_uracil  =: monad define
-  order=: order, 5
-  assert 'U' -: rna 'A'
-)
-
-rna_complement_ignore=: 1 NB. Change this value to 0 to run this test
-test_rna_complement  =: monad define
-  order=: order, 6
-  assert 'UGCACCAGAAUU' -: rna 'ACGTGGTCTTAA'
+rna_transcription_test_06_ignore=: 1 NB. Change this value to 0 to run this test
+test_rna_transcription_test_06  =: monad define
+  Description@.1 ('RNA complement')
+  Order@.1 (6)
+  
+  NB. expected=. 'UGCACCAGAAUU'
+  assert 'UGCACCAGAAUU' -: to_rna 'ACGTGGTCTTAA'
 )
