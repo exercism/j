@@ -140,6 +140,14 @@
         "prerequisites": [],
         "difficulty": 3,
         "status": "wip"
+      },
+      {
+        "slug": "space-age",
+        "name": "Space Age",
+        "uuid": "153fa031-c66d-4aa3-9170-04bcef95bd18",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
       }
     ]
   },
