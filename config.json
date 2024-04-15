@@ -56,8 +56,7 @@
         "uuid": "266be147-836e-42c7-91d0-6c577037c2ff",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 2,
-        "status": "wip"
+        "difficulty": 1
       },
       {
         "slug": "rna-transcription",
@@ -113,8 +112,7 @@
         "uuid": "33b094c3-52e5-443b-b56d-63dadb74cb79",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 3,
-        "status": "wip"
+        "difficulty": 2
       },
       {
         "slug": "spiral-matrix",
@@ -138,8 +136,7 @@
         "uuid": "85a6d24e-a4a8-405b-8a09-29e294439e61",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 3,
-        "status": "wip"
+        "difficulty": 3
       },
       {
         "slug": "space-age",
