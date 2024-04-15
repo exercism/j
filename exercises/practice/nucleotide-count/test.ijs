@@ -48,6 +48,10 @@ test_nucleotide_counts_test_04  =: monad define
   assert 20 12 17 21 -: nucleotide_counts strand
 )
 
+
+NB. Error cases
+NB. ===============================================================================================
+
 nucleotide_counts_test_05_ignore=: 1 NB. Change this value to 0 to run this test
 nucleotide_counts_test_05_expect=: 'domain error'
 test_nucleotide_counts_test_05  =: monad define
@@ -56,5 +60,5 @@ test_nucleotide_counts_test_05  =: monad define
   
   strand=. 'AGXXACT'
   NB. expected=. 'domain error'
-  assert nucleotide_counts strand
+  assert 0 = nucleotide_counts strand
 )
