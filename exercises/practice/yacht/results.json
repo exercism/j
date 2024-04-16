@@ -1,0 +1,180 @@
+{
+  "version": 3,
+  "status": "pass",
+  "tests": [
+    {
+      "status": "pass",
+      "name": "Yacht",
+      "message": "OK",
+      "task_id": "1"
+    },
+    {
+      "status": "pass",
+      "name": "Not Yacht",
+      "message": "OK",
+      "task_id": "1"
+    },
+    {
+      "status": "pass",
+      "name": "Ones",
+      "message": "OK",
+      "task_id": "1"
+    },
+    {
+      "status": "pass",
+      "name": "Ones, out of order",
+      "message": "OK",
+      "task_id": "1"
+    },
+    {
+      "status": "pass",
+      "name": "No ones",
+      "message": "OK",
+      "task_id": "1"
+    },
+    {
+      "status": "pass",
+      "name": "Twos",
+      "message": "OK",
+      "task_id": "1"
+    },
+    {
+      "status": "pass",
+      "name": "Fours",
+      "message": "OK",
+      "task_id": "1"
+    },
+    {
+      "status": "pass",
+      "name": "Yacht counted as threes",
+      "message": "OK",
+      "task_id": "1"
+    },
+    {
+      "status": "pass",
+      "name": "Yacht of 3s counted as fives",
+      "message": "OK",
+      "task_id": "1"
+    },
+    {
+      "status": "pass",
+      "name": "Fives",
+      "message": "OK",
+      "task_id": "1"
+    },
+    {
+      "status": "pass",
+      "name": "Sixes",
+      "message": "OK",
+      "task_id": "1"
+    },
+    {
+      "status": "pass",
+      "name": "Full house two small, three big",
+      "message": "OK",
+      "task_id": "1"
+    },
+    {
+      "status": "pass",
+      "name": "Full house three small, two big",
+      "message": "OK",
+      "task_id": "1"
+    },
+    {
+      "status": "pass",
+      "name": "Two pair is not a full_house",
+      "message": "OK",
+      "task_id": "1"
+    },
+    {
+      "status": "pass",
+      "name": "Four of a kind is not a full_house",
+      "message": "OK",
+      "task_id": "1"
+    },
+    {
+      "status": "pass",
+      "name": "Yacht is not a full_house",
+      "message": "OK",
+      "task_id": "1"
+    },
+    {
+      "status": "pass",
+      "name": "Four of a Kind",
+      "message": "OK",
+      "task_id": "1"
+    },
+    {
+      "status": "pass",
+      "name": "Yacht can be scored as Four of a Kind",
+      "message": "OK",
+      "task_id": "1"
+    },
+    {
+      "status": "pass",
+      "name": "Full house is not Four of a Kind",
+      "message": "OK",
+      "task_id": "1"
+    },
+    {
+      "status": "pass",
+      "name": "Little Straight",
+      "message": "OK",
+      "task_id": "1"
+    },
+    {
+      "status": "pass",
+      "name": "Little Straight as Big Straight",
+      "message": "OK",
+      "task_id": "1"
+    },
+    {
+      "status": "pass",
+      "name": "Four in order but not a little_straight",
+      "message": "OK",
+      "task_id": "1"
+    },
+    {
+      "status": "pass",
+      "name": "No pairs but not a little_straight",
+      "message": "OK",
+      "task_id": "1"
+    },
+    {
+      "status": "pass",
+      "name": "Minimum is 1, maximum is 5, but not a little_straight",
+      "message": "OK",
+      "task_id": "1"
+    },
+    {
+      "status": "pass",
+      "name": "Big Straight",
+      "message": "OK",
+      "task_id": "1"
+    },
+    {
+      "status": "pass",
+      "name": "Big Straight as little_straight",
+      "message": "OK",
+      "task_id": "1"
+    },
+    {
+      "status": "pass",
+      "name": "No pairs but not a big_straight",
+      "message": "OK",
+      "task_id": "1"
+    },
+    {
+      "status": "pass",
+      "name": "Choice",
+      "message": "OK",
+      "task_id": "1"
+    },
+    {
+      "status": "pass",
+      "name": "Yacht as choice",
+      "message": "OK",
+      "task_id": "1"
+    }
+  ]
+}

@@ -56,8 +56,7 @@
         "uuid": "266be147-836e-42c7-91d0-6c577037c2ff",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 2,
-        "status": "wip"
+        "difficulty": 1
       },
       {
         "slug": "rna-transcription",
@@ -113,8 +112,7 @@
         "uuid": "33b094c3-52e5-443b-b56d-63dadb74cb79",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 3,
-        "status": "wip"
+        "difficulty": 2
       },
       {
         "slug": "spiral-matrix",
@@ -131,6 +129,38 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 2
+      },
+      {
+        "slug": "all-your-base",
+        "name": "All Your Base",
+        "uuid": "85a6d24e-a4a8-405b-8a09-29e294439e61",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
+        "slug": "space-age",
+        "name": "Space Age",
+        "uuid": "153fa031-c66d-4aa3-9170-04bcef95bd18",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
+      },
+      {
+        "slug": "dnd-character",
+        "name": "D&D Character",
+        "uuid": "cd93b8de-7419-4266-acfd-d44935d9cca2",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
+        "slug": "yacht",
+        "name": "Yacht",
+        "uuid": "a6316654-da7f-4c7d-9468-8a49fca0dd91",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 6
       }
     ]
   },

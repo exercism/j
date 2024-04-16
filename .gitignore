@@ -7,4 +7,5 @@ Generator/canonical-data.json
 Generator/sample_leap.json
 Generator/Test-Generator.fsx
 TODO.md
-TODO.md
+Generator/Test-Generator-2.fsx
+Generator/dnd-sample-mod.json
