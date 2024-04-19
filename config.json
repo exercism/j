@@ -161,6 +161,38 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 6
+      },
+      {
+        "slug": "secret-handshake",
+        "name": "Secret Handshake",
+        "uuid": "3faf400f-6b19-45bc-ab0c-902ed7e57ba5",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
+        "slug": "anagram",
+        "name": "Anagram",
+        "uuid": "8445b407-6f71-4310-842e-44dbec2c8436",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
+        "slug": "matching-brackets",
+        "name": "Matching Brackets",
+        "uuid": "73e4e91b-c959-4807-bf62-6116e015ea65",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 7
+      },
+      {
+        "slug": "pig-latin",
+        "name": "Pig Latin",
+        "uuid": "b2a8c857-8555-4a10-983b-7c45feacf439",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 6
       }
     ]
   },

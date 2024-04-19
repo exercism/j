@@ -1,0 +1,18 @@
+{
+  "authors": [
+    "eNascimento178"
+  ],
+  "files": {
+    "solution": [
+      "matching-brackets.ijs"
+    ],
+    "test": [
+      "test.ijs"
+    ],
+    "example": [
+      ".meta/example.ijs"
+    ]
+  },
+  "blurb": "Make sure the brackets and braces all match.",
+  "source": "Ginna Baker"
+}

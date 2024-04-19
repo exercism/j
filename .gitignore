@@ -3,9 +3,6 @@
 .DS_Store
 bin/configlet
 bin/configlet.exe
-Generator/canonical-data.json
-Generator/sample_leap.json
-Generator/Test-Generator.fsx
 TODO.md
-Generator/Test-Generator-2.fsx
-Generator/dnd-sample-mod.json
+Generator/*
+/exercises/practice/*/results.json
