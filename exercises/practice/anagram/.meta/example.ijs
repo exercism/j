@@ -1,6 +1,3 @@
-NB. Tacit whithout equality check
-NB. findAnagrams=: (-:&(/:~)"1&:(tolower@>))"1 0 # ]
+require 'strings'
 
-findAnagrams=: {{
-  (#~ (</:~x) = (/:~ @(''"_^:(x&-:))@tolower)each) y
-}}
+findAnagrams=: ((-:&(/:~))`(0"_) @. -: &: (tolower@>))"1 0 # ]
