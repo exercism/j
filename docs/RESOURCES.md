@@ -7,8 +7,7 @@ The [NuVoc](https://code.jsoftware.com/wiki/NuVoc) is the definitive J reference
 
 -   <https://code.jsoftware.com/wiki/System/Forums> mailing lists
 -   <https://www.reddit.com/r/apljk/> subreddit
--   [#jsoftware](http://webchat.freenode.net/?channels=jsoftware) irc channel
-
+-   <https://discord.gg/jA4pRNx5> discord channel
 
 # Rosetta Code
 
