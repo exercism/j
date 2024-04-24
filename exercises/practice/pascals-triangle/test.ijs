@@ -54,7 +54,7 @@ test_pascals_triangle_test_05  =: monad define
   Order@.1 (5)
 
   NB. count=: 4
-  expected=. 1 ; 1 1 ; 1 2 1 ; 1 3 3 1
+  expected=. > 1 ; 1 1 ; 1 2 1 ; 1 3 3 1
   assert expected -: > pascal 4
 )
 
