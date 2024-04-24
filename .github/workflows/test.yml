@@ -17,9 +17,9 @@ name: J / Test
 
 on:
   push:
-    branches: [main; add-test-workflows]
+    branches: [main]
   pull_request: 
-  workflow_dispatch: 
+  workflow_dispatch:
 
 jobs:
   test:
