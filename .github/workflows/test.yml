@@ -13,27 +13,33 @@
 # Requires scripts:
 # - bin/test
 
-name: <track> / Test
+name: J / Test
 
 on:
   push:
     branches: [main]
-  pull_request:
+  pull_request: 
   workflow_dispatch:
 
 jobs:
-  ci:
-    runs-on: <image-name>
+  test:
+    runs-on: ubuntu-22.04
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@9bb56186c3b09b4f86b1c65136769dd318469633
 
-      - name: Use <setup tooling>
-        uses: <action to setup tooling>
-
       - name: Install project dependencies
-        run: <install dependencies>
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends wget ca-certificates
+
+      - name: Install J
+        run: |
+          wget https://www.jsoftware.com/download/j9.5/install/j9.5_linux64.tar.gz
+          tar -xvf j9.5_linux64.tar.gz
+          mv j9.5 /opt/j9.5
+          rm -rf j9.5_linux64.tar.gz
 
       - name: Verify all exercises
-        run: bin/verify-exercises
+        run: ./bin/verify-exercises.sh

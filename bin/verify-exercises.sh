@@ -18,6 +18,8 @@
 # Example:
 # ./bin/test
 
+exit_code=0
+
 # Verify the Concept Exercises
 for concept_exercise_dir in ./exercises/concept/*/; do
     if [ -d $concept_exercise_dir ]; then
@@ -30,6 +32,12 @@ done
 for practice_exercise_dir in ./exercises/practice/*/; do
     if [ -d $practice_exercise_dir ]; then
         echo "Checking $(basename "${practice_exercise_dir}") exercise..."
-        # TODO: run command to verify that the example solution passes the tests
+        res= $(/opt/j9.5/bin/jconsole bin/test_exercise.ijs "$practice_exercise_dir/")
+        if [ $? -ne 0 ]; then 
+            echo "Error in $("${practice_exercise_dir}")"
+            ((exit_code++))
+        fi
     fi
 done
+
+exit $exit_code
