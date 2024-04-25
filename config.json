@@ -196,6 +196,38 @@
       }
     ]
   },
+  "key_features": [
+    {
+      "title": "Array Manipulation",
+      "content": "Effortlessly handle multidimensional arrays and very large datasets",
+      "icon": "fast"
+    },
+    {
+      "title": "Concise Syntax",
+      "content": "J's succinct syntax allows you to express complex data transformations with elegance",
+      "icon": "expressive"
+    },
+    {
+      "title": "Tacit Programming",
+      "content": "Functions compose naturally, emphasizing the beauty of functional programming",
+      "icon": "functional"
+    },
+    {
+      "title": "Declarative Nature",
+      "content": "With J, you focus on expressing the “what” rather than the “how.”",
+      "icon": "productive"
+    },
+    {
+      "title": "Objects Everywhere",
+      "content": "Objects are first-class citizens, enabling elegant and modular code",
+      "icon": "multi-paradigm"
+    },
+    {
+      "title": "Cross-Platform",
+      "content": "J runs anywhere—Windows, Linux, macOS, and Raspberry Pi.",
+      "icon": "cross-platform"
+    }
+  ],
   "tags": [
     "paradigm/declarative",
     "paradigm/functional",
