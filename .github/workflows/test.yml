@@ -42,4 +42,4 @@ jobs:
           rm -rf j9.5_linux64.tar.gz
 
       - name: Verify all exercises
-        run: ./bin/verify-exercises.sh
+        run: bin/verify-exercises.sh
