@@ -48,7 +48,7 @@ test_anagram_test_04  =: monad define
 
   subject    =. 'listen'
   candidates =. 'enlists' ; 'google' ; 'inlets' ; 'banana'
-  expected   =. 1 $ <'inlets'
+  expected   =. ,<'inlets'
   assert expected -: subject findAnagrams candidates
 )
 
@@ -80,7 +80,7 @@ test_anagram_test_07  =: monad define
   Order@.1 (7)
 
   subject    =. 'mass'
-  candidates =. 1 $ <'last'
+  candidates =. ,<'last'
   expected   =. ''
   assert expected -: subject findAnagrams candidates
 )
@@ -92,7 +92,7 @@ test_anagram_test_08  =: monad define
 
   subject    =. 'Orchestra'
   candidates =. 'cashregister' ; 'Carthorse' ; 'radishes'
-  expected   =.  1 $ <'Carthorse'
+  expected   =.  ,<'Carthorse'
   assert expected -: subject findAnagrams candidates
 )
 
@@ -103,7 +103,7 @@ test_anagram_test_09  =: monad define
 
   subject    =. 'Orchestra'
   candidates =. 'cashregister' ; 'carthorse' ; 'radishes'
-  expected   =.  1 $ <'carthorse'
+  expected   =.  ,<'carthorse'
   assert expected -: subject findAnagrams candidates
 )
 
@@ -114,7 +114,7 @@ test_anagram_test_10  =: monad define
 
   subject    =. 'orchestra'
   candidates =. 'cashregister' ; 'Carthorse' ; 'radishes'
-  expected   =.  1 $ <'Carthorse'
+  expected   =.  ,<'Carthorse'
   assert expected -: subject findAnagrams candidates
 )
 
@@ -124,7 +124,7 @@ test_anagram_test_11  =: monad define
   Order@.1 (11)
 
   subject    =. 'go'
-  candidates =. <'goGoGO'
+  candidates =. ,<'goGoGO'
   expected   =. ''
   assert expected -: subject findAnagrams candidates
 )
@@ -135,7 +135,7 @@ test_anagram_test_12  =: monad define
   Order@.1 (12)
 
   subject    =. 'tapper'
-  candidates =. 1 $ <'patter'
+  candidates =. ,<'patter'
   expected   =. ''
   assert expected -: subject findAnagrams candidates
 )
@@ -146,7 +146,7 @@ test_anagram_test_13  =: monad define
   Order@.1 (13)
 
   subject    =. 'BANANA'
-  candidates =. 1 $ <'banana'
+  candidates =. ,<'banana'
   expected   =. ''
   assert expected -: subject findAnagrams candidates
 )
@@ -158,7 +158,7 @@ test_anagram_test_14  =: monad define
 
   subject    =. 'LISTEN'
   candidates =. 'LISTEN' ; 'Silent'
-  expected   =.  1 $ <'Silent'
+  expected   =.  ,<'Silent'
   assert expected -: subject findAnagrams candidates
 )
 
