@@ -3,7 +3,7 @@ name: J / Test
 on:
   push:
     branches: [main]
-  pull_request: 
+  pull_request:
     branches: [main]
   workflow_dispatch:
 
@@ -13,12 +13,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@9bb56186c3b09b4f86b1c65136769dd318469633
-
-      - name: Install project dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y --no-install-recommends wget ca-certificates
+        uses: actions/checkout@0ad4b8fadaa221de15dcec353f45205ec38ea70b
 
       - name: Install J
         run: |
@@ -26,6 +21,7 @@ jobs:
           tar -xvf j9.5_linux64.tar.gz
           mv j9.5 /opt/j9.5
           rm -rf j9.5_linux64.tar.gz
+          echo "/opt/j9.5/bin" >> $GITHUB_PATH
 
       - name: Verify all exercises
         run: bin/verify-exercises.sh

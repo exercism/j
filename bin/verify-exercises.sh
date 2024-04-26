@@ -2,20 +2,8 @@
 
 # Synopsis:
 # Test the track's exercises.
-# 
-# At a minimum, this file must check if the example/exemplar solution of each 
-# Practice/Concept Exercise passes the exercise's tests.
-#
-# To check this, you usually have to (temporarily) replace the exercise's solution files
-# with its exemplar/example files.
-#
-# If your track uses skipped tests, make sure to (temporarily) enable these tests
-# before running the tests.
-#
-# The path to the solution/example/exemplar files can be found in the exercise's
-# .meta/config.json file, or possibly inferred from the exercise's directory name.
 
-# Example verify:
+# Example:
 # ./bin/verify-exercises.sh
 
 exit_code=0
