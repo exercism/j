@@ -3,7 +3,7 @@ name: J / Test
 on:
   push:
     branches: [main]
-  pull_request: 
+  pull_request:
     branches: [main]
   workflow_dispatch:
 
@@ -14,11 +14,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@9bb56186c3b09b4f86b1c65136769dd318469633
-
-      - name: Install project dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y --no-install-recommends wget ca-certificates
 
       - name: Install J
         run: |
