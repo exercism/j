@@ -11,8 +11,7 @@ exit_code=0
 # Verify the Practice Exercises
 for practice_exercise_dir in ./exercises/practice/*/; do
     if [ -d $practice_exercise_dir ]; then
-        echo "Checking $(basename "${practice_exercise_dir}") exercise..."
-        res=$(jconsole bin/test_exercise.ijs "$practice_exercise_dir/")
+        bin/verify-exercise.sh $(basename "${practice_exercise_dir}")
         if [ $? -ne 0 ]; then 
             echo "Error in ${practice_exercise_dir}"
             ((exit_code++))
