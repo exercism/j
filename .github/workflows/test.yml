@@ -21,6 +21,7 @@ jobs:
           tar -xvf j9.5_linux64.tar.gz
           mv j9.5 /opt/j9.5
           rm -rf j9.5_linux64.tar.gz
+          echo "/opt/j9.5/bin" >> $GITHUB_PATH
 
       - name: Verify all exercises
         run: bin/verify-exercises.sh
