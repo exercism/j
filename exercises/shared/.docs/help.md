@@ -7,4 +7,5 @@ To get help if you're having trouble, you can use one of the following resources
 - [discord](https://discord.gg/jA4pRNx5) discord channel for array programming languages.
 
 ## Submitting Incomplete Solutions
+
 It's possible to submit an incomplete solution so you can see how others have completed the exercise.

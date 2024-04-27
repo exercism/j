@@ -2,10 +2,11 @@
 
 Refer to [System/Installation](https://code.jsoftware.com/wiki/System/Installation) for instructions on how to get things set up on your system.
 
-After installing, Use the package manager (called `pacman`) to grab available addons. This includes fun bits like plotting, graphics, image manipulation, and much else. To do this, you can start a `J` console session by typing `jconsole` then enter:
+Once J has been installed, run `jconsole` to open a J console and enter:
 
 ```j
 load 'pacman'
-'update'jpkg''
-'install' jpkg '*'
+'update' jpkg ''
+'install' jpkg 'general/unittest'
+exit 0
 ```
