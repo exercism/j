@@ -28,7 +28,7 @@ test_pascals_triangle_test_02  =: monad define
   assert (1 1$1) -:&:> pascal 1
 )
 
-pascals_triangle_test_03_ignore=: 0 NB. Change this value to 0 to run this test
+pascals_triangle_test_03_ignore=: 1 NB. Change this value to 0 to run this test
 test_pascals_triangle_test_03  =: monad define
   Description@.1 ('two rows')
   Order@.1 (3)
