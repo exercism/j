@@ -14,9 +14,9 @@ test_dnd_character_test_01  =: monad define
   Order@.1 (1)
   Task@.1 (1)
 
-  score    =. 3
-  expected =. _4
-  assert expected -: modifier score
+  NB. score    =. 3
+  NB. expected =. _4
+  assert _4 -: modifier 3
 )
 
 dnd_character_test_02_ignore=: 1 NB. Change this value to 0 to run this test
@@ -25,9 +25,9 @@ test_dnd_character_test_02  =: monad define
   Order@.1 (2)
   Task@.1 (1)
 
-  score    =. 4
-  expected =. _3
-  assert expected -: modifier score
+  NB. score    =. 4
+  NB. expected =. _3
+  assert _3 -: modifier 4
 )
 
 dnd_character_test_03_ignore=: 1 NB. Change this value to 0 to run this test
@@ -36,9 +36,9 @@ test_dnd_character_test_03  =: monad define
   Order@.1 (3)
   Task@.1 (1)
 
-  score    =. 5
-  expected =. _3
-  assert expected -: modifier score
+  NB. score    =. 5
+  NB. expected =. _3
+  assert _3 -: modifier 5
 )
 
 dnd_character_test_04_ignore=: 1 NB. Change this value to 0 to run this test
@@ -47,9 +47,9 @@ test_dnd_character_test_04  =: monad define
   Order@.1 (4)
   Task@.1 (1)
 
-  score    =. 6
-  expected =. _2
-  assert expected -: modifier score
+  NB. score    =. 6
+  NB. expected =. _2
+  assert _2 -: modifier 6
 )
 
 dnd_character_test_05_ignore=: 1 NB. Change this value to 0 to run this test
@@ -58,9 +58,9 @@ test_dnd_character_test_05  =: monad define
   Order@.1 (5)
   Task@.1 (1)
 
-  score    =. 7
-  expected =. _2
-  assert expected -: modifier score
+  NB. score    =. 7
+  NB. expected =. _2
+  assert _2 -: modifier 7
 )
 
 dnd_character_test_06_ignore=: 1 NB. Change this value to 0 to run this test
@@ -69,9 +69,9 @@ test_dnd_character_test_06  =: monad define
   Order@.1 (6)
   Task@.1 (1)
 
-  score    =. 8
-  expected =. _1
-  assert expected -: modifier score
+  NB. score    =. 8
+  NB. expected =. _1
+  assert _1 -: modifier 8
 )
 
 dnd_character_test_07_ignore=: 1 NB. Change this value to 0 to run this test
@@ -80,9 +80,9 @@ test_dnd_character_test_07  =: monad define
   Order@.1 (7)
   Task@.1 (1)
 
-  score    =. 9
-  expected =. _1
-  assert expected -: modifier score
+  NB. score    =. 9
+  NB. expected =. _1
+  assert _1 -: modifier 9
 )
 
 dnd_character_test_08_ignore=: 1 NB. Change this value to 0 to run this test
@@ -91,9 +91,9 @@ test_dnd_character_test_08  =: monad define
   Order@.1 (8)
   Task@.1 (1)
 
-  score    =. 10
-  expected =. 0
-  assert expected -: modifier score
+  NB. score    =. 10
+  NB. expected =. 0
+  assert 0 -: modifier 10
 )
 
 dnd_character_test_09_ignore=: 1 NB. Change this value to 0 to run this test
@@ -102,9 +102,9 @@ test_dnd_character_test_09  =: monad define
   Order@.1 (9)
   Task@.1 (1)
 
-  score    =. 11
-  expected =. 0
-  assert expected -: modifier score
+  NB. score    =. 11
+  NB. expected =. 0
+  assert 0 -: modifier 11
 )
 
 dnd_character_test_10_ignore=: 1 NB. Change this value to 0 to run this test
@@ -113,9 +113,9 @@ test_dnd_character_test_10  =: monad define
   Order@.1 (10)
   Task@.1 (1)
 
-  score    =. 12
-  expected =. 1
-  assert expected -: modifier score
+  NB. score    =. 12
+  NB. expected =. 1
+  assert 1 -: modifier 12
 )
 
 dnd_character_test_11_ignore=: 1 NB. Change this value to 0 to run this test
@@ -124,9 +124,9 @@ test_dnd_character_test_11  =: monad define
   Order@.1 (11)
   Task@.1 (1)
 
-  score    =. 13
-  expected =. 1
-  assert expected -: modifier score
+  NB. score    =. 13
+  NB. expected =. 1
+  assert 1 -: modifier 13
 )
 
 dnd_character_test_12_ignore=: 1 NB. Change this value to 0 to run this test
@@ -135,9 +135,9 @@ test_dnd_character_test_12  =: monad define
   Order@.1 (12)
   Task@.1 (1)
 
-  score    =. 14
-  expected =. 2
-  assert expected -: modifier score
+  NB. score    =. 14
+  NB. expected =. 2
+  assert 2 -: modifier 14
 )
 
 dnd_character_test_13_ignore=: 1 NB. Change this value to 0 to run this test
@@ -146,9 +146,9 @@ test_dnd_character_test_13  =: monad define
   Order@.1 (13)
   Task@.1 (1)
 
-  score    =. 15
-  expected =. 2
-  assert expected -: modifier score
+  NB. score    =. 15
+  NB. expected =. 2
+  assert 2 -: modifier 15
 )
 
 dnd_character_test_14_ignore=: 1 NB. Change this value to 0 to run this test
@@ -157,9 +157,9 @@ test_dnd_character_test_14  =: monad define
   Order@.1 (14)
   Task@.1 (1)
 
-  score    =. 16
-  expected =. 3
-  assert expected -: modifier score
+  NB. score    =. 16
+  NB. expected =. 3
+  assert 3 -: modifier 16
 )
 
 dnd_character_test_15_ignore=: 1 NB. Change this value to 0 to run this test
@@ -168,9 +168,9 @@ test_dnd_character_test_15  =: monad define
   Order@.1 (15)
   Task@.1 (1)
 
-  score    =. 17
-  expected =. 3
-  assert expected -: modifier score
+  NB. score    =. 17
+  NB. expected =. 3
+  assert 3 -: modifier 17
 )
 
 dnd_character_test_16_ignore=: 1 NB. Change this value to 0 to run this test
@@ -179,9 +179,9 @@ test_dnd_character_test_16  =: monad define
   Order@.1 (16)
   Task@.1 (1)
 
-  score    =. 18
-  expected =. 4
-  assert expected -: modifier score
+  NB. score    =. 18
+  NB. expected =. 4
+  assert 4 -: modifier 18
 )
 
 dnd_character_test_17_ignore=: 1 NB. Change this value to 0 to run this test
@@ -191,7 +191,6 @@ test_dnd_character_test_17  =: monad define
   Task@.1 (2)
   ability_within_range=. 3 {{ >:&u *. <:&v }} 18
 
-  input=. ''
   assert ability_within_range ability ''
 )
 
@@ -203,7 +202,6 @@ test_dnd_character_test_18  =: monad define
   Task@.1 (3)
   ability_within_range=. 3 {{ >:&u *. <:&v }} 18
   
-  input=. ''
   c    =. character ''
 
   assert ability_within_range STRENGTH
@@ -220,7 +218,6 @@ test_dnd_character_test_19  =: monad define
   Order@.1 (19)
   Task@.1 (4)
 
-  input=. ''
   c    =. character ''
 
   assert STRENGTH = STRENGTH
