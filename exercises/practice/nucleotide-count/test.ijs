@@ -13,9 +13,9 @@ test_nucleotide_counts_test_01  =: monad define
   Description@.1 ('empty strand')
   Order@.1 (1)
   
-  strand=. ''
+  NB. strand  =. ''
   NB. expected=. 0 0 0 0
-  assert 0 0 0 0 -: nucleotide_counts strand
+  assert 0 0 0 0 -: nucleotide_counts ''
 )
 
 nucleotide_counts_test_02_ignore=: 1 NB. Change this value to 0 to run this test
@@ -23,9 +23,9 @@ test_nucleotide_counts_test_02  =: monad define
   Description@.1 ('can count one nucleotide in single-character input')
   Order@.1 (2)
   
-  strand=. 1$'G'
+  NB. strand  =. ,'G'
   NB. expected=. 0 0 1 0
-  assert 0 0 1 0 -: nucleotide_counts strand
+  assert 0 0 1 0 -: nucleotide_counts ,'G'
 )
 
 nucleotide_counts_test_03_ignore=: 1 NB. Change this value to 0 to run this test
@@ -33,9 +33,9 @@ test_nucleotide_counts_test_03  =: monad define
   Description@.1 ('strand with repeated nucleotide')
   Order@.1 (3)
   
-  strand=. 'GGGGGGG'
+  NB. strand  =. 'GGGGGGG'
   NB. expected=. 0 0 7 0
-  assert 0 0 7 0 -: nucleotide_counts strand
+  assert 0 0 7 0 -: nucleotide_counts 'GGGGGGG'
 )
 
 nucleotide_counts_test_04_ignore=: 1 NB. Change this value to 0 to run this test
@@ -43,9 +43,9 @@ test_nucleotide_counts_test_04  =: monad define
   Description@.1 ('strand with multiple nucleotides')
   Order@.1 (4)
   
-  strand=. 'AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC'
+  NB. strand  =. 'AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC'
   NB. expected=. 20 12 17 21
-  assert 20 12 17 21 -: nucleotide_counts strand
+  assert 20 12 17 21 -: nucleotide_counts 'AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC'
 )
 
 
@@ -58,7 +58,7 @@ test_nucleotide_counts_test_05  =: monad define
   Description@.1 ('strand with invalid nucleotides')
   Order@.1 (5)
   
-  strand=. 'AGXXACT'
+  NB. strand  =. 'AGXXACT'
   NB. expected=. 'domain error'
-  assert 0 = nucleotide_counts strand
+  assert 0 -: nucleotide_counts 'AGXXACT'
 )
