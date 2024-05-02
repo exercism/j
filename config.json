@@ -193,6 +193,22 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 6
+      },
+      {
+        "slug": "kindergarten-garden",
+        "name": "Kindergarten Garden",
+        "uuid": "4ef00077-722e-40cd-a94e-5256d26d1a74",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
+        "slug": "roman-numerals",
+        "name": "Roman Numerals",
+        "uuid": "c204cfed-f935-46c1-bc88-46148b814f69",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
       }
     ]
   },
