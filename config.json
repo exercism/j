@@ -152,7 +152,8 @@
         "uuid": "cd93b8de-7419-4266-acfd-d44935d9cca2",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 4
+        "difficulty": 4,
+        "status": "wip"
       },
       {
         "slug": "yacht",
