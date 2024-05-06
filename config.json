@@ -212,6 +212,13 @@
       }
     ]
   },
+  "concepts": [
+    {
+      "uuid": "ee1b92af-d313-483b-8535-dfde2e1b7a44",
+      "slug": "basics-1",
+      "name": "Basics 1"
+    }
+  ],
   "key_features": [
     {
       "title": "Array Manipulation",
