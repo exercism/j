@@ -152,7 +152,7 @@
         "uuid": "cd93b8de-7419-4266-acfd-d44935d9cca2",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 4
+        "difficulty": 5
       },
       {
         "slug": "yacht",
@@ -209,6 +209,14 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 2
+      },
+      {
+        "slug": "protein-translation",
+        "name": "Protein Translation",
+        "uuid": "f1b82434-778d-4d37-870b-e006924c9e59",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
       }
     ]
   },
