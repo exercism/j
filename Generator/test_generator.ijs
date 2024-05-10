@@ -1,6 +1,5 @@
 require 'strings convert/json web/gethttp'
-load 'Generator/toml_parser.ijs'
-NB. 1!:44 'Generator'
+load 'Generator/toml_parser.ijs Generator/test_class.ijs'
 
 
 get_cannonical_data_path=. 'https://raw.githubusercontent.com/exercism/problem-specifications/main/exercises/', '/canonical-data.json' ,~ ]
@@ -16,7 +15,7 @@ NB. it all values containing the tests then spread the boxes of level 2 and fina
 get_all_tests=. ((#~ 2 = # every) @: (<S:2) @: ({::~ tests_idx))
 
 
-tests=:{{
+format_tests=:{{
   data     =. dec_json gethttp get_cannonical_data_path f. y
   name     =. exercise_name f. data
   all_tests=. get_all_tests f. data
@@ -30,7 +29,24 @@ tests=:{{
 
 0 : 0
 load 'test_class.ijs'
-param=:(get_all_tests 'leap')
+leap  =: format_tests'leap'
 
-a=:param conew 'testsuite'
+ob=: leap conew 'testsuite'
+name_0_
+uuid_2_
+description_3_
+
+test_1_0_
+
+conl 1 NB. gets all numbered 'objects'
 )
+
+leap  =: format_tests'leap'
+
+ob=: leap conew 'testsuite'
+name_0_
+uuid_2_
+description_3_
+
+test_1_0_
+test_1__ob

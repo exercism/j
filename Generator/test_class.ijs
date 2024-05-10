@@ -12,10 +12,13 @@ destroy=: 3 : 0
 cocurrent 'testsuite'
 
 create=: 3 : 0
-  (('test_',":)each i.# y)=: (conew&'test') every y
+  'name tests'=: (>@{. ; <@}.) y
+  (('test_',":)each #\ tests)=: (conew&'test') every tests
   0
 )
 
 destroy=: 3 : 0
   codestroy''
 )
+
+
