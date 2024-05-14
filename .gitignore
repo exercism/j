@@ -6,4 +6,5 @@ bin/configlet.exe
 TODO.md
 Generator/*.json
 Generator/*.fsx
+Generator/*.txt
 /exercises/practice/*/results.json
