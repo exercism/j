@@ -16,7 +16,7 @@ format_tests=:{{
   flatten_cases=. ([: ; (<^:(1 -.@-: #@$))each)^:_
   data     =. dec_json gethttp github_data_path y
 
-  name     =. ({: {~ (<'exercise') i.~ {.) data
+  name     =. ;@({: {~ (<'exercise') i.~ {.) data
   all_tests=. flatten_cases get_cases data
   
   (fputs ,. all_tests) 1!:2 <'Generator/temp.txt'
@@ -26,5 +26,6 @@ format_tests=:{{
   NB. attemps to remove `excl` from `all_tests` using uuid info. 
   NB. if fails because `excl` is empty returns `all_tests`
   tests=. (all_tests #~ [: ,@:-. (excl -:"0 ])"0) :: all_tests uuids
+  name ; tests
 }}
  

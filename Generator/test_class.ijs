@@ -14,22 +14,15 @@ cocurrent 'test'
 
 create=: 3 : 0
   (' ' joinstring {. y) =: {: y
-  input=: input conew 'input'
+  if. 2 1 -: $ input do.
+    y_in=: ; {: input
+  elseif. 0 = # input do. 
+    y_in=: ''
+  else.
+    x_in=: {. {: input
+    y_in=: }. {: input
+  end.
   0
-)
-
-destroy=: 3 : 0
-  codestroy''
-)
-
-cocurrent 'singleinputtest'
-
-create=: 3 : 0
-  (' ' joinstring {. y) =: {: y
-  'input_name input_value'=: ((": @ ; @ {. ) ; (''"_)`(": @ ; @ {:) @. (0 -.@-: #)) input
-  format_input=: '  NB. ', input_name, '=. ', input_value
-  expected=: 0:`1:`] @. (('json_false';'json_true')&i.@<) expected
-  format_expected=: '  NB. expected=. ', ":expected
 )
 
 destroy=: 3 : 0
@@ -40,7 +33,7 @@ cocurrent 'testsuite'
 
 create=: 3 : 0
   'name tests'=: (>@{. ; <@}.) y
-  (('test_',":)each #\ tests)=: (conew&'singleinputtest') every tests
+  (('test_',":)each #\ tests)=: (conew&'test') every tests
   smoutput conames''
   0
 )
