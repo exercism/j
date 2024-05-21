@@ -14,7 +14,7 @@ test_rna_transcription_test_01  =: monad define
   Order@.1 (1)
   
   NB. expected=. ''
-  assert '' -: to_rna ''
+  assert '' -:&, to_rna ''
 )
 
 rna_transcription_test_02_ignore=: 1 NB. Change this value to 0 to run this test
@@ -23,7 +23,7 @@ test_rna_transcription_test_02  =: monad define
   Order@.1 (2)
   
   NB. expected=. 'C'
-  assert 'C' -: to_rna 'G'
+  assert 'C' -:&, to_rna 'G'
 )
 
 rna_transcription_test_03_ignore=: 1 NB. Change this value to 0 to run this test
@@ -32,7 +32,7 @@ test_rna_transcription_test_03  =: monad define
   Order@.1 (3)
   
   NB. expected=. 'G'
-  assert 'G' -: to_rna 'C'
+  assert 'G' -:&, to_rna 'C'
 )
 
 rna_transcription_test_04_ignore=: 1 NB. Change this value to 0 to run this test
@@ -41,7 +41,7 @@ test_rna_transcription_test_04  =: monad define
   Order@.1 (4)
   
   NB. expected=. 'A'
-  assert 'A' -: to_rna'T'
+  assert 'A' -:&, to_rna'T'
 )
 
 rna_transcription_test_05_ignore=: 1 NB. Change this value to 0 to run this test
@@ -50,7 +50,7 @@ test_rna_transcription_test_05  =: monad define
   Order@.1 (5)
   
   NB. expected=. 'U'
-  assert 'U' -: to_rna'A'
+  assert 'U' -:&, to_rna'A'
 )
 
 rna_transcription_test_06_ignore=: 1 NB. Change this value to 0 to run this test
@@ -59,5 +59,5 @@ test_rna_transcription_test_06  =: monad define
   Order@.1 (6)
   
   NB. expected=. 'UGCACCAGAAUU'
-  assert 'UGCACCAGAAUU' -: to_rna 'ACGTGGTCTTAA'
+  assert 'UGCACCAGAAUU' -:&, to_rna 'ACGTGGTCTTAA'
 )
