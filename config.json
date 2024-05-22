@@ -289,6 +289,14 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 3
+      },
+      {
+        "slug": "phone-number",
+        "name": "Phone Number",
+        "uuid": "ce51e027-0e41-4a9f-a911-a59335d5e421",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
       }
     ]
   },
