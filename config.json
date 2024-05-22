@@ -265,6 +265,22 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 3
+      },
+      {
+        "slug": "knapsack",
+        "name": "Knapsack",
+        "uuid": "39e1308a-1591-45f5-bfda-f822fa6c6f64",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 6
+      },
+      {
+        "slug": "meetup",
+        "name": "Meetup",
+        "uuid": "0aa37027-b2cd-4580-937b-5b2336ceee68",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
       }
     ]
   },
