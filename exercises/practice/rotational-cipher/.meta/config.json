@@ -1,0 +1,19 @@
+{
+  "authors": [
+    "eNascimento178"
+  ],
+  "files": {
+    "solution": [
+      "rotational-cipher.ijs"
+    ],
+    "test": [
+      "test.ijs"
+    ],
+    "example": [
+      ".meta/example.ijs"
+    ]
+  },
+  "blurb": "Create an implementation of the rotational cipher, also sometimes called the Caesar cipher.",
+  "source": "Wikipedia",
+  "source_url": "https://en.wikipedia.org/wiki/Caesar_cipher"
+}

@@ -1,0 +1,19 @@
+{
+  "authors": [
+    "eNascimento178"
+  ],
+  "files": {
+    "solution": [
+      "isogram.ijs"
+    ],
+    "test": [
+      "test.ijs"
+    ],
+    "example": [
+      ".meta/example.ijs"
+    ]
+  },
+  "blurb": "Determine if a word or phrase is an isogram.",
+  "source": "Wikipedia",
+  "source_url": "https://en.wikipedia.org/wiki/Isogram"
+}

@@ -281,6 +281,38 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 5
+      },
+      {
+        "slug": "rotational-cipher",
+        "name": "Rotational Cipher",
+        "uuid": "9fe9fe6c-6d16-4903-bf90-0ee7d59ef2ac",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
+        "slug": "phone-number",
+        "name": "Phone Number",
+        "uuid": "ce51e027-0e41-4a9f-a911-a59335d5e421",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
+        "slug": "isogram",
+        "name": "Isogram",
+        "uuid": "eb989a86-5ba4-44ee-af08-f009c852101d",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
+      },
+      {
+        "slug": "bob",
+        "name": "Bob",
+        "uuid": "a0ba77df-3fee-4429-82fc-10c6d293c62e",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
       }
     ]
   },
