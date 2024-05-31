@@ -1,11 +1,7 @@
 require 'strings convert/json web/gethttp'
 load 'Generator/toml_parser.ijs'
 
-ignore_flag=:{{ y, '_test_', x ,'_ignore=: ', ('1 NB. Change this value to 0 to run this test'"_)`('0'"_)@.(0 = x) }}
-test_name=: {{ 'test_',y,'_test_',x,'  =: monad define' }}
-
-
-format_tests=:{{
+format_tests=: monad define
   github_data_path=. 'https://raw.githubusercontent.com/exercism/problem-specifications/main/exercises/', '/canonical-data.json' ,~ ]
   NB. column where the tests are located at the hihgest level
   tests_idx=. {::~ (1 , (<'cases') i.~ {.)
@@ -27,5 +23,4 @@ format_tests=:{{
   NB. if fails because `excl` is empty returns `all_tests`
   tests=. (all_tests #~ [: ,@:-. (excl -:"0 ])"0) :: all_tests uuids
   name ; tests
-}}
- 
+)
