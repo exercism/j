@@ -8,3 +8,4 @@ Generator/*.json
 Generator/*.fsx
 Generator/*.txt
 /exercises/practice/*/results.json
+Generator/test.ijs

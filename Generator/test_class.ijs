@@ -12,7 +12,11 @@ create=: 3 : 0
     'yin xin'=: yin
     xin      =: 5!:6 < 'xin'
   end.
-  expected=: 1:^:(-:&'json_true') @: (0:^:(-:&'json_false')) expected
+  NB. correct case where numeric array is convertd into  an array of boxed numbers
+  select. expected
+  case. 'json_false' do. expected=: 0
+  case. 'json_true'  do. expected=: 1
+  end.
 
   yin      =: 5!:6 < 'yin'  
   expected =: 5!:6 < 'expected'
@@ -28,8 +32,8 @@ cocurrent 'testsuite'
 create=: 3 : 0
   load 'Generator/test_data.ijs'
   'name tests'=: (>@{. ; <@}.) format_tests y
-  name        =: name rplc ' ';'_'
-  filename    =: '.ijs' ,~ name rplc '_';'-'
+  filename    =: name , '.ijs'
+  name        =: name rplc '-';'_'
   (('test_',":)each #\ tests)=: all_tests=: (conew&'test')every tests
   0
 )
@@ -45,7 +49,7 @@ create=: 3 : 0
   suite       =: y conew 'testsuite'
   test_numbers=: (_2 {.!.'0' ":)each #\ tests__suite
 
-  load_directive=: 'load ', quote filename__suite
+  load_directive=: 'load ', (quote filename__suite)
   helpers       =: {{)n
 
 
@@ -57,37 +61,32 @@ before_all=: monad define
 
 }}
 
-  ignore_flags=: (,&' NB. Change this value to 0 to run this test')^:(-:&'1')each ('0' , '1' #~ <:@#) test_numbers
-  ignore_flags=: ((name__suite, '_test_', [ , '_ignore=: ' , ])&": each/"1) test_numbers ,. ignore_flags
-  test_names  =: {{'test_', name__suite, '_test_', y, '  =: monad define'}}each test_numbers
-  
-  descriptions=: {{ 
-    desc=. 'description' callfrom y
-    '  Description@.1 (''' , desc , ''')'
-  }}each all_tests__suite
-  
-  order =: {{ '  Order@.1 (', (":y), ')', LF }}each #\ tests__suite
+  ignore_flags=: ((<'0') 0} (<'1 NB. Change this value to 0 to run this test') #~ #) test_numbers                     
+  ignore_flags=: ((name__suite, '_test_', [ , '_ignore=: ' , ])each/"1) test_numbers ,. ignore_flags
+  tests =: ignore_flags {{ x , LF ,  'test_', name__suite, '_test_', y, '  =: monad define'}}each test_numbers         NB. append tests names
+  tests =: tests {{ x , LF , '  Description@.1 (''' , ('description' callfrom y) , ''')' }}each all_tests__suite       NB. append descriptions
+  tests =: tests {{ x , LF , '  Order@.1 (', (":y), ')', LF }}each #\ tests__suite                                     NB. append ordering
 
-  inputs =: {{
-    ((({{('  NB. ', x  , ' =. ' , (5!:6) (<'val') [ val=.>y)}})every/"1)@:|:)^:(-.@-:&'') 'input' callfrom y 
-  }}each :: '' all_tests__suite
-
-  expecteds =: {{
-    '  NB. expected =. ' , ": 'expected' callfrom y
-  }}each all_tests__suite 
-  
-  assertions  =: {{ 
-    e =. '(', ')',~ 'expected' callfrom y
-    p =. 'property' callfrom y
-    xval=. ('(' , ] , ') '"_)^:(-.@-:&'') ('xin' callfrom y)
-    yval=. ' ', 'yin' callfrom y
-    '  assert ', e , ' -: ' , xval , p, yval
+  NB. Correct extra blank line for single input cases
+  tests =: tests {{                                                                                                    NB. append inputs
+    x , LF , LF joinstring {{ '  NB. ', x  , ' =. ' , 5!:6 <'y' }}each/"1 :: (,:'  NB. input=. ''''') |: 'input' callfrom y 
   }}each all_tests__suite
 
-  end_def =: ,&(')',LF)
+  tests =: tests {{ x , LF , '  NB. expected =. ' , ": 'expected' callfrom y }}each all_tests__suite                   NB. append expeted result as comment
+  
+  tests =: tests {{                                                                                                    NB. append assertion
+    pat=. Jchar_jregex_ , '|' , '*' <:@#@]} Jnum_jregex_
+    parens=. ('(' , ')' ,~ ])^:([: -. pat&rxeq)
 
-  vals=: <"1 ignore_flags ,. test_names ,. descriptions ,. order ,. inputs ,. expecteds ,. assertions
-  vals=: load_directive ; helpers ; (end_def@:(fputs@:;))each vals
+    expe =. parens 'expected' callfrom y
+    prop =. 'property' callfrom y
+    xval =. parens 'xin' callfrom y
+    yval =. ' ', 'yin' callfrom y
+    x , LF , '  assert ', expe , ' -: ' , xval , prop , yval , LF , ')' , LF
+  }}each all_tests__suite
+
+  tests =: load_directive ; helpers ; tests
+  text  =: fputs LF joinstring tests
 )
 
 destroy=: 3 : 0
@@ -98,23 +97,8 @@ destroy=: 3 : 0
 cocurrent 'base'
 a =: 'all-your-base' conew 'testwriter'
 b =: 'leap' conew 'testwriter'
-s =: ('all-your-base') conew 'testsuite'
+c =: 'dnd-character' conew 'testwriter'
 
-
-all_tests__s
-,.ignore_flags__a
-,.test_names__a
-,.descriptions__a
-,.order__a
-,.inputs__a
-,.expecteds__a
-,.assertions__a
-end_defs__a
-
-;expected_924_
-
-;{:vals__a
-
-(fputs joinstring vals__a) 1!:2 < 'Generator/test.ijs'
-(fputs joinstring vals__b) 1!:2 < 'Generator/test.ijs'
-5!:6 <'yin_390_'
+(fputs LF joinstring tests__a) 1!:2 < 'Generator/test.ijs'
+(fputs joinstring tests__b) 1!:2 < 'Generator/test.ijs'
+(fputs joinstring tests__c) 1!:2 < 'Generator/test.ijs'  NB. last cases not printing the ignore flags, name and helpers
