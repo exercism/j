@@ -1,6 +1,6 @@
 # Installation
 
-Refer to [System/Installation](https://code.jsoftware.com/wiki/System/Installation) for instructions on how to get things set up on your system.
+Refer to [System/Installation][install-link] for instructions on how to get things set up on your system.
 
 ~~~exercism/caution
 If you have the Java Development Kit (JDK) installed, the `jconsole` executable could potentially conflict with the Java Console, which uses the same name.
@@ -22,3 +22,5 @@ Once J has been installed, open a J console at your terminal and enter the follo
   'install' jpkg 'general/unittest'
   exit 0
 ```
+
+[install-link]: https://code.jsoftware.com/wiki/System/Installation
