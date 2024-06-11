@@ -7,6 +7,8 @@ To run the tests follow these steps:
 - Load your solution file (eg `load 'hello-world.ijs'`)
 - Load the unit test framework by typing `load  'general/unittest'`
 - Test your solution by typing `unittest 'test.ijs'`.
+<br></br>
+- Alternatively it's possible run the tests in a single line like this: `jconsole -js "load 'hello-world.ijs'" "echo unittest 'test.ijs'" "exit 0"`.
 
 ## Skipped tests
 
@@ -19,7 +21,7 @@ To run the test, change its value to 0.
 
 ```
     leap_test_02_ignore=: 1 NB. Change this value to 0 to run this test
-    test_leap_test_02  =: monade define
+    test_leap_test_02  =: monad define
     ...                     NB. test definitions
     )
 ```
