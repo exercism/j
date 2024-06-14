@@ -1,0 +1,18 @@
+{
+  "authors": [
+    "eNascimento178"
+  ],
+  "files": {
+    "solution": [
+      "meetup.ijs"
+    ],
+    "test": [
+      "test.ijs"
+    ],
+    "example": [
+      ".meta/example.ijs"
+    ]
+  },
+  "blurb": "Calculate the date of meetups.",
+  "source": "Jeremy Hinegardner mentioned a Boulder meetup that happens on the Wednesteenth of every month"
+}

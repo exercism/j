@@ -249,6 +249,134 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 3
+      },
+      {
+        "slug": "scrabble-score",
+        "name": "Scrabble Score",
+        "uuid": "dc4b47a1-824e-4415-a4cc-5bc16de4f1ed",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
+      },
+      {
+        "slug": "robot-simulator",
+        "name": "Robot Simulator",
+        "uuid": "1a99d169-21a7-4a9d-9a40-7dd48ed2deb7",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
+        "slug": "knapsack",
+        "name": "Knapsack",
+        "uuid": "39e1308a-1591-45f5-bfda-f822fa6c6f64",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 6
+      },
+      {
+        "slug": "meetup",
+        "name": "Meetup",
+        "uuid": "0aa37027-b2cd-4580-937b-5b2336ceee68",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
+        "slug": "rotational-cipher",
+        "name": "Rotational Cipher",
+        "uuid": "9fe9fe6c-6d16-4903-bf90-0ee7d59ef2ac",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
+        "slug": "phone-number",
+        "name": "Phone Number",
+        "uuid": "ce51e027-0e41-4a9f-a911-a59335d5e421",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
+        "slug": "isogram",
+        "name": "Isogram",
+        "uuid": "eb989a86-5ba4-44ee-af08-f009c852101d",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
+      },
+      {
+        "slug": "bob",
+        "name": "Bob",
+        "uuid": "a0ba77df-3fee-4429-82fc-10c6d293c62e",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
+      },
+      {
+        "slug": "grade-school",
+        "name": "Grade School",
+        "uuid": "0d0bd1b7-48e4-41b4-9bd5-5c5311b0da22",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
+        "slug": "eliuds-eggs",
+        "name": "Eliud's Eggs",
+        "uuid": "23e999e2-b2cb-44f8-be94-98dde25d5467",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
+      },
+      {
+        "slug": "run-length-encoding",
+        "name": "Run-Length Encoding",
+        "uuid": "4b4189ba-578b-4cbf-bffa-443fc49e73ac",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
+      },
+      {
+        "slug": "armstrong-numbers",
+        "name": "Armstrong Numbers",
+        "uuid": "3349bf31-c174-47a1-82c1-bc91b5d490c3",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
+        "slug": "diamond",
+        "name": "Diamond",
+        "uuid": "05bb2b80-0521-473f-b39e-c09e8d81d16f",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
+        "slug": "largest-series-product",
+        "name": "Largest Series Product",
+        "uuid": "0eca7e0d-f897-48d8-83da-316f92a09749",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
+        "slug": "sieve",
+        "name": "Sieve",
+        "uuid": "9081e8b6-6bfb-4239-ac08-6f3aa1450991",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
+      },
+      {
+        "slug": "food-chain",
+        "name": "Food Chain",
+        "uuid": "1a1465ba-e0db-4abe-bd70-ba505ff6408e",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
       }
     ]
   },
