@@ -4,5 +4,8 @@
 bin/configlet
 bin/configlet.exe
 TODO.md
-Generator/*
+tools/generator/*.json
+tools/generator/*.fsx
+tools/generator/*.txt
+tools/generator/test.ijs
 /exercises/practice/*/results.json
