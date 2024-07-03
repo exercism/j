@@ -1,4 +1,4 @@
-load_toml         =. 1!:1 @: ([: < 'E:\OneDrive\Documentos\Cursos\Exercism\j\exercises\practice\' , '\.meta\tests.toml' ,~ ])
+load_toml         =. 1!:1 @: ([: < 'exercises\practice\' , '\.meta\tests.toml' ,~ ])
 remove_comments   =. #~ '#' -.@= {.@>
 include_flags     =. 'include *= *false *\r?'&rxeq
 get_uuid          =. ((-.&('[ ]',CRLF)))L:0 @ {."1 @ >
