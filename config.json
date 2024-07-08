@@ -385,6 +385,14 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 8
+      },
+      {
+        "slug": "crypto-square",
+        "name": "Crypto Square",
+        "uuid": "5723544b-74d3-4483-b67e-5e7b513c8867",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
       }
     ]
   },
