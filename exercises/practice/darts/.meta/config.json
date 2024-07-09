@@ -1,0 +1,18 @@
+{
+  "authors": [
+    "eNascimento178"
+  ],
+  "files": {
+    "solution": [
+      "darts.ijs"
+    ],
+    "test": [
+      "test.ijs"
+    ],
+    "example": [
+      ".meta/example.ijs"
+    ]
+  },
+  "blurb": "Calculate the points scored in a single toss of a Darts game.",
+  "source": "Inspired by an exercise created by a professor Della Paolera in Argentina"
+}
