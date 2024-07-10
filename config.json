@@ -387,6 +387,14 @@
         "difficulty": 8
       },
       {
+        "slug": "crypto-square",
+        "name": "Crypto Square",
+        "uuid": "5723544b-74d3-4483-b67e-5e7b513c8867",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
         "slug": "atbash-cipher",
         "name": "Atbash Cipher",
         "uuid": "3da8ba25-b6a2-431f-a4a7-e7fc33318fdb",
