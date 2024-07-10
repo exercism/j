@@ -26,6 +26,6 @@ format_tests=: monad define
 
   NB. attemps to remove `excl` from `all_tests` using uuid info. 
   NB. if fails because `excl` is empty returns `all_tests`
-  tests=. (all_tests #~ [: ,@:-. (excl -:"0 ])"0) :: all_tests uuids
+  tests=. (all_tests #~ [: ,@:-. e.&excl"0) :: all_tests uuids
   name ; tests
 )
