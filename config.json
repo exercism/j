@@ -387,6 +387,14 @@
         "difficulty": 8
       },
       {
+        "slug": "darts",
+        "name": "Darts",
+        "uuid": "4fd80fde-8868-44da-a52b-f4b8549c9cc8",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
+      },
+      }
         "slug": "crypto-square",
         "name": "Crypto Square",
         "uuid": "5723544b-74d3-4483-b67e-5e7b513c8867",
