@@ -411,6 +411,14 @@
         "difficulty": 2
       },
       {
+        "slug": "resistor-color",
+        "name": "Resistor Color",
+        "uuid": "531db49e-36b0-4664-9b68-1a4bcec586e1",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
+      },
+      {
         "slug": "resistor-color-duo",
         "name": "Resistor Color Duo",
         "uuid": "e1cf7ece-8437-4fb7-b076-472823df8797",
