@@ -433,6 +433,14 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 3
+      },
+      {
+        "slug": "isbn-verifier",
+        "name": "ISBN Verifier",
+        "uuid": "3c319f7b-7b0f-4cab-a036-1040694fa900",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
       }
     ]
   },
