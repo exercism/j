@@ -425,6 +425,14 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 2
+      },
+      {
+        "slug": "resistor-color-trio",
+        "name": "Resistor Color Trio",
+        "uuid": "2a23b20f-b0fc-41fe-a953-5c2b6e87aae8",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
       }
     ]
   },
