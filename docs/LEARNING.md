@@ -1,4 +1,13 @@
-# Books
+# Learning J
+
+A great starting point for learning J is the article [J notation as a tool of thought][j-notation] by [Hillel Wayne][hillel-wayne-blog].
+
+## NuVoc
+
+The [NuVoc][nuvoc-link] is the definitive J reference.
+It is a highly concise and information dense overview of the J primitives and language.
+
+## Books
 
 - [J Primer][j-primer-link] a tour of `J` and great starting point that avoids being overly concise and focused on the complex aspects of the language.
 - [Learning J][learning-j-link] a more in depth tour of `J` suitable for beginners as well as experienced programmers.
@@ -12,6 +21,9 @@ These are available in HTML on the net and also are included with your `J` syste
 Another great book (for purchase) is [Fractals Visualization and J][fractals-link] which emphasises using `J` to explore and visualize various mathematical concepts.
 
 
+[j-notation]: https://www.hillelwayne.com/post/j-notation/
+[hillel-wayne-blog]: https://www.hillelwayne.com/
+[nuvoc-link]: https://code.jsoftware.com/wiki/NuVoc
 [j-primer-link]: https://www.jsoftware.com/help/primer/contents.htm
 [learning-j-link]: https://www.jsoftware.com/help/learning/contents.htm
 [j-for-c-link]: https://www.jsoftware.com/help/jforc/contents.htm
