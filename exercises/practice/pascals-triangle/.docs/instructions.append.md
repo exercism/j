@@ -1,3 +1,5 @@
+# Instructions append
+
 ## Output
 In this exercise, you will implement a verb that generates Pascal’s Triangle up to a given number of rows. The output from your verb can be formatted in one of two ways:
 
