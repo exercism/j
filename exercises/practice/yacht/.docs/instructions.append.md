@@ -1,6 +1,6 @@
 # Instructions append
 
-## Notes
+## Track specific instructions
 
 In the "Yacht" exercise, you will create a verb that calculates the score for a single throw of five dice in the game Yacht, based on the chosen category.
 

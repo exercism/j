@@ -1,6 +1,6 @@
 # Instructions append
 
-## Notes
+## Track specific instructions
 
 For this exercise, your verb will receive two arguments:
 
