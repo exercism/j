@@ -1,4 +1,6 @@
-## Notes
+# Instructions append
+
+## Track specific instructions
 
 For this exercise you need to define a **locale** named `robot` that defines the **nouns** `position` and `direction` and a **verb** `move`.
 

@@ -1,8 +1,11 @@
-## Notes
+# Instructions append
 
-You need to define two verbs called `allergic_to` and `list`
+## Track specific instructions
 
-### Inputs
+You need to define two verbs called `allergic_to` and `list`.
+
+## Inputs
+
 1. `allergic_to` verb is **dyad** where:
 
     - **Left Argument**: is a string containing the allergen name.
@@ -18,7 +21,9 @@ Your verbs will be called with these arguments like so:
   'cats' allergic_to 255
   list 5
 ```
-### Outputs
+
+## Outputs
+
 The output of `allergic_to` verb is a **boolean**
 
 The output of `list` is a **list of boxes**

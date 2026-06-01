@@ -1,6 +1,6 @@
-## Additional Information
+# Instructions append
 
-### Example Input
+## Example Input
 
 ```j
   INPUTS=: 2 ; 1 0 0 1 0 1 ; 10
@@ -12,11 +12,11 @@ This means that your inputs are:
   1{INPUTS NB. is the digits.
   2{INPUTS NB. is the output base.
 ```
-### Handling Invalid Inputs
+## Handling Invalid Inputs
 
 If any of the input values is invalid, your verb should return either an `empty`(e.g., `0$0` or `''`).
 
-#### Examples
+### Examples
 
 - If the _input base_ is smaller than 2:
     ```j
