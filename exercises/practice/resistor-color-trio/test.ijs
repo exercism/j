@@ -1,17 +1,9 @@
 load 'resistor-color-trio.ijs'
 
 
-before_all=: monad define
-  (]Description =: (3 : 'descriptions=: i.0')`(3 : 'descriptions=: descriptions , < y'))@.0 ''
-  (]Order       =: (3 : 'order=: i.0')`(3 : 'order=: order , < y'))@.0 ''
-  (]Task        =: (3 : 'tasks=: i.0')`(3 : 'tasks=: tasks , < y'))@.0 '' 
-)
-
-
 resistor_color_trio_test_01_ignore=: 0
 test_resistor_color_trio_test_01  =: monad define
-  Description@.1 ('Orange and orange and black')
-  Order@.1 (1)
+  Description=: 'Orange and orange and black'
 
   NB. colors=. <;._1 ' orange orange black'
   NB. expected=. 33;'ohms'
@@ -20,8 +12,7 @@ test_resistor_color_trio_test_01  =: monad define
 
 resistor_color_trio_test_02_ignore=: 1 NB. Change this value to 0 to run this test
 test_resistor_color_trio_test_02  =: monad define
-  Description@.1 ('Blue and grey and brown')
-  Order@.1 (2)
+  Description=: 'Blue and grey and brown'
 
   NB. colors=. <;._1 ' blue grey brown'
   NB. expected=. 680;'ohms'
@@ -30,8 +21,7 @@ test_resistor_color_trio_test_02  =: monad define
 
 resistor_color_trio_test_03_ignore=: 1 NB. Change this value to 0 to run this test
 test_resistor_color_trio_test_03  =: monad define
-  Description@.1 ('Red and black and red')
-  Order@.1 (3)
+  Description=: 'Red and black and red'
 
   NB. colors=. <;._1 ' red black red'
   NB. expected=. 2;'kiloohms'
@@ -40,8 +30,7 @@ test_resistor_color_trio_test_03  =: monad define
 
 resistor_color_trio_test_04_ignore=: 1 NB. Change this value to 0 to run this test
 test_resistor_color_trio_test_04  =: monad define
-  Description@.1 ('Green and brown and orange')
-  Order@.1 (4)
+  Description=: 'Green and brown and orange'
 
   NB. colors=. <;._1 ' green brown orange'
   NB. expected=. 51;'kiloohms'
@@ -50,8 +39,7 @@ test_resistor_color_trio_test_04  =: monad define
 
 resistor_color_trio_test_05_ignore=: 1 NB. Change this value to 0 to run this test
 test_resistor_color_trio_test_05  =: monad define
-  Description@.1 ('Yellow and violet and yellow')
-  Order@.1 (5)
+  Description=: 'Yellow and violet and yellow'
 
   NB. colors=. <;._1 ' yellow violet yellow'
   NB. expected=. 470;'kiloohms'
@@ -60,8 +48,7 @@ test_resistor_color_trio_test_05  =: monad define
 
 resistor_color_trio_test_06_ignore=: 1 NB. Change this value to 0 to run this test
 test_resistor_color_trio_test_06  =: monad define
-  Description@.1 ('Blue and violet and blue')
-  Order@.1 (6)
+  Description=: 'Blue and violet and blue'
 
   NB. colors=. <;._1 ' blue violet blue'
   NB. expected=. 67;'megaohms'
@@ -70,8 +57,7 @@ test_resistor_color_trio_test_06  =: monad define
 
 resistor_color_trio_test_07_ignore=: 1 NB. Change this value to 0 to run this test
 test_resistor_color_trio_test_07  =: monad define
-  Description@.1 ('Minimum possible value')
-  Order@.1 (7)
+  Description=: 'Minimum possible value'
 
   NB. colors=. <;._1 ' black black black'
   NB. expected=. 0;'ohms'
@@ -80,8 +66,7 @@ test_resistor_color_trio_test_07  =: monad define
 
 resistor_color_trio_test_08_ignore=: 1 NB. Change this value to 0 to run this test
 test_resistor_color_trio_test_08  =: monad define
-  Description@.1 ('Maximum possible value')
-  Order@.1 (8)
+  Description=: 'Maximum possible value'
 
   NB. colors=. <;._1 ' white white white'
   NB. expected=. 99;'gigaohms'
@@ -90,8 +75,7 @@ test_resistor_color_trio_test_08  =: monad define
 
 resistor_color_trio_test_09_ignore=: 1 NB. Change this value to 0 to run this test
 test_resistor_color_trio_test_09  =: monad define
-  Description@.1 ('First two colors make an invalid octal number')
-  Order@.1 (9)
+  Description=: 'First two colors make an invalid octal number'
 
   NB. colors=. <;._1 ' black grey black'
   NB. expected=. 8;'ohms'
@@ -100,8 +84,7 @@ test_resistor_color_trio_test_09  =: monad define
 
 resistor_color_trio_test_10_ignore=: 1 NB. Change this value to 0 to run this test
 test_resistor_color_trio_test_10  =: monad define
-  Description@.1 ('Ignore extra colors')
-  Order@.1 (10)
+  Description=: 'Ignore extra colors'
 
   NB. colors=. <;._1 ' blue green yellow orange'
   NB. expected=. 650;'kiloohms'

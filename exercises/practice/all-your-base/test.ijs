@@ -1,17 +1,10 @@
 load 'all-your-base.ijs'
 
 
-before_all=: monad define  
-  (]Description =: (3 : 'descriptions=: i.0')`(3 : 'descriptions=: descriptions , < y'))@.0 ''
-  (]Order       =: (3 : 'order=: i.0')`(3 : 'order=: order , < y'))@.0 ''
-  (]Task        =: (3 : 'tasks=: i.0')`(3 : 'tasks=: tasks , < y'))@.0 '' 
-)
-
-
 all_your_base_test_01_ignore=: 0
 test_all_your_base_test_01  =: monad define
-  Description@.1 ('single bit one to decimal')
-  Order@.1 (1)
+  Description=: 'single bit one to decimal'
+
 
   NB. input_base  =. 2
   NB. digits      =. 1$1
@@ -23,8 +16,8 @@ test_all_your_base_test_01  =: monad define
 
 all_your_base_test_02_ignore=: 1 NB. Change this value to 0 to run this test
 test_all_your_base_test_02  =: monad define
-  Description@.1 ('binary to single decimal')
-  Order@.1 (2)
+  Description=: 'binary to single decimal'
+
 
   NB. input_base  =. 2
   NB. digits      =. 1 0 1
@@ -35,8 +28,8 @@ test_all_your_base_test_02  =: monad define
 
 all_your_base_test_03_ignore=: 1 NB. Change this value to 0 to run this test
 test_all_your_base_test_03  =: monad define
-  Description@.1 ('single decimal to binary')
-  Order@.1 (3)
+  Description=: 'single decimal to binary'
+
 
   NB. input_base  =. 10
   NB. digits      =. 1$5
@@ -47,8 +40,8 @@ test_all_your_base_test_03  =: monad define
 
 all_your_base_test_04_ignore=: 1 NB. Change this value to 0 to run this test
 test_all_your_base_test_04  =: monad define
-  Description@.1 ('binary to multiple decimal')
-  Order@.1 (4)
+  Description=: 'binary to multiple decimal'
+
 
   NB. input_base  =. 2
   NB. digits      =. 1 0 1 0 1 0
@@ -59,8 +52,8 @@ test_all_your_base_test_04  =: monad define
 
 all_your_base_test_05_ignore=: 1 NB. Change this value to 0 to run this test
 test_all_your_base_test_05  =: monad define
-  Description@.1 ('decimal to binary')
-  Order@.1 (5)
+  Description=: 'decimal to binary'
+
 
   NB. input_base  =. 10
   NB. digits      =. 4 2
@@ -71,8 +64,8 @@ test_all_your_base_test_05  =: monad define
 
 all_your_base_test_06_ignore=: 1 NB. Change this value to 0 to run this test
 test_all_your_base_test_06  =: monad define
-  Description@.1 ('trinary to hexadecimal')
-  Order@.1 (6)
+  Description=: 'trinary to hexadecimal'
+
 
   NB. input_base  =. 3
   NB. digits      =. 1 1 2 0
@@ -83,8 +76,8 @@ test_all_your_base_test_06  =: monad define
 
 all_your_base_test_07_ignore=: 1 NB. Change this value to 0 to run this test
 test_all_your_base_test_07  =: monad define
-  Description@.1 ('hexadecimal to trinary')
-  Order@.1 (7)
+  Description=: 'hexadecimal to trinary'
+
 
   NB. input_base  =. 16
   NB. digits      =. 2 10
@@ -95,8 +88,8 @@ test_all_your_base_test_07  =: monad define
 
 all_your_base_test_08_ignore=: 1 NB. Change this value to 0 to run this test
 test_all_your_base_test_08  =: monad define
-  Description@.1 ('15-bit integer')
-  Order@.1 (8)
+  Description=: '15-bit integer'
+
 
   NB. input_base  =. 97
   NB. digits      =. 3 46 60
@@ -107,8 +100,8 @@ test_all_your_base_test_08  =: monad define
 
 all_your_base_test_09_ignore=: 1 NB. Change this value to 0 to run this test
 test_all_your_base_test_09  =: monad define
-  Description@.1 ('empty list')
-  Order@.1 (9)
+  Description=: 'empty list'
+
 
   NB. input_base  =. 2
   NB. digits      =. ''
@@ -119,8 +112,8 @@ test_all_your_base_test_09  =: monad define
 
 all_your_base_test_10_ignore=: 1 NB. Change this value to 0 to run this test
 test_all_your_base_test_10  =: monad define
-  Description@.1 ('single zero')
-  Order@.1 (10)
+  Description=: 'single zero'
+
 
   NB. input_base  =. 10
   NB. digits      =. 1$0
@@ -131,8 +124,8 @@ test_all_your_base_test_10  =: monad define
 
 all_your_base_test_11_ignore=: 1 NB. Change this value to 0 to run this test
 test_all_your_base_test_11  =: monad define
-  Description@.1 ('multiple zeros')
-  Order@.1 (11)
+  Description=: 'multiple zeros'
+
 
   NB. input_base  =. 10
   NB. digits      =. 0 0 0
@@ -143,8 +136,8 @@ test_all_your_base_test_11  =: monad define
 
 all_your_base_test_12_ignore=: 1 NB. Change this value to 0 to run this test
 test_all_your_base_test_12  =: monad define
-  Description@.1 ('leading zeros')
-  Order@.1 (12)
+  Description=: 'leading zeros'
+
 
   NB. input_base  =. 7
   NB. digits      =. 0 6 0
@@ -159,8 +152,8 @@ NB. ============================================================================
 
 all_your_base_test_13_ignore=: 1 NB. Change this value to 0 to run this test
 test_all_your_base_test_13  =: monad define
-  Description@.1 ('input base is one')
-  Order@.1 (13)
+  Description=: 'input base is one'
+
 
   NB. input_base  =. 1
   NB. digits      =. 1$0
@@ -171,8 +164,8 @@ test_all_your_base_test_13  =: monad define
 
 all_your_base_test_14_ignore=: 1 NB. Change this value to 0 to run this test
 test_all_your_base_test_14  =: monad define
-  Description@.1 ('input base is zero')
-  Order@.1 (14)
+  Description=: 'input base is zero'
+
 
   NB. input_base  =. 0
   NB. digits      =. ''
@@ -183,8 +176,8 @@ test_all_your_base_test_14  =: monad define
 
 all_your_base_test_15_ignore=: 1 NB. Change this value to 0 to run this test
 test_all_your_base_test_15  =: monad define
-  Description@.1 ('input base is negative')
-  Order@.1 (15)
+  Description=: 'input base is negative'
+
 
   NB. input_base  =. _2
   NB. digits      =. 1$1
@@ -195,8 +188,8 @@ test_all_your_base_test_15  =: monad define
 
 all_your_base_test_16_ignore=: 1 NB. Change this value to 0 to run this test
 test_all_your_base_test_16  =: monad define
-  Description@.1 ('negative digit')
-  Order@.1 (16)
+  Description=: 'negative digit'
+
 
   NB. input_base  =. 2
   NB. digits      =. 1 _1 1 0 1 0
@@ -207,8 +200,8 @@ test_all_your_base_test_16  =: monad define
 
 all_your_base_test_17_ignore=: 1 NB. Change this value to 0 to run this test
 test_all_your_base_test_17  =: monad define
-  Description@.1 ('invalid positive digit')
-  Order@.1 (17)
+  Description=: 'invalid positive digit'
+
 
   NB. input_base  =. 2
   NB. digits      =. 1 2 1 0 1 0
@@ -219,8 +212,8 @@ test_all_your_base_test_17  =: monad define
 
 all_your_base_test_18_ignore=: 1 NB. Change this value to 0 to run this test
 test_all_your_base_test_18  =: monad define
-  Description@.1 ('output base is one')
-  Order@.1 (18)
+  Description=: 'output base is one'
+
 
   NB. input_base  =. 2
   NB. digits      =. 1 0 1 0 1 0
@@ -231,8 +224,8 @@ test_all_your_base_test_18  =: monad define
 
 all_your_base_test_19_ignore=: 1 NB. Change this value to 0 to run this test
 test_all_your_base_test_19  =: monad define
-  Description@.1 ('output base is zero')
-  Order@.1 (19)
+  Description=: 'output base is zero'
+
 
   NB. input_base  =. 10
   NB. digits      =. 1$7
@@ -243,8 +236,8 @@ test_all_your_base_test_19  =: monad define
 
 all_your_base_test_20_ignore=: 1 NB. Change this value to 0 to run this test
 test_all_your_base_test_20  =: monad define
-  Description@.1 ('output base is negative')
-  Order@.1 (20)
+  Description=: 'output base is negative'
+
 
   NB. input_base  =. 2
   NB. digits      =. 1$1
@@ -255,8 +248,8 @@ test_all_your_base_test_20  =: monad define
 
 all_your_base_test_21_ignore=: 1 NB. Change this value to 0 to run this test
 test_all_your_base_test_21  =: monad define
-  Description@.1 ('both bases are negative')
-  Order@.1 (21)
+  Description=: 'both bases are negative'
+
 
   NB. input_base  =. _2
   NB. digits      =. 1$1

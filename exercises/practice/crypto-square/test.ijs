@@ -1,17 +1,10 @@
 load 'crypto-square.ijs'
 
 
-before_all=: monad define
-  (]Description =: (3 : 'descriptions=: i.0')`(3 : 'descriptions=: descriptions , < y'))@.0 ''
-  (]Order       =: (3 : 'order=: i.0')`(3 : 'order=: order , < y'))@.0 ''
-  (]Task        =: (3 : 'tasks=: i.0')`(3 : 'tasks=: tasks , < y'))@.0 '' 
-)
-
-
 crypto_square_test_01_ignore=: 0
 test_crypto_square_test_01  =: monad define
-  Description@.1 ('empty plaintext results in an empty ciphertext')
-  Order@.1 (1)
+  Description=: 'empty plaintext results in an empty ciphertext'
+
 
   NB. plaintext=. 0$0
   NB. expected=. 0$0
@@ -20,8 +13,8 @@ test_crypto_square_test_01  =: monad define
 
 crypto_square_test_02_ignore=: 1 NB. Change this value to 0 to run this test
 test_crypto_square_test_02  =: monad define
-  Description@.1 ('normalization results in empty plaintext')
-  Order@.1 (2)
+  Description=: 'normalization results in empty plaintext'
+
 
   NB. plaintext=. '... --- ...'
   NB. expected=. 0$0
@@ -30,8 +23,8 @@ test_crypto_square_test_02  =: monad define
 
 crypto_square_test_03_ignore=: 1 NB. Change this value to 0 to run this test
 test_crypto_square_test_03  =: monad define
-  Description@.1 ('Lowercase')
-  Order@.1 (3)
+  Description=: 'Lowercase'
+
 
   NB. plaintext=. 'A'
   NB. expected=. 'a'
@@ -40,8 +33,8 @@ test_crypto_square_test_03  =: monad define
 
 crypto_square_test_04_ignore=: 1 NB. Change this value to 0 to run this test
 test_crypto_square_test_04  =: monad define
-  Description@.1 ('Remove spaces')
-  Order@.1 (4)
+  Description=: 'Remove spaces'
+
 
   NB. plaintext=. '  b '
   NB. expected=. 'b'
@@ -50,8 +43,8 @@ test_crypto_square_test_04  =: monad define
 
 crypto_square_test_05_ignore=: 1 NB. Change this value to 0 to run this test
 test_crypto_square_test_05  =: monad define
-  Description@.1 ('Remove punctuation')
-  Order@.1 (5)
+  Description=: 'Remove punctuation'
+
 
   NB. plaintext=. '@1,%!'
   NB. expected=. '1'
@@ -60,8 +53,8 @@ test_crypto_square_test_05  =: monad define
 
 crypto_square_test_06_ignore=: 1 NB. Change this value to 0 to run this test
 test_crypto_square_test_06  =: monad define
-  Description@.1 ('9 character plaintext results in 3 chunks of 3 characters')
-  Order@.1 (6)
+  Description=: '9 character plaintext results in 3 chunks of 3 characters'
+
 
   NB. plaintext=. 'This is fun!'
   NB. expected=. 'tsf hiu isn'
@@ -70,8 +63,8 @@ test_crypto_square_test_06  =: monad define
 
 crypto_square_test_07_ignore=: 1 NB. Change this value to 0 to run this test
 test_crypto_square_test_07  =: monad define
-  Description@.1 ('8 character plaintext results in 3 chunks, the last one with a trailing space')
-  Order@.1 (7)
+  Description=: '8 character plaintext results in 3 chunks, the last one with a trailing space'
+
 
   NB. plaintext=. 'Chill out.'
   NB. expected=. 'clu hlt io '
@@ -80,8 +73,8 @@ test_crypto_square_test_07  =: monad define
 
 crypto_square_test_08_ignore=: 1 NB. Change this value to 0 to run this test
 test_crypto_square_test_08  =: monad define
-  Description@.1 ('54 character plaintext results in 7 chunks, the last two with trailing spaces')
-  Order@.1 (8)
+  Description=: '54 character plaintext results in 7 chunks, the last two with trailing spaces'
+
 
   NB. plaintext=. 'If man was meant to stay on the ground, god would have given us roots.'
   NB. expected=. 'imtgdvs fearwer mayoogo anouuio ntnnlvt wttddes aohghn  sseoau '

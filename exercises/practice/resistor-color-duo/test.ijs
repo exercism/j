@@ -1,17 +1,10 @@
 load 'resistor-color-duo.ijs'
 
 
-before_all=: monad define
-  (]Description =: (3 : 'descriptions=: i.0')`(3 : 'descriptions=: descriptions , < y'))@.0 ''
-  (]Order       =: (3 : 'order=: i.0')`(3 : 'order=: order , < y'))@.0 ''
-  (]Task        =: (3 : 'tasks=: i.0')`(3 : 'tasks=: tasks , < y'))@.0 '' 
-)
-
-
 resistor_color_duo_test_01_ignore=: 0
 test_resistor_color_duo_test_01  =: monad define
-  Description@.1 ('Brown and black')
-  Order@.1 (1)
+  Description=: 'Brown and black'
+
 
   NB. colors=. <;._1 ' brown black'
   NB. expected=. 10
@@ -20,8 +13,8 @@ test_resistor_color_duo_test_01  =: monad define
 
 resistor_color_duo_test_02_ignore=: 1 NB. Change this value to 0 to run this test
 test_resistor_color_duo_test_02  =: monad define
-  Description@.1 ('Blue and grey')
-  Order@.1 (2)
+  Description=: 'Blue and grey'
+
 
   NB. colors=. <;._1 ' blue grey'
   NB. expected=. 68
@@ -30,8 +23,8 @@ test_resistor_color_duo_test_02  =: monad define
 
 resistor_color_duo_test_03_ignore=: 1 NB. Change this value to 0 to run this test
 test_resistor_color_duo_test_03  =: monad define
-  Description@.1 ('Yellow and violet')
-  Order@.1 (3)
+  Description=: 'Yellow and violet'
+
 
   NB. colors=. <;._1 ' yellow violet'
   NB. expected=. 47
@@ -40,8 +33,8 @@ test_resistor_color_duo_test_03  =: monad define
 
 resistor_color_duo_test_04_ignore=: 1 NB. Change this value to 0 to run this test
 test_resistor_color_duo_test_04  =: monad define
-  Description@.1 ('White and red')
-  Order@.1 (4)
+  Description=: 'White and red'
+
 
   NB. colors=. <;._1 ' white red'
   NB. expected=. 92
@@ -50,8 +43,8 @@ test_resistor_color_duo_test_04  =: monad define
 
 resistor_color_duo_test_05_ignore=: 1 NB. Change this value to 0 to run this test
 test_resistor_color_duo_test_05  =: monad define
-  Description@.1 ('Orange and orange')
-  Order@.1 (5)
+  Description=: 'Orange and orange'
+
 
   NB. colors=. <;._1 ' orange orange'
   NB. expected=. 33
@@ -60,8 +53,8 @@ test_resistor_color_duo_test_05  =: monad define
 
 resistor_color_duo_test_06_ignore=: 1 NB. Change this value to 0 to run this test
 test_resistor_color_duo_test_06  =: monad define
-  Description@.1 ('Ignore additional colors')
-  Order@.1 (6)
+  Description=: 'Ignore additional colors'
+
 
   NB. colors=. <;._1 ' green brown orange'
   NB. expected=. 51
@@ -70,8 +63,8 @@ test_resistor_color_duo_test_06  =: monad define
 
 resistor_color_duo_test_07_ignore=: 1 NB. Change this value to 0 to run this test
 test_resistor_color_duo_test_07  =: monad define
-  Description@.1 ('Black and brown, one-digit')
-  Order@.1 (7)
+  Description=: 'Black and brown, one-digit'
+
 
   NB. colors=. <;._1 ' black brown'
   NB. expected=. 1

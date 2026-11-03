@@ -1,17 +1,9 @@
 load 'minesweeper.ijs'
 
 
-before_all=: monad define  
-  (]Description =: (3 : 'descriptions=: i.0')`(3 : 'descriptions=: descriptions , < y'))@.0 ''
-  (]Order       =: (3 : 'order=: i.0')`(3 : 'order=: order , < y'))@.0 ''
-  (]Task        =: (3 : 'tasks=: i.0')`(3 : 'tasks=: tasks , < y'))@.0 '' 
-)
-
-
 minesweeper_test_01_ignore=: 0
 test_minesweeper_test_01  =: monad define
-  Description@.1 ('no rows')
-  Order@.1 (1)
+  Description=: 'no rows'
 
   NB. minefield=. ,:''
   NB. expected =. ,:''
@@ -20,8 +12,7 @@ test_minesweeper_test_01  =: monad define
 
 minesweeper_test_02_ignore=: 1 NB. Change this value to 0 to run this test
 test_minesweeper_test_02  =: monad define
-  Description@.1 ('no columns')
-  Order@.1 (2)
+  Description=: 'no columns'
 
   NB. minefield=. ,:a:
   NB. expected =. ,:a:
@@ -30,8 +21,7 @@ test_minesweeper_test_02  =: monad define
 
 minesweeper_test_03_ignore=: 1 NB. Change this value to 0 to run this test
 test_minesweeper_test_03  =: monad define
-  Description@.1 ('no mines')
-  Order@.1 (3)
+  Description=: 'no mines'
 
   NB. minefield=. '   ','   ',:'   '
   NB. expected =. '   ','   ',:'   '
@@ -40,8 +30,7 @@ test_minesweeper_test_03  =: monad define
 
 minesweeper_test_04_ignore=: 1 NB. Change this value to 0 to run this test
 test_minesweeper_test_04  =: monad define
-  Description@.1 ('minefield with only mines')
-  Order@.1 (4)
+  Description=: 'minefield with only mines'
 
   NB. minefield=. '***','***',:'***'
   NB. expected =. '***','***',:'***'
@@ -50,8 +39,7 @@ test_minesweeper_test_04  =: monad define
 
 minesweeper_test_05_ignore=: 1 NB. Change this value to 0 to run this test
 test_minesweeper_test_05  =: monad define
-  Description@.1 ('mine surrounded by spaces')
-  Order@.1 (5)
+  Description=: 'mine surrounded by spaces'
 
   NB. minefield=. '   ',' * ',:'   '
   NB. expected =. '111','1*1',:'111'
@@ -60,8 +48,7 @@ test_minesweeper_test_05  =: monad define
 
 minesweeper_test_06_ignore=: 1 NB. Change this value to 0 to run this test
 test_minesweeper_test_06  =: monad define
-  Description@.1 ('space surrounded by mines')
-  Order@.1 (6)
+  Description=: 'space surrounded by mines'
 
   NB. minefield=. '***','* *',:'***'
   NB. expected =. '***','*8*',:'***'
@@ -70,8 +57,7 @@ test_minesweeper_test_06  =: monad define
 
 minesweeper_test_07_ignore=: 1 NB. Change this value to 0 to run this test
 test_minesweeper_test_07  =: monad define
-  Description@.1 ('horizontal line')
-  Order@.1 (7)
+  Description=: 'horizontal line'
 
   NB. minefield=. ,:' * * '
   NB. expected =. ,:'1*2*1'
@@ -80,8 +66,7 @@ test_minesweeper_test_07  =: monad define
 
 minesweeper_test_08_ignore=: 1 NB. Change this value to 0 to run this test
 test_minesweeper_test_08  =: monad define
-  Description@.1 ('horizontal line, mines at edges')
-  Order@.1 (8)
+  Description=: 'horizontal line, mines at edges'
 
   NB. minefield=. '*   *'
   NB. expected =. '*1 1*'
@@ -90,8 +75,7 @@ test_minesweeper_test_08  =: monad define
 
 minesweeper_test_09_ignore=: 1 NB. Change this value to 0 to run this test
 test_minesweeper_test_09  =: monad define
-  Description@.1 ('vertical line')
-  Order@.1 (9)
+  Description=: 'vertical line'
 
   NB. minefield=. ' ','*',' ','*',:' '
   NB. expected =. '1','*','2','*',:'1'
@@ -100,8 +84,7 @@ test_minesweeper_test_09  =: monad define
 
 minesweeper_test_10_ignore=: 1 NB. Change this value to 0 to run this test
 test_minesweeper_test_10  =: monad define
-  Description@.1 ('vertical line, mines at edges')
-  Order@.1 (10)
+  Description=: 'vertical line, mines at edges'
 
   NB. minefield=. '*',' ',' ',' ',:'*'
   NB. expected =. '*','1',' ','1',:'*'
@@ -110,8 +93,7 @@ test_minesweeper_test_10  =: monad define
 
 minesweeper_test_11_ignore=: 1 NB. Change this value to 0 to run this test
 test_minesweeper_test_11  =: monad define
-  Description@.1 ('cross')
-  Order@.1 (11)
+  Description=: 'cross'
 
   NB. minefield=. '  *  ','  *  ','*****','  *  ',:'  *  '
   NB. expected =. ' 2*2 ','25*52','*****','25*52',:' 2*2 '
@@ -120,8 +102,7 @@ test_minesweeper_test_11  =: monad define
 
 minesweeper_test_12_ignore=: 1 NB. Change this value to 0 to run this test
 test_minesweeper_test_12  =: monad define
-  Description@.1 ('large minefield')
-  Order@.1 (12)
+  Description=: 'large minefield'
 
   NB. minefield=. ' *  * ','  *   ','    * ','   * *',' *  * ',:'      '
   NB. expected =. '1*22*1','12*322',' 123*2','112*4*','1*22*2',:'111111'
