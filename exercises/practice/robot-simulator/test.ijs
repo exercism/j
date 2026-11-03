@@ -1,21 +1,13 @@
 load 'robot-simulator.ijs'
 
 
-before_all=: monad define  
-  (]Description =: (3 : 'descriptions=: i.0')`(3 : 'descriptions=: descriptions , < y'))@.0 ''
-  (]Order       =: (3 : 'order=: i.0')`(3 : 'order=: order , < y'))@.0 ''
-  (]Task        =: (3 : 'tasks=: i.0')`(3 : 'tasks=: tasks , < y'))@.0 '' 
-)
-
-
 robot_simulator_test_01_ignore=: 0
 test_robot_simulator_test_01  =: monad define
-  Description@.1 ('at origin facing north')
-  Order@.1 (1) 
+  Description=: 'at origin facing north' 
 
   NB. initial state
   NB. ==============================
-  NB. 'x y' =. position =. 0 0
+  NB. 'x y'=. 0 0
   NB. direction=. 'north'
 
   r =. (0 0;'north') conew 'robot'
@@ -25,12 +17,11 @@ test_robot_simulator_test_01  =: monad define
 
 robot_simulator_test_02_ignore=: 1 NB. Change this value to 0 to run this test
 test_robot_simulator_test_02  =: monad define
-  Description@.1 ('at negative position facing south')
-  Order@.1 (2) 
+  Description=: 'at negative position facing south' 
 
   NB. initial state
   NB. ==============================
-  NB. 'x y' =. position =. _1 _1
+  NB. 'x y'=. _1 _1
   NB. direction=. 'south'
 
   r =. (_1 _1;'south') conew 'robot'
@@ -40,18 +31,17 @@ test_robot_simulator_test_02  =: monad define
 
 robot_simulator_test_03_ignore=: 1 NB. Change this value to 0 to run this test
 test_robot_simulator_test_03  =: monad define
-  Description@.1 ('changes north to east')
-  Order@.1 (3) 
+  Description=: 'changes north to east' 
 
   NB. initial state
   NB. ==============================
-  NB. 'x y' =. position =. 0 0
+  NB. 'x y'=. 0 0
   NB. direction=. 'north'
   NB. instructions=. 'R'
 
   NB. expected
   NB. ==============================
-  NB. 'x y' =. position =. 0 0
+  NB. 'x y'=. 0 0
   NB. direction=. 'east'
 
 
@@ -63,18 +53,17 @@ test_robot_simulator_test_03  =: monad define
 
 robot_simulator_test_04_ignore=: 1 NB. Change this value to 0 to run this test
 test_robot_simulator_test_04  =: monad define
-  Description@.1 ('changes east to south')
-  Order@.1 (4) 
+  Description=: 'changes east to south' 
 
   NB. initial state
   NB. ==============================
-  NB. 'x y' =. position =. 0 0
+  NB. 'x y'=. 0 0
   NB. direction=. 'east'
   NB. instructions=. 'R'
 
   NB. expected
   NB. ==============================
-  NB. 'x y' =. position =. 0 0
+  NB. 'x y'=. 0 0
   NB. direction=. 'south'
 
 
@@ -86,18 +75,17 @@ test_robot_simulator_test_04  =: monad define
 
 robot_simulator_test_05_ignore=: 1 NB. Change this value to 0 to run this test
 test_robot_simulator_test_05  =: monad define
-  Description@.1 ('changes south to west')
-  Order@.1 (5) 
+  Description=: 'changes south to west' 
 
   NB. initial state
   NB. ==============================
-  NB. 'x y' =. position =. 0 0
+  NB. 'x y'=. 0 0
   NB. direction=. 'south'
   NB. instructions=. 'R'
 
   NB. expected
   NB. ==============================
-  NB. 'x y' =. position =. 0 0
+  NB. 'x y'=. 0 0
   NB. direction=. 'west'
 
 
@@ -109,18 +97,17 @@ test_robot_simulator_test_05  =: monad define
 
 robot_simulator_test_06_ignore=: 1 NB. Change this value to 0 to run this test
 test_robot_simulator_test_06  =: monad define
-  Description@.1 ('changes west to north')
-  Order@.1 (6) 
+  Description=: 'changes west to north' 
 
   NB. initial state
   NB. ==============================
-  NB. 'x y' =. position =. 0 0
+  NB. 'x y'=. 0 0
   NB. direction=. 'west'
   NB. instructions=. 'R'
 
   NB. expected
   NB. ==============================
-  NB. 'x y' =. position =. 0 0
+  NB. 'x y'=. 0 0
   NB. direction=. 'north'
 
 
@@ -132,18 +119,17 @@ test_robot_simulator_test_06  =: monad define
 
 robot_simulator_test_07_ignore=: 1 NB. Change this value to 0 to run this test
 test_robot_simulator_test_07  =: monad define
-  Description@.1 ('changes north to west')
-  Order@.1 (7) 
+  Description=: 'changes north to west' 
 
   NB. initial state
   NB. ==============================
-  NB. 'x y' =. position =. 0 0
+  NB. 'x y'=. 0 0
   NB. direction=. 'north'
   NB. instructions=. 'L'
 
   NB. expected
   NB. ==============================
-  NB. 'x y' =. position =. 0 0
+  NB. 'x y'=. 0 0
   NB. direction=. 'west'
 
 
@@ -155,18 +141,17 @@ test_robot_simulator_test_07  =: monad define
 
 robot_simulator_test_08_ignore=: 1 NB. Change this value to 0 to run this test
 test_robot_simulator_test_08  =: monad define
-  Description@.1 ('changes west to south')
-  Order@.1 (8) 
+  Description=: 'changes west to south' 
 
   NB. initial state
   NB. ==============================
-  NB. 'x y' =. position =. 0 0
+  NB. 'x y'=. 0 0
   NB. direction=. 'west'
   NB. instructions=. 'L'
 
   NB. expected
   NB. ==============================
-  NB. 'x y' =. position =. 0 0
+  NB. 'x y'=. 0 0
   NB. direction=. 'south'
 
 
@@ -178,18 +163,17 @@ test_robot_simulator_test_08  =: monad define
 
 robot_simulator_test_09_ignore=: 1 NB. Change this value to 0 to run this test
 test_robot_simulator_test_09  =: monad define
-  Description@.1 ('changes south to east')
-  Order@.1 (9) 
+  Description=: 'changes south to east' 
 
   NB. initial state
   NB. ==============================
-  NB. 'x y' =. position =. 0 0
+  NB. 'x y'=. 0 0
   NB. direction=. 'south'
   NB. instructions=. 'L'
 
   NB. expected
   NB. ==============================
-  NB. 'x y' =. position =. 0 0
+  NB. 'x y'=. 0 0
   NB. direction=. 'east'
 
 
@@ -201,18 +185,17 @@ test_robot_simulator_test_09  =: monad define
 
 robot_simulator_test_10_ignore=: 1 NB. Change this value to 0 to run this test
 test_robot_simulator_test_10  =: monad define
-  Description@.1 ('changes east to north')
-  Order@.1 (10) 
+  Description=: 'changes east to north' 
 
   NB. initial state
   NB. ==============================
-  NB. 'x y' =. position =. 0 0
+  NB. 'x y'=. 0 0
   NB. direction=. 'east'
   NB. instructions=. 'L'
 
   NB. expected
   NB. ==============================
-  NB. 'x y' =. position =. 0 0
+  NB. 'x y'=. 0 0
   NB. direction=. 'north'
 
 
@@ -224,18 +207,17 @@ test_robot_simulator_test_10  =: monad define
 
 robot_simulator_test_11_ignore=: 1 NB. Change this value to 0 to run this test
 test_robot_simulator_test_11  =: monad define
-  Description@.1 ('facing north increments Y')
-  Order@.1 (11) 
+  Description=: 'facing north increments Y' 
 
   NB. initial state
   NB. ==============================
-  NB. 'x y' =. position =. 0 0
+  NB. 'x y'=. 0 0
   NB. direction=. 'north'
   NB. instructions=. 'A'
 
   NB. expected
   NB. ==============================
-  NB. 'x y' =. position =. 0 1
+  NB. 'x y'=. 0 1
   NB. direction=. 'north'
 
 
@@ -247,18 +229,17 @@ test_robot_simulator_test_11  =: monad define
 
 robot_simulator_test_12_ignore=: 1 NB. Change this value to 0 to run this test
 test_robot_simulator_test_12  =: monad define
-  Description@.1 ('facing south decrements Y')
-  Order@.1 (12) 
+  Description=: 'facing south decrements Y' 
 
   NB. initial state
   NB. ==============================
-  NB. 'x y' =. position =. 0 0
+  NB. 'x y'=. 0 0
   NB. direction=. 'south'
   NB. instructions=. 'A'
 
   NB. expected
   NB. ==============================
-  NB. 'x y' =. position =. 0 _1
+  NB. 'x y'=. 0 _1
   NB. direction=. 'south'
 
 
@@ -270,18 +251,17 @@ test_robot_simulator_test_12  =: monad define
 
 robot_simulator_test_13_ignore=: 1 NB. Change this value to 0 to run this test
 test_robot_simulator_test_13  =: monad define
-  Description@.1 ('facing east increments X')
-  Order@.1 (13) 
+  Description=: 'facing east increments X' 
 
   NB. initial state
   NB. ==============================
-  NB. 'x y' =. position =. 0 0
+  NB. 'x y'=. 0 0
   NB. direction=. 'east'
   NB. instructions=. 'A'
 
   NB. expected
   NB. ==============================
-  NB. 'x y' =. position =. 1 0
+  NB. 'x y'=. 1 0
   NB. direction=. 'east'
 
 
@@ -293,18 +273,17 @@ test_robot_simulator_test_13  =: monad define
 
 robot_simulator_test_14_ignore=: 1 NB. Change this value to 0 to run this test
 test_robot_simulator_test_14  =: monad define
-  Description@.1 ('facing west decrements X')
-  Order@.1 (14) 
+  Description=: 'facing west decrements X' 
 
   NB. initial state
   NB. ==============================
-  NB. 'x y' =. position =. 0 0
+  NB. 'x y'=. 0 0
   NB. direction=. 'west'
   NB. instructions=. 'A'
 
   NB. expected
   NB. ==============================
-  NB. 'x y' =. position =. _1 0
+  NB. 'x y'=. _1 0
   NB. direction=. 'west'
 
 
@@ -316,18 +295,17 @@ test_robot_simulator_test_14  =: monad define
 
 robot_simulator_test_15_ignore=: 1 NB. Change this value to 0 to run this test
 test_robot_simulator_test_15  =: monad define
-  Description@.1 ('moving east and north from README')
-  Order@.1 (15) 
+  Description=: 'moving east and north from README' 
 
   NB. initial state
   NB. ==============================
-  NB. 'x y' =. position =. 7 3
+  NB. 'x y'=. 7 3
   NB. direction=. 'north'
   NB. instructions=. 'RAALAL'
 
   NB. expected
   NB. ==============================
-  NB. 'x y' =. position =. 9 4
+  NB. 'x y'=. 9 4
   NB. direction=. 'west'
 
 
@@ -339,18 +317,17 @@ test_robot_simulator_test_15  =: monad define
 
 robot_simulator_test_16_ignore=: 1 NB. Change this value to 0 to run this test
 test_robot_simulator_test_16  =: monad define
-  Description@.1 ('moving west and north')
-  Order@.1 (16) 
+  Description=: 'moving west and north' 
 
   NB. initial state
   NB. ==============================
-  NB. 'x y' =. position =. 0 0
+  NB. 'x y'=. 0 0
   NB. direction=. 'north'
   NB. instructions=. 'LAAARALA'
 
   NB. expected
   NB. ==============================
-  NB. 'x y' =. position =. _4 1
+  NB. 'x y'=. _4 1
   NB. direction=. 'west'
 
 
@@ -362,18 +339,17 @@ test_robot_simulator_test_16  =: monad define
 
 robot_simulator_test_17_ignore=: 1 NB. Change this value to 0 to run this test
 test_robot_simulator_test_17  =: monad define
-  Description@.1 ('moving west and south')
-  Order@.1 (17) 
+  Description=: 'moving west and south' 
 
   NB. initial state
   NB. ==============================
-  NB. 'x y' =. position =. 2 _7
+  NB. 'x y'=. 2 _7
   NB. direction=. 'east'
   NB. instructions=. 'RRAAAAALA'
 
   NB. expected
   NB. ==============================
-  NB. 'x y' =. position =. _3 _8
+  NB. 'x y'=. _3 _8
   NB. direction=. 'south'
 
 
@@ -385,18 +361,17 @@ test_robot_simulator_test_17  =: monad define
 
 robot_simulator_test_18_ignore=: 1 NB. Change this value to 0 to run this test
 test_robot_simulator_test_18  =: monad define
-  Description@.1 ('moving east and north')
-  Order@.1 (18) 
+  Description=: 'moving east and north' 
 
   NB. initial state
   NB. ==============================
-  NB. 'x y' =. position =. 8 4
+  NB. 'x y'=. 8 4
   NB. direction=. 'south'
   NB. instructions=. 'LAAARRRALLLL'
 
   NB. expected
   NB. ==============================
-  NB. 'x y' =. position =. 11 5
+  NB. 'x y'=. 11 5
   NB. direction=. 'north'
 
 

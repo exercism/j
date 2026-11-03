@@ -1,17 +1,9 @@
 load 'grade-school.ijs'
 
 
-before_all=: monad define
-  (]Description =: (3 : 'descriptions=: i.0')`(3 : 'descriptions=: descriptions , < y'))@.0 ''
-  (]Order       =: (3 : 'order=: i.0')`(3 : 'order=: order , < y'))@.0 ''
-  (]Task        =: (3 : 'tasks=: i.0')`(3 : 'tasks=: tasks , < y'))@.0 ''
-)
-
-
 grade_school_test_01_ignore=: 0
 test_grade_school_test_01  =: monad define
-  Description@.1 ('Roster is empty when no student is added')
-  Order@.1 (1)
+  Description=: 'Roster is empty when no student is added'
 
   NB. students=. ''
   NB. expected=. ''
@@ -20,8 +12,7 @@ test_grade_school_test_01  =: monad define
 
 grade_school_test_02_ignore=: 1 NB. Change this value to 0 to run this test
 test_grade_school_test_02  =: monad define
-  Description@.1 ('Add a student')
-  Order@.1 (2)
+  Description=: 'Add a student'
 
   NB. students=. 'Aimee' ; 2
   NB. expected=. ,1
@@ -30,8 +21,7 @@ test_grade_school_test_02  =: monad define
 
 grade_school_test_03_ignore=: 1 NB. Change this value to 0 to run this test
 test_grade_school_test_03  =: monad define
-  Description@.1 ('Student is added to the roster')
-  Order@.1 (3)
+  Description=: 'Student is added to the roster'
 
   NB. students=. 'Aimee' ; 2
   NB. expected=. (,<'Aimee')
@@ -40,8 +30,7 @@ test_grade_school_test_03  =: monad define
 
 grade_school_test_04_ignore=: 1 NB. Change this value to 0 to run this test
 test_grade_school_test_04  =: monad define
-  Description@.1 ('Adding multiple students in the same grade in the roster')
-  Order@.1 (4)
+  Description=: 'Adding multiple students in the same grade in the roster'
 
   NB. students=. (;:'Blair James Paul'),: <"0 (2 2 2)
   NB. expected=. 1 1 1
@@ -50,8 +39,7 @@ test_grade_school_test_04  =: monad define
 
 grade_school_test_05_ignore=: 1 NB. Change this value to 0 to run this test
 test_grade_school_test_05  =: monad define
-  Description@.1 ('Multiple students in the same grade are added to the roster')
-  Order@.1 (5)
+  Description=: 'Multiple students in the same grade are added to the roster'
 
   NB. students=. (;:'Blair James Paul'),: <"0 (2 2 2)
   NB. expected=. 'Blair James Paul'
@@ -60,8 +48,7 @@ test_grade_school_test_05  =: monad define
 
 grade_school_test_06_ignore=: 1 NB. Change this value to 0 to run this test
 test_grade_school_test_06  =: monad define
-  Description@.1 ('Cannot add student to same grade in the roster more than once')
-  Order@.1 (6)
+  Description=: 'Cannot add student to same grade in the roster more than once'
 
   NB. students=. (;:'Blair James James Paul'),: <"0 (2 2 2 2)
   NB. expected=. 1 1 0 1
@@ -70,8 +57,7 @@ test_grade_school_test_06  =: monad define
 
 grade_school_test_09_ignore=: 1 NB. Change this value to 0 to run this test
 test_grade_school_test_09  =: monad define
-  Description@.1 ('Student not added to same grade in the roster more than once')
-  Order@.1 (9)
+  Description=: 'Student not added to same grade in the roster more than once'
 
   NB. expected=. 'Blair James Paul'
   assert (;:'Blair James Paul') -: roster (;:'Blair James James Paul'),: <"0 (2 2 2 2)
@@ -79,8 +65,7 @@ test_grade_school_test_09  =: monad define
 
 grade_school_test_10_ignore=: 1 NB. Change this value to 0 to run this test
 test_grade_school_test_10  =: monad define
-  Description@.1 ('Adding students in multiple grades')
-  Order@.1 (10)
+  Description=: 'Adding students in multiple grades'
 
   NB. students=. (;:'Chelsea Logan'),: <"0 (3 7)
   NB. expected=. 1 1
@@ -89,8 +74,7 @@ test_grade_school_test_10  =: monad define
 
 grade_school_test_11_ignore=: 1 NB. Change this value to 0 to run this test
 test_grade_school_test_11  =: monad define
-  Description@.1 ('Students in multiple grades are added to the roster')
-  Order@.1 (11)
+  Description=: 'Students in multiple grades are added to the roster'
 
   NB. students=. (;:'Chelsea Logan'),: <"0 (3 7)
   NB. expected=. 'Chelsea Logan'
@@ -99,8 +83,7 @@ test_grade_school_test_11  =: monad define
 
 grade_school_test_12_ignore=: 1 NB. Change this value to 0 to run this test
 test_grade_school_test_12  =: monad define
-  Description@.1 ('Cannot add same student to multiple grades in the roster')
-  Order@.1 (12)
+  Description=: 'Cannot add same student to multiple grades in the roster'
 
   NB. students=. (;:'Blair James James Paul'),: <"0 (2 2 3 3)
   NB. expected=. 1 1 0 1
@@ -109,8 +92,7 @@ test_grade_school_test_12  =: monad define
 
 grade_school_test_14_ignore=: 1 NB. Change this value to 0 to run this test
 test_grade_school_test_14  =: monad define
-  Description@.1 ('Student not added to multiple grades in the roster')
-  Order@.1 (14)
+  Description=: 'Student not added to multiple grades in the roster'
 
   NB. students=. (;:'Blair James James Paul'),: <"0 (2 2 3 3)
   NB. expected=. 'Blair James Paul'
@@ -119,8 +101,7 @@ test_grade_school_test_14  =: monad define
 
 grade_school_test_15_ignore=: 1 NB. Change this value to 0 to run this test
 test_grade_school_test_15  =: monad define
-  Description@.1 ('Students are sorted by grades in the roster')
-  Order@.1 (15)
+  Description=: 'Students are sorted by grades in the roster'
 
   NB. students=. (;:'Jim Peter Anna'),: <"0 (3 2 1)
   NB. expected=. 'Anna Peter Jim'
@@ -129,8 +110,7 @@ test_grade_school_test_15  =: monad define
 
 grade_school_test_16_ignore=: 1 NB. Change this value to 0 to run this test
 test_grade_school_test_16  =: monad define
-  Description@.1 ('Students are sorted by name in the roster')
-  Order@.1 (16)
+  Description=: 'Students are sorted by name in the roster'
 
   NB. students=. (;:'Peter Zoe Alex'),: <"0 (2 2 2)
   NB. expected=. 'Alex Peter Zoe'
@@ -139,8 +119,7 @@ test_grade_school_test_16  =: monad define
 
 grade_school_test_17_ignore=: 1 NB. Change this value to 0 to run this test
 test_grade_school_test_17  =: monad define
-  Description@.1 ('Students are sorted by grades and then by name in the roster')
-  Order@.1 (17)
+  Description=: 'Students are sorted by grades and then by name in the roster'
 
   NB. students=. (;:'Peter Anna Barb Zoe Alex Jim Charlie'),: <"0 (2 1 1 2 2 3 1)
   NB. expected=. 'Anna Barb Charlie Alex Peter Zoe Jim'
@@ -149,8 +128,7 @@ test_grade_school_test_17  =: monad define
 
 grade_school_test_18_ignore=: 1 NB. Change this value to 0 to run this test
 test_grade_school_test_18  =: monad define
-  Description@.1 ('Grade is empty if no students in the roster')
-  Order@.1 (18)
+  Description=: 'Grade is empty if no students in the roster'
 
   NB. students=. ''
   NB. desiredGrade=. 1
@@ -160,8 +138,7 @@ test_grade_school_test_18  =: monad define
 
 grade_school_test_19_ignore=: 1 NB. Change this value to 0 to run this test
 test_grade_school_test_19  =: monad define
-  Description@.1 ('Grade is empty if no students in that grade')
-  Order@.1 (19)
+  Description=: 'Grade is empty if no students in that grade'
 
   NB. students=. (;:'Peter Zoe Alex Jim'),: <"0 (2 2 2 3)
   NB. desiredGrade=. 1
@@ -171,8 +148,7 @@ test_grade_school_test_19  =: monad define
 
 grade_school_test_20_ignore=: 1 NB. Change this value to 0 to run this test
 test_grade_school_test_20  =: monad define
-  Description@.1 ('Student not added to same grade more than once')
-  Order@.1 (20)
+  Description=: 'Student not added to same grade more than once'
 
   NB. students=. (;:'Blair James James Paul'),: <"0 (2 2 2 2)
   NB. desiredGrade=. 2
@@ -182,8 +158,7 @@ test_grade_school_test_20  =: monad define
 
 grade_school_test_21_ignore=: 1 NB. Change this value to 0 to run this test
 test_grade_school_test_21  =: monad define
-  Description@.1 ('Student not added to multiple grades')
-  Order@.1 (21)
+  Description=: 'Student not added to multiple grades'
 
   NB. students=. (;:'Blair James James Paul'),: <"0 (2 2 3 3)
   NB. desiredGrade=. 2
@@ -193,8 +168,7 @@ test_grade_school_test_21  =: monad define
 
 grade_school_test_22_ignore=: 1 NB. Change this value to 0 to run this test
 test_grade_school_test_22  =: monad define
-  Description@.1 ('Student not added to other grade for multiple grades')
-  Order@.1 (22)
+  Description=: 'Student not added to other grade for multiple grades'
 
   NB. students=. (;:'Blair James James Paul'),: <"0 (2 2 3 3)
   NB. desiredGrade=. 3
@@ -204,8 +178,7 @@ test_grade_school_test_22  =: monad define
 
 grade_school_test_23_ignore=: 1 NB. Change this value to 0 to run this test
 test_grade_school_test_23  =: monad define
-  Description@.1 ('Students are sorted by name in a grade')
-  Order@.1 (23)
+  Description=: 'Students are sorted by name in a grade'
 
   NB. students=. (;:'Franklin Bradley Jeff'),: <"0 (5 5 1)
   NB. desiredGrade=. 5

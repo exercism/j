@@ -1,17 +1,9 @@
 load 'kindergarten-garden.ijs'
 
 
-before_all=: monad define  
-  (]Description =: (3 : 'descriptions=: i.0')`(3 : 'descriptions=: descriptions , < y'))@.0 ''
-  (]Order       =: (3 : 'order=: i.0')`(3 : 'order=: order , < y'))@.0 ''
-  (]Task        =: (3 : 'tasks=: i.0')`(3 : 'tasks=: tasks , < y'))@.0 '' 
-)
-
-
 kindergarten_garden_test_01_ignore=: 0
 test_kindergarten_garden_test_01  =: monad define
-  Description@.1 ('garden with single student')
-  Order@.1 (1)
+  Description=: 'garden with single student'
 
   NB. diagram  =. 2 2$'RCGG'
   NB. student  =. 'Alice'
@@ -21,8 +13,7 @@ test_kindergarten_garden_test_01  =: monad define
 
 kindergarten_garden_test_02_ignore=: 1 NB. Change this value to 0 to run this test
 test_kindergarten_garden_test_02  =: monad define
-  Description@.1 ('different garden with single student')
-  Order@.1 (2)
+  Description=: 'different garden with single student'
 
   NB. diagram  =. 2 2$'VCRC'
   NB. student  =. 'Alice'
@@ -32,8 +23,7 @@ test_kindergarten_garden_test_02  =: monad define
 
 kindergarten_garden_test_03_ignore=: 1 NB. Change this value to 0 to run this test
 test_kindergarten_garden_test_03  =: monad define
-  Description@.1 ('garden with two students')
-  Order@.1 (3)
+  Description=: 'garden with two students'
 
   NB. diagram  =. 2 4$'VVCGVVRC'
   NB. student  =. 'Bob'
@@ -43,8 +33,7 @@ test_kindergarten_garden_test_03  =: monad define
 
 kindergarten_garden_test_04_ignore=: 1 NB. Change this value to 0 to run this test
 test_kindergarten_garden_test_04  =: monad define
-  Description@.1 ('second student''s garden')
-  Order@.1 (4)
+  Description=: 'second student''s garden'
 
   NB. diagram  =. 2 6$'VVCCGGVVCCGG'
   NB. student  =. 'Bob'
@@ -54,8 +43,7 @@ test_kindergarten_garden_test_04  =: monad define
 
 kindergarten_garden_test_05_ignore=: 1 NB. Change this value to 0 to run this test
 test_kindergarten_garden_test_05  =: monad define
-  Description@.1 ('third student''s garden')
-  Order@.1 (5)
+  Description=: 'third student''s garden'
 
   NB. diagram  =. 2 6$'VVCCGGVVCCGG'
   NB. student  =. 'Charlie'
@@ -65,8 +53,7 @@ test_kindergarten_garden_test_05  =: monad define
 
 kindergarten_garden_test_06_ignore=: 1 NB. Change this value to 0 to run this test
 test_kindergarten_garden_test_06  =: monad define
-  Description@.1 ('for Alice, first student''s garden')
-  Order@.1 (6)
+  Description=: 'for Alice, first student''s garden'
 
   NB. diagram  =. 2 24$'VRCGVVRVCGGCCGVRGCVCGCGVVRCCCGCRRGVCGCRVVCVGCGCV'
   NB. student  =. 'Alice'
@@ -76,8 +63,7 @@ test_kindergarten_garden_test_06  =: monad define
 
 kindergarten_garden_test_07_ignore=: 1 NB. Change this value to 0 to run this test
 test_kindergarten_garden_test_07  =: monad define
-  Description@.1 ('for Bob, second student''s garden')
-  Order@.1 (7)
+  Description=: 'for Bob, second student''s garden'
 
   NB. diagram  =. 2 24$'VRCGVVRVCGGCCGVRGCVCGCGVVRCCCGCRRGVCGCRVVCVGCGCV'
   NB. student  =. 'Bob'
@@ -87,8 +73,7 @@ test_kindergarten_garden_test_07  =: monad define
 
 kindergarten_garden_test_08_ignore=: 1 NB. Change this value to 0 to run this test
 test_kindergarten_garden_test_08  =: monad define
-  Description@.1 ('for Charlie')
-  Order@.1 (8)
+  Description=: 'for Charlie'
 
   NB. diagram  =. 2 24$'VRCGVVRVCGGCCGVRGCVCGCGVVRCCCGCRRGVCGCRVVCVGCGCV'
   NB. student  =. 'Charlie'
@@ -98,8 +83,7 @@ test_kindergarten_garden_test_08  =: monad define
 
 kindergarten_garden_test_09_ignore=: 1 NB. Change this value to 0 to run this test
 test_kindergarten_garden_test_09  =: monad define
-  Description@.1 ('for David')
-  Order@.1 (9)
+  Description=: 'for David'
 
   NB. diagram  =. 2 24$'VRCGVVRVCGGCCGVRGCVCGCGVVRCCCGCRRGVCGCRVVCVGCGCV'
   NB. student  =. 'David'
@@ -109,8 +93,7 @@ test_kindergarten_garden_test_09  =: monad define
 
 kindergarten_garden_test_10_ignore=: 1 NB. Change this value to 0 to run this test
 test_kindergarten_garden_test_10  =: monad define
-  Description@.1 ('for Eve')
-  Order@.1 (10)
+  Description=: 'for Eve'
 
   NB. diagram  =. 2 24$'VRCGVVRVCGGCCGVRGCVCGCGVVRCCCGCRRGVCGCRVVCVGCGCV'
   NB. student  =. 'Eve'
@@ -120,8 +103,7 @@ test_kindergarten_garden_test_10  =: monad define
 
 kindergarten_garden_test_11_ignore=: 1 NB. Change this value to 0 to run this test
 test_kindergarten_garden_test_11  =: monad define
-  Description@.1 ('for Fred')
-  Order@.1 (11)
+  Description=: 'for Fred'
 
   NB. diagram  =. 2 24$'VRCGVVRVCGGCCGVRGCVCGCGVVRCCCGCRRGVCGCRVVCVGCGCV'
   NB. student  =. 'Fred'
@@ -131,8 +113,7 @@ test_kindergarten_garden_test_11  =: monad define
 
 kindergarten_garden_test_12_ignore=: 1 NB. Change this value to 0 to run this test
 test_kindergarten_garden_test_12  =: monad define
-  Description@.1 ('for Ginny')
-  Order@.1 (12)
+  Description=: 'for Ginny'
 
   NB. diagram  =. 2 24$'VRCGVVRVCGGCCGVRGCVCGCGVVRCCCGCRRGVCGCRVVCVGCGCV'
   NB. student  =. 'Ginny'
@@ -142,8 +123,7 @@ test_kindergarten_garden_test_12  =: monad define
 
 kindergarten_garden_test_13_ignore=: 1 NB. Change this value to 0 to run this test
 test_kindergarten_garden_test_13  =: monad define
-  Description@.1 ('for Harriet')
-  Order@.1 (13)
+  Description=: 'for Harriet'
 
   NB. diagram  =. 2 24$'VRCGVVRVCGGCCGVRGCVCGCGVVRCCCGCRRGVCGCRVVCVGCGCV'
   NB. student  =. 'Harriet'
@@ -153,8 +133,7 @@ test_kindergarten_garden_test_13  =: monad define
 
 kindergarten_garden_test_14_ignore=: 1 NB. Change this value to 0 to run this test
 test_kindergarten_garden_test_14  =: monad define
-  Description@.1 ('for Ileana')
-  Order@.1 (14)
+  Description=: 'for Ileana'
 
   NB. diagram  =. 2 24$'VRCGVVRVCGGCCGVRGCVCGCGVVRCCCGCRRGVCGCRVVCVGCGCV'
   NB. student  =. 'Ileana'
@@ -164,8 +143,7 @@ test_kindergarten_garden_test_14  =: monad define
 
 kindergarten_garden_test_15_ignore=: 1 NB. Change this value to 0 to run this test
 test_kindergarten_garden_test_15  =: monad define
-  Description@.1 ('for Joseph')
-  Order@.1 (15)
+  Description=: 'for Joseph'
 
   NB. diagram  =. 2 24$'VRCGVVRVCGGCCGVRGCVCGCGVVRCCCGCRRGVCGCRVVCVGCGCV'
   NB. student  =. 'Joseph'
@@ -175,8 +153,7 @@ test_kindergarten_garden_test_15  =: monad define
 
 kindergarten_garden_test_16_ignore=: 1 NB. Change this value to 0 to run this test
 test_kindergarten_garden_test_16  =: monad define
-  Description@.1 ('for Kincaid, second to last student''s garden')
-  Order@.1 (16)
+  Description=: 'for Kincaid, second to last student''s garden'
 
   NB. diagram  =. 2 24$'VRCGVVRVCGGCCGVRGCVCGCGVVRCCCGCRRGVCGCRVVCVGCGCV'
   NB. student  =. 'Kincaid'
@@ -186,8 +163,7 @@ test_kindergarten_garden_test_16  =: monad define
 
 kindergarten_garden_test_17_ignore=: 1 NB. Change this value to 0 to run this test
 test_kindergarten_garden_test_17  =: monad define
-  Description@.1 ('for Larry, last student''s garden')
-  Order@.1 (17)
+  Description=: 'for Larry, last student''s garden'
 
   NB. diagram  =. 2 24$'VRCGVVRVCGGCCGVRGCVCGCGVVRCCCGCRRGVCGCRVVCVGCGCV'
   NB. student  =. 'Larry'

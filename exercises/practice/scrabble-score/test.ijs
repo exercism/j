@@ -1,17 +1,10 @@
 load 'scrabble-score.ijs'
 
 
-before_all=: monad define  
-  (]Description =: (3 : 'descriptions=: i.0')`(3 : 'descriptions=: descriptions , < y'))@.0 ''
-  (]Order       =: (3 : 'order=: i.0')`(3 : 'order=: order , < y'))@.0 ''
-  (]Task        =: (3 : 'tasks=: i.0')`(3 : 'tasks=: tasks , < y'))@.0 '' 
-)
-
-
 scrabble_score_test_01_ignore=: 0
 test_scrabble_score_test_01  =: monad define
-  Description@.1 ('lowercase letter')
-  Order@.1 (1)
+  Description=: 'lowercase letter'
+
 
   NB. word     =. 'a'
   NB. expected =. 1
@@ -20,8 +13,8 @@ test_scrabble_score_test_01  =: monad define
 
 scrabble_score_test_02_ignore=: 1 NB. Change this value to 0 to run this test
 test_scrabble_score_test_02  =: monad define
-  Description@.1 ('uppercase letter')
-  Order@.1 (2)
+  Description=: 'uppercase letter'
+
 
   NB. word     =. 'A'
   NB. expected =. 1
@@ -30,8 +23,8 @@ test_scrabble_score_test_02  =: monad define
 
 scrabble_score_test_03_ignore=: 1 NB. Change this value to 0 to run this test
 test_scrabble_score_test_03  =: monad define
-  Description@.1 ('valuable letter')
-  Order@.1 (3)
+  Description=: 'valuable letter'
+
 
   NB. word     =. 'f'
   NB. expected =. 4
@@ -40,8 +33,8 @@ test_scrabble_score_test_03  =: monad define
 
 scrabble_score_test_04_ignore=: 1 NB. Change this value to 0 to run this test
 test_scrabble_score_test_04  =: monad define
-  Description@.1 ('short word')
-  Order@.1 (4)
+  Description=: 'short word'
+
 
   NB. word     =. 'at'
   NB. expected =. 2
@@ -50,8 +43,8 @@ test_scrabble_score_test_04  =: monad define
 
 scrabble_score_test_05_ignore=: 1 NB. Change this value to 0 to run this test
 test_scrabble_score_test_05  =: monad define
-  Description@.1 ('short, valuable word')
-  Order@.1 (5)
+  Description=: 'short, valuable word'
+
 
   NB. word     =. 'zoo'
   NB. expected =. 12
@@ -60,8 +53,8 @@ test_scrabble_score_test_05  =: monad define
 
 scrabble_score_test_06_ignore=: 1 NB. Change this value to 0 to run this test
 test_scrabble_score_test_06  =: monad define
-  Description@.1 ('medium word')
-  Order@.1 (6)
+  Description=: 'medium word'
+
 
   NB. word     =. 'street'
   NB. expected =. 6
@@ -70,8 +63,8 @@ test_scrabble_score_test_06  =: monad define
 
 scrabble_score_test_07_ignore=: 1 NB. Change this value to 0 to run this test
 test_scrabble_score_test_07  =: monad define
-  Description@.1 ('medium, valuable word')
-  Order@.1 (7)
+  Description=: 'medium, valuable word'
+
 
   NB. word     =. 'quirky'
   NB. expected =. 22
@@ -80,8 +73,8 @@ test_scrabble_score_test_07  =: monad define
 
 scrabble_score_test_08_ignore=: 1 NB. Change this value to 0 to run this test
 test_scrabble_score_test_08  =: monad define
-  Description@.1 ('long, mixed-case word')
-  Order@.1 (8)
+  Description=: 'long, mixed-case word'
+
 
   NB. word     =. 'OxyphenButazone'
   NB. expected =. 41
@@ -90,8 +83,8 @@ test_scrabble_score_test_08  =: monad define
 
 scrabble_score_test_09_ignore=: 1 NB. Change this value to 0 to run this test
 test_scrabble_score_test_09  =: monad define
-  Description@.1 ('english-like word')
-  Order@.1 (9)
+  Description=: 'english-like word'
+
 
   NB. word     =. 'pinata'
   NB. expected =. 8
@@ -100,8 +93,8 @@ test_scrabble_score_test_09  =: monad define
 
 scrabble_score_test_10_ignore=: 1 NB. Change this value to 0 to run this test
 test_scrabble_score_test_10  =: monad define
-  Description@.1 ('empty input')
-  Order@.1 (10)
+  Description=: 'empty input'
+
 
   NB. word     =. ''
   NB. expected =. 0
@@ -110,8 +103,8 @@ test_scrabble_score_test_10  =: monad define
 
 scrabble_score_test_11_ignore=: 1 NB. Change this value to 0 to run this test
 test_scrabble_score_test_11  =: monad define
-  Description@.1 ('entire alphabet available')
-  Order@.1 (11)
+  Description=: 'entire alphabet available'
+
 
   NB. word     =. 'abcdefghijklmnopqrstuvwxyz'
   NB. expected =. 87

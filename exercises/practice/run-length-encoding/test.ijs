@@ -1,17 +1,10 @@
 load 'run-length-encoding.ijs'
 
 
-before_all=: monad define  
-  (]Description =: (3 : 'descriptions=: i.0')`(3 : 'descriptions=: descriptions , < y'))@.0 ''
-  (]Order       =: (3 : 'order=: i.0')`(3 : 'order=: order , < y'))@.0 ''
-  (]Task        =: (3 : 'tasks=: i.0')`(3 : 'tasks=: tasks , < y'))@.0 '' 
-)
-
-
 run_length_encoding_test_01_ignore=: 0
 test_run_length_encoding_test_01  =: monad define
-  Description@.1 ('empty string')
-  Order@.1 (1)
+  Description=: 'empty string'
+
 
   NB. string=. ''
   NB. expected=. ''
@@ -20,8 +13,8 @@ test_run_length_encoding_test_01  =: monad define
 
 run_length_encoding_test_02_ignore=: 1 NB. Change this value to 0 to run this test
 test_run_length_encoding_test_02  =: monad define
-  Description@.1 ('single characters only are encoded without count')
-  Order@.1 (2)
+  Description=: 'single characters only are encoded without count'
+
 
   NB. string=. 'XYZ'
   NB. expected=. 'XYZ'
@@ -30,8 +23,8 @@ test_run_length_encoding_test_02  =: monad define
 
 run_length_encoding_test_03_ignore=: 1 NB. Change this value to 0 to run this test
 test_run_length_encoding_test_03  =: monad define
-  Description@.1 ('string with no single characters')
-  Order@.1 (3)
+  Description=: 'string with no single characters'
+
 
   NB. string=. 'AABBBCCCC'
   NB. expected=. '2A3B4C'
@@ -40,8 +33,8 @@ test_run_length_encoding_test_03  =: monad define
 
 run_length_encoding_test_04_ignore=: 1 NB. Change this value to 0 to run this test
 test_run_length_encoding_test_04  =: monad define
-  Description@.1 ('single characters mixed with repeated characters')
-  Order@.1 (4)
+  Description=: 'single characters mixed with repeated characters'
+
 
   NB. string=. 'WWWWWWWWWWWWBWWWWWWWWWWWWBBBWWWWWWWWWWWWWWWWWWWWWWWWB'
   NB. expected=. '12WB12W3B24WB'
@@ -50,8 +43,8 @@ test_run_length_encoding_test_04  =: monad define
 
 run_length_encoding_test_05_ignore=: 1 NB. Change this value to 0 to run this test
 test_run_length_encoding_test_05  =: monad define
-  Description@.1 ('multiple whitespace mixed in string')
-  Order@.1 (5)
+  Description=: 'multiple whitespace mixed in string'
+
 
   NB. string=. '  hsqq qww  '
   NB. expected=. '2 hs2q q2w2 '
@@ -60,8 +53,8 @@ test_run_length_encoding_test_05  =: monad define
 
 run_length_encoding_test_06_ignore=: 1 NB. Change this value to 0 to run this test
 test_run_length_encoding_test_06  =: monad define
-  Description@.1 ('lowercase characters')
-  Order@.1 (6)
+  Description=: 'lowercase characters'
+
 
   NB. string=. 'aabbbcccc'
   NB. expected=. '2a3b4c'
@@ -70,8 +63,8 @@ test_run_length_encoding_test_06  =: monad define
 
 run_length_encoding_test_07_ignore=: 1 NB. Change this value to 0 to run this test
 test_run_length_encoding_test_07  =: monad define
-  Description@.1 ('empty string')
-  Order@.1 (7)
+  Description=: 'empty string'
+
 
   NB. string=. ''
   NB. expected=. ''
@@ -80,8 +73,8 @@ test_run_length_encoding_test_07  =: monad define
 
 run_length_encoding_test_08_ignore=: 1 NB. Change this value to 0 to run this test
 test_run_length_encoding_test_08  =: monad define
-  Description@.1 ('single characters only')
-  Order@.1 (8)
+  Description=: 'single characters only'
+
 
   NB. string=. 'XYZ'
   NB. expected=. 'XYZ'
@@ -90,8 +83,8 @@ test_run_length_encoding_test_08  =: monad define
 
 run_length_encoding_test_09_ignore=: 1 NB. Change this value to 0 to run this test
 test_run_length_encoding_test_09  =: monad define
-  Description@.1 ('string with no single characters')
-  Order@.1 (9)
+  Description=: 'string with no single characters'
+
 
   NB. string=. '2A3B4C'
   NB. expected=. 'AABBBCCCC'
@@ -100,8 +93,8 @@ test_run_length_encoding_test_09  =: monad define
 
 run_length_encoding_test_10_ignore=: 1 NB. Change this value to 0 to run this test
 test_run_length_encoding_test_10  =: monad define
-  Description@.1 ('single characters with repeated characters')
-  Order@.1 (10)
+  Description=: 'single characters with repeated characters'
+
 
   NB. string=. '12WB12W3B24WB'
   NB. expected=. 'WWWWWWWWWWWWBWWWWWWWWWWWWBBBWWWWWWWWWWWWWWWWWWWWWWWWB'
@@ -110,8 +103,8 @@ test_run_length_encoding_test_10  =: monad define
 
 run_length_encoding_test_11_ignore=: 1 NB. Change this value to 0 to run this test
 test_run_length_encoding_test_11  =: monad define
-  Description@.1 ('multiple whitespace mixed in string')
-  Order@.1 (11)
+  Description=: 'multiple whitespace mixed in string'
+
 
   NB. string=. '2 hs2q q2w2 '
   NB. expected=. '  hsqq qww  '
@@ -120,8 +113,8 @@ test_run_length_encoding_test_11  =: monad define
 
 run_length_encoding_test_12_ignore=: 1 NB. Change this value to 0 to run this test
 test_run_length_encoding_test_12  =: monad define
-  Description@.1 ('lowercase string')
-  Order@.1 (12)
+  Description=: 'lowercase string'
+
 
   NB. string=. '2a3b4c'
   NB. expected=. 'aabbbcccc'
@@ -130,8 +123,8 @@ test_run_length_encoding_test_12  =: monad define
 
 run_length_encoding_test_13_ignore=: 1 NB. Change this value to 0 to run this test
 test_run_length_encoding_test_13  =: monad define
-  Description@.1 ('encode followed by decode gives original string')
-  Order@.1 (13)
+  Description=: 'encode followed by decode gives original string'
+
 
   NB. string=. 'zzz ZZ  zZ'
   NB. expected=. 'zzz ZZ  zZ'

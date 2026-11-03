@@ -1,17 +1,10 @@
 load 'food-chain.ijs'
 
 
-before_all=: monad define  
-  (]Description =: (3 : 'descriptions=: i.0')`(3 : 'descriptions=: descriptions , < y'))@.0 ''
-  (]Order       =: (3 : 'order=: i.0')`(3 : 'order=: order , < y'))@.0 ''
-  (]Task        =: (3 : 'tasks=: i.0')`(3 : 'tasks=: tasks , < y'))@.0 '' 
-)
-
-
 food_chain_test_01_ignore=: 0
 test_food_chain_test_01  =: monad define
-  Description@.1 ('fly')
-  Order@.1 (1)
+  Description=: 'fly'
+
 
   NB. startverse=. 1
   NB. endverse=. 1
@@ -25,8 +18,8 @@ I don't know why she swallowed the fly. Perhaps she'll die.
 
 food_chain_test_02_ignore=: 1 NB. Change this value to 0 to run this test
 test_food_chain_test_02  =: monad define
-  Description@.1 ('spider')
-  Order@.1 (2)
+  Description=: 'spider'
+
 
   NB. startverse=. 2
   NB. endverse=. 2
@@ -44,8 +37,8 @@ I don't know why she swallowed the fly. Perhaps she'll die.
 
 food_chain_test_03_ignore=: 1 NB. Change this value to 0 to run this test
 test_food_chain_test_03  =: monad define
-  Description@.1 ('bird')
-  Order@.1 (3)
+  Description=: 'bird'
+
 
   NB. startverse=. 3
   NB. endverse=. 3
@@ -65,8 +58,8 @@ I don't know why she swallowed the fly. Perhaps she'll die.
 
 food_chain_test_04_ignore=: 1 NB. Change this value to 0 to run this test
 test_food_chain_test_04  =: monad define
-  Description@.1 ('cat')
-  Order@.1 (4)
+  Description=: 'cat'
+
 
   NB. startverse=. 4
   NB. endverse=. 4
@@ -88,8 +81,8 @@ I don't know why she swallowed the fly. Perhaps she'll die.
 
 food_chain_test_05_ignore=: 1 NB. Change this value to 0 to run this test
 test_food_chain_test_05  =: monad define
-  Description@.1 ('dog')
-  Order@.1 (5)
+  Description=: 'dog'
+
 
   NB. startverse=. 5
   NB. endverse=. 5
@@ -113,8 +106,8 @@ I don't know why she swallowed the fly. Perhaps she'll die.
 
 food_chain_test_06_ignore=: 1 NB. Change this value to 0 to run this test
 test_food_chain_test_06  =: monad define
-  Description@.1 ('goat')
-  Order@.1 (6)
+  Description=: 'goat'
+
 
   NB. startverse=. 6
   NB. endverse=. 6
@@ -140,8 +133,8 @@ I don't know why she swallowed the fly. Perhaps she'll die.
 
 food_chain_test_07_ignore=: 1 NB. Change this value to 0 to run this test
 test_food_chain_test_07  =: monad define
-  Description@.1 ('cow')
-  Order@.1 (7)
+  Description=: 'cow'
+
 
   NB. startverse=. 7
   NB. endverse=. 7
@@ -169,8 +162,8 @@ I don't know why she swallowed the fly. Perhaps she'll die.
 
 food_chain_test_08_ignore=: 1 NB. Change this value to 0 to run this test
 test_food_chain_test_08  =: monad define
-  Description@.1 ('horse')
-  Order@.1 (8)
+  Description=: 'horse'
+
 
   NB. startverse=. 8
   NB. endverse=. 8
@@ -184,8 +177,8 @@ She's dead, of course!
 
 food_chain_test_09_ignore=: 1 NB. Change this value to 0 to run this test
 test_food_chain_test_09  =: monad define
-  Description@.1 ('multiple verses')
-  Order@.1 (9)
+  Description=: 'multiple verses'
+
 
   NB. startverse=. 1
   NB. endverse=. 3
@@ -221,8 +214,8 @@ I don't know why she swallowed the fly. Perhaps she'll die.
 
 food_chain_test_10_ignore=: 1 NB. Change this value to 0 to run this test
 test_food_chain_test_10  =: monad define
-  Description@.1 ('full song')
-  Order@.1 (10)
+  Description=: 'full song'
+
 
   NB. startverse=. 1
   NB. endverse=. 8

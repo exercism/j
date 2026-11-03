@@ -1,17 +1,10 @@
 load 'pascals-triangle.ijs'
 
 
-before_all=: monad define  
-  (]Description =: (3 : 'descriptions=: i.0')`(3 : 'descriptions=: descriptions , < y'))@.0 ''
-  (]Order       =: (3 : 'order=: i.0')`(3 : 'order=: order , < y'))@.0 ''
-  (]Task        =: (3 : 'tasks=: i.0')`(3 : 'tasks=: tasks , < y'))@.0 '' 
-)
-
-
 pascals_triangle_test_01_ignore=: 0
 test_pascals_triangle_test_01  =: monad define
-  Description@.1 ('zero rows')
-  Order@.1 (1)
+  Description=: 'zero rows'
+
 
   NB. count    =. 0
   NB. expected =. 0 0$''
@@ -20,8 +13,8 @@ test_pascals_triangle_test_01  =: monad define
 
 pascals_triangle_test_02_ignore=: 1 NB. Change this value to 0 to run this test
 test_pascals_triangle_test_02  =: monad define
-  Description@.1 ('single row')
-  Order@.1 (2)
+  Description=: 'single row'
+
 
   NB. count    =. 1
   NB. expected =. 1 1$1
@@ -30,8 +23,8 @@ test_pascals_triangle_test_02  =: monad define
 
 pascals_triangle_test_03_ignore=: 1 NB. Change this value to 0 to run this test
 test_pascals_triangle_test_03  =: monad define
-  Description@.1 ('two rows')
-  Order@.1 (3)
+  Description=: 'two rows'
+
 
   NB. count    =. 2
   NB. expected =. 1;1 1
@@ -40,8 +33,8 @@ test_pascals_triangle_test_03  =: monad define
 
 pascals_triangle_test_04_ignore=: 1 NB. Change this value to 0 to run this test
 test_pascals_triangle_test_04  =: monad define
-  Description@.1 ('three rows')
-  Order@.1 (4)
+  Description=: 'three rows'
+
 
   NB. count    =. 3
   NB. expected =. 1;1 1;1 2 1
@@ -50,8 +43,8 @@ test_pascals_triangle_test_04  =: monad define
 
 pascals_triangle_test_05_ignore=: 1 NB. Change this value to 0 to run this test
 test_pascals_triangle_test_05  =: monad define
-  Description@.1 ('four rows')
-  Order@.1 (5)
+  Description=: 'four rows'
+
 
   NB. count    =. 4
   NB. expected =. 1;1 1;1 2 1;1 3 3 1
@@ -60,8 +53,8 @@ test_pascals_triangle_test_05  =: monad define
 
 pascals_triangle_test_06_ignore=: 1 NB. Change this value to 0 to run this test
 test_pascals_triangle_test_06  =: monad define
-  Description@.1 ('five rows')
-  Order@.1 (6)
+  Description=: 'five rows'
+
 
   NB. count    =. 5
   NB. expected =. 1;1 1;1 2 1;1 3 3 1;1 4 6 4 1
@@ -70,8 +63,8 @@ test_pascals_triangle_test_06  =: monad define
 
 pascals_triangle_test_07_ignore=: 1 NB. Change this value to 0 to run this test
 test_pascals_triangle_test_07  =: monad define
-  Description@.1 ('six rows')
-  Order@.1 (7)
+  Description=: 'six rows'
+
 
   NB. count    =. 6
   NB. expected =. 1;1 1;1 2 1;1 3 3 1;1 4 6 4 1;1 5 10 10 5 1
@@ -80,8 +73,8 @@ test_pascals_triangle_test_07  =: monad define
 
 pascals_triangle_test_08_ignore=: 1 NB. Change this value to 0 to run this test
 test_pascals_triangle_test_08  =: monad define
-  Description@.1 ('ten rows')
-  Order@.1 (8)
+  Description=: 'ten rows'
+
 
   NB. count    =. 10
   NB. expected =. 1;1 1;1 2 1;1 3 3 1;1 4 6 4 1;1 5 10 10 5 1;1 6 15 20 15 6 1;1 7 21 35 35 21 7 1;1 8 28 56 70 56 28 8 1;1 9 36 84 126 126 84 36 9 1

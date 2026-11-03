@@ -1,18 +1,10 @@
 load 'anagram.ijs'
 
 
-before_all=: monad define  
-  (]Description =: (3 : 'descriptions=: i.0')`(3 : 'descriptions=: descriptions , < y'))@.0 ''
-  (]Order       =: (3 : 'order=: i.0')`(3 : 'order=: order , < y'))@.0 ''
-  (]Task        =: (3 : 'tasks=: i.0')`(3 : 'tasks=: tasks , < y'))@.0 '' 
-)
-
-
 anagram_test_01_ignore=: 0
 test_anagram_test_01  =: monad define
-  Description@.1 ('no matches')
-  Order@.1 (1)
-
+  Description=: 'no matches'
+  
   NB. subject    =. 'diaper'
   NB. candidates =. 'hello';'world';'zombies';'pants'
   NB. expected   =. ''
@@ -21,9 +13,8 @@ test_anagram_test_01  =: monad define
 
 anagram_test_02_ignore=: 1 NB. Change this value to 0 to run this test
 test_anagram_test_02  =: monad define
-  Description@.1 ('detects two anagrams')
-  Order@.1 (2)
-
+  Description=: 'detects two anagrams'
+  
   NB. subject    =. 'solemn'
   NB. candidates =. 'lemons';'cherry';'melons'
   NB. expected   =. 'lemons';'melons'
@@ -32,9 +23,8 @@ test_anagram_test_02  =: monad define
 
 anagram_test_03_ignore=: 1 NB. Change this value to 0 to run this test
 test_anagram_test_03  =: monad define
-  Description@.1 ('does not detect anagram subsets')
-  Order@.1 (3)
-
+  Description=: 'does not detect anagram subsets'
+  
   NB. subject    =. 'good'
   NB. candidates =. 'dog';'goody'
   NB. expected   =. ''
@@ -43,9 +33,8 @@ test_anagram_test_03  =: monad define
 
 anagram_test_04_ignore=: 1 NB. Change this value to 0 to run this test
 test_anagram_test_04  =: monad define
-  Description@.1 ('detects anagram')
-  Order@.1 (4)
-
+  Description=: 'detects anagram'
+  
   NB. subject    =. 'listen'
   NB. candidates =. 'enlists';'google';'inlets';'banana'
   NB. expected   =. ,<'inlets'
@@ -54,9 +43,8 @@ test_anagram_test_04  =: monad define
 
 anagram_test_05_ignore=: 1 NB. Change this value to 0 to run this test
 test_anagram_test_05  =: monad define
-  Description@.1 ('detects three anagrams')
-  Order@.1 (5)
-
+  Description=: 'detects three anagrams'
+  
   NB. subject    =. 'allergy'
   NB. candidates =. 'gallery';'ballerina';'regally';'clergy';'largely';'leading'
   NB. expected   =. 'gallery';'regally';'largely'
@@ -65,9 +53,8 @@ test_anagram_test_05  =: monad define
 
 anagram_test_06_ignore=: 1 NB. Change this value to 0 to run this test
 test_anagram_test_06  =: monad define
-  Description@.1 ('detects multiple anagrams with different case')
-  Order@.1 (6)
-
+  Description=: 'detects multiple anagrams with different case'
+  
   NB. subject    =. 'nose'
   NB. candidates =. 'Eons';'ONES'
   NB. expected   =. 'Eons';'ONES'
@@ -76,9 +63,8 @@ test_anagram_test_06  =: monad define
 
 anagram_test_07_ignore=: 1 NB. Change this value to 0 to run this test
 test_anagram_test_07  =: monad define
-  Description@.1 ('does not detect non-anagrams with identical checksum')
-  Order@.1 (7)
-
+  Description=: 'does not detect non-anagrams with identical checksum'
+  
   NB. subject    =. 'mass'
   NB. candidates =. ,<'last'
   NB. expected   =. ''
@@ -87,9 +73,8 @@ test_anagram_test_07  =: monad define
 
 anagram_test_08_ignore=: 1 NB. Change this value to 0 to run this test
 test_anagram_test_08  =: monad define
-  Description@.1 ('detects anagrams case-insensitively')
-  Order@.1 (8)
-
+  Description=: 'detects anagrams case-insensitively'
+  
   NB. subject    =. 'Orchestra'
   NB. candidates =. 'cashregister';'Carthorse';'radishes'
   NB. expected   =.  ,<'Carthorse'
@@ -98,9 +83,8 @@ test_anagram_test_08  =: monad define
 
 anagram_test_09_ignore=: 1 NB. Change this value to 0 to run this test
 test_anagram_test_09  =: monad define
-  Description@.1 ('detects anagrams using case-insensitive subject')
-  Order@.1 (9)
-
+  Description=: 'detects anagrams using case-insensitive subject'
+  
   NB. subject    =. 'Orchestra'
   NB. candidates =. 'cashregister';'carthorse';'radishes'
   NB. expected   =.  ,<'carthorse'
@@ -109,9 +93,8 @@ test_anagram_test_09  =: monad define
 
 anagram_test_10_ignore=: 1 NB. Change this value to 0 to run this test
 test_anagram_test_10  =: monad define
-  Description@.1 ('detects anagrams using case-insensitive possible matches')
-  Order@.1 (10)
-
+  Description=: 'detects anagrams using case-insensitive possible matches'
+  
   NB. subject    =. 'orchestra'
   NB. candidates =. 'cashregister';'Carthorse';'radishes'
   NB. expected   =.  ,<'Carthorse'
@@ -120,9 +103,8 @@ test_anagram_test_10  =: monad define
 
 anagram_test_11_ignore=: 1 NB. Change this value to 0 to run this test
 test_anagram_test_11  =: monad define
-  Description@.1 ('does not detect an anagram if the original word is repeated')
-  Order@.1 (11)
-
+  Description=: 'does not detect an anagram if the original word is repeated'
+  
   NB. subject    =. 'go'
   NB. candidates =. ,<'goGoGO'
   NB. expected   =. ''
@@ -131,9 +113,8 @@ test_anagram_test_11  =: monad define
 
 anagram_test_12_ignore=: 1 NB. Change this value to 0 to run this test
 test_anagram_test_12  =: monad define
-  Description@.1 ('anagrams must use all letters exactly once')
-  Order@.1 (12)
-
+  Description=: 'anagrams must use all letters exactly once'
+  
   NB. subject    =. 'tapper'
   NB. candidates =. ,<'patter'
   NB. expected   =. ''
@@ -142,9 +123,8 @@ test_anagram_test_12  =: monad define
 
 anagram_test_13_ignore=: 1 NB. Change this value to 0 to run this test
 test_anagram_test_13  =: monad define
-  Description@.1 ('words are not anagrams of themselves even if letter case is completely different')
-  Order@.1 (13)
-
+  Description=: 'words are not anagrams of themselves even if letter case is completely different'
+  
   NB. subject    =. 'BANANA'
   NB. candidates =. ,<'banana'
   NB. expected   =. ''
@@ -153,9 +133,8 @@ test_anagram_test_13  =: monad define
 
 anagram_test_14_ignore=: 1 NB. Change this value to 0 to run this test
 test_anagram_test_14  =: monad define
-  Description@.1 ('words other than themselves can be anagrams')
-  Order@.1 (14)
-
+  Description=: 'words other than themselves can be anagrams'
+  
   NB. subject    =. 'LISTEN'
   NB. candidates =. 'LISTEN';'Silent'
   NB. expected   =.  ,<'Silent'
@@ -165,9 +144,8 @@ test_anagram_test_14  =: monad define
 
 anagram_test_15_ignore=: 1 NB. Change this value to 0 to run this test
 test_anagram_test_15  =: monad define
-  Description@.1 ('different characters may have the same bytes')
-  Order@.1 (15)
-
+  Description=: 'different characters may have the same bytes'
+  
   NB. subject    =. 'a⬂'
   NB. candidates =. '€a'
   NB. expected   =. ''

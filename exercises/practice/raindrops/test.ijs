@@ -1,17 +1,10 @@
 load 'raindrops.ijs'
 
 
-before_all=: monad define  
-  (]Description =: (3 : 'descriptions=: i.0')`(3 : 'descriptions=: descriptions , < y'))@.0 ''
-  (]Order       =: (3 : 'order=: i.0')`(3 : 'order=: order , < y'))@.0 ''
-  (]Task        =: (3 : 'tasks=: i.0')`(3 : 'tasks=: tasks , < y'))@.0 '' 
-)
-
-
 raindrops_test_01_ignore=: 0
 test_raindrops_test_01  =: monad define
-  Description@.1 ('the sound for 1 is 1')
-  Order@.1 (1)
+  Description=: 'the sound for 1 is 1'
+
 
   NB. number   =. 1
   NB. expected =. ": 1
@@ -20,8 +13,8 @@ test_raindrops_test_01  =: monad define
 
 raindrops_test_02_ignore=: 1 NB. Change this value to 0 to run this test
 test_raindrops_test_02  =: monad define
-  Description@.1 ('the sound for 3 is Pling')
-  Order@.1 (2)
+  Description=: 'the sound for 3 is Pling'
+
 
   NB. number   =. 3
   NB. expected =. 'Pling'
@@ -30,8 +23,8 @@ test_raindrops_test_02  =: monad define
 
 raindrops_test_03_ignore=: 1 NB. Change this value to 0 to run this test
 test_raindrops_test_03  =: monad define
-  Description@.1 ('the sound for 5 is Plang')
-  Order@.1 (3)
+  Description=: 'the sound for 5 is Plang'
+
 
   NB. number   =. 5
   NB. expected =. 'Plang'
@@ -40,8 +33,8 @@ test_raindrops_test_03  =: monad define
 
 raindrops_test_04_ignore=: 1 NB. Change this value to 0 to run this test
 test_raindrops_test_04  =: monad define
-  Description@.1 ('the sound for 7 is Plong')
-  Order@.1 (4)
+  Description=: 'the sound for 7 is Plong'
+
 
   NB. number   =. 7
   NB. expected =. 'Plong'
@@ -50,8 +43,8 @@ test_raindrops_test_04  =: monad define
 
 raindrops_test_05_ignore=: 1 NB. Change this value to 0 to run this test
 test_raindrops_test_05  =: monad define
-  Description@.1 ('the sound for 6 is Pling as it has a factor 3')
-  Order@.1 (5)
+  Description=: 'the sound for 6 is Pling as it has a factor 3'
+
 
   NB. number   =. 6
   NB. expected =. 'Pling'
@@ -60,8 +53,8 @@ test_raindrops_test_05  =: monad define
 
 raindrops_test_06_ignore=: 1 NB. Change this value to 0 to run this test
 test_raindrops_test_06  =: monad define
-  Description@.1 ('2 to the power 3 does not make a raindrop sound as 3 is the exponent not the base')
-  Order@.1 (6)
+  Description=: '2 to the power 3 does not make a raindrop sound as 3 is the exponent not the base'
+
 
   NB. number   =. 8
   NB. expected =. ": 8
@@ -70,8 +63,8 @@ test_raindrops_test_06  =: monad define
 
 raindrops_test_07_ignore=: 1 NB. Change this value to 0 to run this test
 test_raindrops_test_07  =: monad define
-  Description@.1 ('the sound for 9 is Pling as it has a factor 3')
-  Order@.1 (7)
+  Description=: 'the sound for 9 is Pling as it has a factor 3'
+
 
   NB. number   =. 9
   NB. expected =. 'Pling'
@@ -80,8 +73,8 @@ test_raindrops_test_07  =: monad define
 
 raindrops_test_08_ignore=: 1 NB. Change this value to 0 to run this test
 test_raindrops_test_08  =: monad define
-  Description@.1 ('the sound for 10 is Plang as it has a factor 5')
-  Order@.1 (8)
+  Description=: 'the sound for 10 is Plang as it has a factor 5'
+
 
   NB. number   =. 10
   NB. expected =. 'Plang'
@@ -90,8 +83,8 @@ test_raindrops_test_08  =: monad define
 
 raindrops_test_09_ignore=: 1 NB. Change this value to 0 to run this test
 test_raindrops_test_09  =: monad define
-  Description@.1 ('the sound for 14 is Plong as it has a factor of 7')
-  Order@.1 (9)
+  Description=: 'the sound for 14 is Plong as it has a factor of 7'
+
 
   NB. number   =. 14
   NB. expected =. 'Plong'
@@ -100,8 +93,8 @@ test_raindrops_test_09  =: monad define
 
 raindrops_test_10_ignore=: 1 NB. Change this value to 0 to run this test
 test_raindrops_test_10  =: monad define
-  Description@.1 ('the sound for 15 is PlingPlang as it has factors 3 and 5')
-  Order@.1 (10)
+  Description=: 'the sound for 15 is PlingPlang as it has factors 3 and 5'
+
 
   NB. number   =. 15
   NB. expected =. 'PlingPlang'
@@ -110,8 +103,8 @@ test_raindrops_test_10  =: monad define
 
 raindrops_test_11_ignore=: 1 NB. Change this value to 0 to run this test
 test_raindrops_test_11  =: monad define
-  Description@.1 ('the sound for 21 is PlingPlong as it has factors 3 and 7')
-  Order@.1 (11)
+  Description=: 'the sound for 21 is PlingPlong as it has factors 3 and 7'
+
 
   NB. number   =. 21
   NB. expected =. 'PlingPlong'
@@ -120,8 +113,8 @@ test_raindrops_test_11  =: monad define
 
 raindrops_test_12_ignore=: 1 NB. Change this value to 0 to run this test
 test_raindrops_test_12  =: monad define
-  Description@.1 ('the sound for 25 is Plang as it has a factor 5')
-  Order@.1 (12)
+  Description=: 'the sound for 25 is Plang as it has a factor 5'
+
 
   NB. number   =. 25
   NB. expected =. 'Plang'
@@ -130,8 +123,8 @@ test_raindrops_test_12  =: monad define
 
 raindrops_test_13_ignore=: 1 NB. Change this value to 0 to run this test
 test_raindrops_test_13  =: monad define
-  Description@.1 ('the sound for 27 is Pling as it has a factor 3')
-  Order@.1 (13)
+  Description=: 'the sound for 27 is Pling as it has a factor 3'
+
 
   NB. number   =. 27
   NB. expected =. 'Pling'
@@ -140,8 +133,8 @@ test_raindrops_test_13  =: monad define
 
 raindrops_test_14_ignore=: 1 NB. Change this value to 0 to run this test
 test_raindrops_test_14  =: monad define
-  Description@.1 ('the sound for 35 is PlangPlong as it has factors 5 and 7')
-  Order@.1 (14)
+  Description=: 'the sound for 35 is PlangPlong as it has factors 5 and 7'
+
 
   NB. number   =. 35
   NB. expected =. 'PlangPlong'
@@ -150,8 +143,8 @@ test_raindrops_test_14  =: monad define
 
 raindrops_test_15_ignore=: 1 NB. Change this value to 0 to run this test
 test_raindrops_test_15  =: monad define
-  Description@.1 ('the sound for 49 is Plong as it has a factor 7')
-  Order@.1 (15)
+  Description=: 'the sound for 49 is Plong as it has a factor 7'
+
 
   NB. number   =. 49
   NB. expected =. 'Plong'
@@ -160,8 +153,8 @@ test_raindrops_test_15  =: monad define
 
 raindrops_test_16_ignore=: 1 NB. Change this value to 0 to run this test
 test_raindrops_test_16  =: monad define
-  Description@.1 ('the sound for 52 is 52')
-  Order@.1 (16)
+  Description=: 'the sound for 52 is 52'
+
 
   NB. number   =. 52
   NB. expected =. '52'
@@ -170,8 +163,8 @@ test_raindrops_test_16  =: monad define
 
 raindrops_test_17_ignore=: 1 NB. Change this value to 0 to run this test
 test_raindrops_test_17  =: monad define
-  Description@.1 ('the sound for 105 is PlingPlangPlong as it has factors 3, 5 and 7')
-  Order@.1 (17)
+  Description=: 'the sound for 105 is PlingPlangPlong as it has factors 3, 5 and 7'
+
 
   NB. number   =. 105
   NB. expected =. 'PlingPlangPlong'
@@ -180,8 +173,8 @@ test_raindrops_test_17  =: monad define
 
 raindrops_test_18_ignore=: 1 NB. Change this value to 0 to run this test
 test_raindrops_test_18  =: monad define
-  Description@.1 ('the sound for 3125 is Plang as it has a factor 5')
-  Order@.1 (18)
+  Description=: 'the sound for 3125 is Plang as it has a factor 5'
+
 
   NB. number   =. 3125
   NB. expected =. 'Plang'

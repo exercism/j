@@ -1,17 +1,10 @@
 load 'allergies.ijs'
 
 
-before_all=: monad define  
-  (]Description =: (3 : 'descriptions=: i.0')`(3 : 'descriptions=: descriptions , < y'))@.0 ''
-  (]Order       =: (3 : 'order=: i.0')`(3 : 'order=: order , < y'))@.0 ''
-  (]Task        =: (3 : 'tasks=: i.0')`(3 : 'tasks=: tasks , < y'))@.0 '' 
-)
-
-
 allergies_test_01_ignore=: 0
 test_allergies_test_01  =: monad define
-  Description@.1 ('not allergic to anything')
-  Order@.1 (1)
+  Description=: 'not allergic to anything'
+
 
   NB. item     =. 'eggs'
   NB. score    =. 0
@@ -21,8 +14,8 @@ test_allergies_test_01  =: monad define
 
 allergies_test_02_ignore=: 1 NB. Change this value to 0 to run this test
 test_allergies_test_02  =: monad define
-  Description@.1 ('allergic only to eggs')
-  Order@.1 (2)
+  Description=: 'allergic only to eggs'
+
 
   NB. item     =. 'eggs'
   NB. score    =. 1
@@ -32,8 +25,8 @@ test_allergies_test_02  =: monad define
 
 allergies_test_03_ignore=: 1 NB. Change this value to 0 to run this test
 test_allergies_test_03  =: monad define
-  Description@.1 ('allergic to eggs and something else')
-  Order@.1 (3)
+  Description=: 'allergic to eggs and something else'
+
 
   NB. item     =. 'eggs'
   NB. score    =. 3
@@ -43,8 +36,8 @@ test_allergies_test_03  =: monad define
 
 allergies_test_04_ignore=: 1 NB. Change this value to 0 to run this test
 test_allergies_test_04  =: monad define
-  Description@.1 ('allergic to something, but not eggs')
-  Order@.1 (4)
+  Description=: 'allergic to something, but not eggs'
+
 
   NB. item     =. 'eggs'
   NB. score    =. 2
@@ -54,8 +47,8 @@ test_allergies_test_04  =: monad define
 
 allergies_test_05_ignore=: 1 NB. Change this value to 0 to run this test
 test_allergies_test_05  =: monad define
-  Description@.1 ('allergic to everything')
-  Order@.1 (5)
+  Description=: 'allergic to everything'
+
 
   NB. item     =. 'eggs'
   NB. score    =. 255
@@ -65,8 +58,8 @@ test_allergies_test_05  =: monad define
 
 allergies_test_06_ignore=: 1 NB. Change this value to 0 to run this test
 test_allergies_test_06  =: monad define
-  Description@.1 ('not allergic to anything')
-  Order@.1 (6)
+  Description=: 'not allergic to anything'
+
 
   NB. item     =. 'peanuts'
   NB. score    =. 0
@@ -76,8 +69,8 @@ test_allergies_test_06  =: monad define
 
 allergies_test_07_ignore=: 1 NB. Change this value to 0 to run this test
 test_allergies_test_07  =: monad define
-  Description@.1 ('allergic only to peanuts')
-  Order@.1 (7)
+  Description=: 'allergic only to peanuts'
+
 
   NB. item     =. 'peanuts'
   NB. score    =. 2
@@ -87,8 +80,8 @@ test_allergies_test_07  =: monad define
 
 allergies_test_08_ignore=: 1 NB. Change this value to 0 to run this test
 test_allergies_test_08  =: monad define
-  Description@.1 ('allergic to peanuts and something else')
-  Order@.1 (8)
+  Description=: 'allergic to peanuts and something else'
+
 
   NB. item     =. 'peanuts'
   NB. score    =. 7
@@ -98,8 +91,8 @@ test_allergies_test_08  =: monad define
 
 allergies_test_09_ignore=: 1 NB. Change this value to 0 to run this test
 test_allergies_test_09  =: monad define
-  Description@.1 ('allergic to something, but not peanuts')
-  Order@.1 (9)
+  Description=: 'allergic to something, but not peanuts'
+
 
   NB. item     =. 'peanuts'
   NB. score    =. 5
@@ -109,8 +102,8 @@ test_allergies_test_09  =: monad define
 
 allergies_test_10_ignore=: 1 NB. Change this value to 0 to run this test
 test_allergies_test_10  =: monad define
-  Description@.1 ('allergic to everything')
-  Order@.1 (10)
+  Description=: 'allergic to everything'
+
 
   NB. item     =. 'peanuts'
   NB. score    =. 255
@@ -120,8 +113,8 @@ test_allergies_test_10  =: monad define
 
 allergies_test_11_ignore=: 1 NB. Change this value to 0 to run this test
 test_allergies_test_11  =: monad define
-  Description@.1 ('not allergic to anything')
-  Order@.1 (11)
+  Description=: 'not allergic to anything'
+
 
   NB. item     =. 'shellfish'
   NB. score    =. 0
@@ -131,8 +124,8 @@ test_allergies_test_11  =: monad define
 
 allergies_test_12_ignore=: 1 NB. Change this value to 0 to run this test
 test_allergies_test_12  =: monad define
-  Description@.1 ('allergic only to shellfish')
-  Order@.1 (12)
+  Description=: 'allergic only to shellfish'
+
 
   NB. item     =. 'shellfish'
   NB. score    =. 4
@@ -142,8 +135,8 @@ test_allergies_test_12  =: monad define
 
 allergies_test_13_ignore=: 1 NB. Change this value to 0 to run this test
 test_allergies_test_13  =: monad define
-  Description@.1 ('allergic to shellfish and something else')
-  Order@.1 (13)
+  Description=: 'allergic to shellfish and something else'
+
 
   NB. item     =. 'shellfish'
   NB. score    =. 14
@@ -153,8 +146,8 @@ test_allergies_test_13  =: monad define
 
 allergies_test_14_ignore=: 1 NB. Change this value to 0 to run this test
 test_allergies_test_14  =: monad define
-  Description@.1 ('allergic to something, but not shellfish')
-  Order@.1 (14)
+  Description=: 'allergic to something, but not shellfish'
+
 
   NB. item     =. 'shellfish'
   NB. score    =. 10
@@ -164,8 +157,8 @@ test_allergies_test_14  =: monad define
 
 allergies_test_15_ignore=: 1 NB. Change this value to 0 to run this test
 test_allergies_test_15  =: monad define
-  Description@.1 ('allergic to everything')
-  Order@.1 (15)
+  Description=: 'allergic to everything'
+
 
   NB. item     =. 'shellfish'
   NB. score    =. 255
@@ -175,8 +168,8 @@ test_allergies_test_15  =: monad define
 
 allergies_test_16_ignore=: 1 NB. Change this value to 0 to run this test
 test_allergies_test_16  =: monad define
-  Description@.1 ('not allergic to anything')
-  Order@.1 (16)
+  Description=: 'not allergic to anything'
+
 
   NB. item     =. 'strawberries'
   NB. score    =. 0
@@ -186,8 +179,8 @@ test_allergies_test_16  =: monad define
 
 allergies_test_17_ignore=: 1 NB. Change this value to 0 to run this test
 test_allergies_test_17  =: monad define
-  Description@.1 ('allergic only to strawberries')
-  Order@.1 (17)
+  Description=: 'allergic only to strawberries'
+
 
   NB. item     =. 'strawberries'
   NB. score    =. 8
@@ -197,8 +190,8 @@ test_allergies_test_17  =: monad define
 
 allergies_test_18_ignore=: 1 NB. Change this value to 0 to run this test
 test_allergies_test_18  =: monad define
-  Description@.1 ('allergic to strawberries and something else')
-  Order@.1 (18)
+  Description=: 'allergic to strawberries and something else'
+
 
   NB. item     =. 'strawberries'
   NB. score    =. 28
@@ -208,8 +201,8 @@ test_allergies_test_18  =: monad define
 
 allergies_test_19_ignore=: 1 NB. Change this value to 0 to run this test
 test_allergies_test_19  =: monad define
-  Description@.1 ('allergic to something, but not strawberries')
-  Order@.1 (19)
+  Description=: 'allergic to something, but not strawberries'
+
 
   NB. item     =. 'strawberries'
   NB. score    =. 20
@@ -219,8 +212,8 @@ test_allergies_test_19  =: monad define
 
 allergies_test_20_ignore=: 1 NB. Change this value to 0 to run this test
 test_allergies_test_20  =: monad define
-  Description@.1 ('allergic to everything')
-  Order@.1 (20)
+  Description=: 'allergic to everything'
+
 
   NB. item     =. 'strawberries'
   NB. score    =. 255
@@ -230,8 +223,8 @@ test_allergies_test_20  =: monad define
 
 allergies_test_21_ignore=: 1 NB. Change this value to 0 to run this test
 test_allergies_test_21  =: monad define
-  Description@.1 ('not allergic to anything')
-  Order@.1 (21)
+  Description=: 'not allergic to anything'
+
 
   NB. item     =. 'tomatoes'
   NB. score    =. 0
@@ -241,8 +234,8 @@ test_allergies_test_21  =: monad define
 
 allergies_test_22_ignore=: 1 NB. Change this value to 0 to run this test
 test_allergies_test_22  =: monad define
-  Description@.1 ('allergic only to tomatoes')
-  Order@.1 (22)
+  Description=: 'allergic only to tomatoes'
+
 
   NB. item     =. 'tomatoes'
   NB. score    =. 16
@@ -252,8 +245,8 @@ test_allergies_test_22  =: monad define
 
 allergies_test_23_ignore=: 1 NB. Change this value to 0 to run this test
 test_allergies_test_23  =: monad define
-  Description@.1 ('allergic to tomatoes and something else')
-  Order@.1 (23)
+  Description=: 'allergic to tomatoes and something else'
+
 
   NB. item     =. 'tomatoes'
   NB. score    =. 56
@@ -263,8 +256,8 @@ test_allergies_test_23  =: monad define
 
 allergies_test_24_ignore=: 1 NB. Change this value to 0 to run this test
 test_allergies_test_24  =: monad define
-  Description@.1 ('allergic to something, but not tomatoes')
-  Order@.1 (24)
+  Description=: 'allergic to something, but not tomatoes'
+
 
   NB. item     =. 'tomatoes'
   NB. score    =. 40
@@ -274,8 +267,8 @@ test_allergies_test_24  =: monad define
 
 allergies_test_25_ignore=: 1 NB. Change this value to 0 to run this test
 test_allergies_test_25  =: monad define
-  Description@.1 ('allergic to everything')
-  Order@.1 (25)
+  Description=: 'allergic to everything'
+
 
   NB. item     =. 'tomatoes'
   NB. score    =. 255
@@ -285,8 +278,8 @@ test_allergies_test_25  =: monad define
 
 allergies_test_26_ignore=: 1 NB. Change this value to 0 to run this test
 test_allergies_test_26  =: monad define
-  Description@.1 ('not allergic to anything')
-  Order@.1 (26)
+  Description=: 'not allergic to anything'
+
 
   NB. item     =. 'chocolate'
   NB. score    =. 0
@@ -296,8 +289,8 @@ test_allergies_test_26  =: monad define
 
 allergies_test_27_ignore=: 1 NB. Change this value to 0 to run this test
 test_allergies_test_27  =: monad define
-  Description@.1 ('allergic only to chocolate')
-  Order@.1 (27)
+  Description=: 'allergic only to chocolate'
+
 
   NB. item     =. 'chocolate'
   NB. score    =. 32
@@ -307,8 +300,8 @@ test_allergies_test_27  =: monad define
 
 allergies_test_28_ignore=: 1 NB. Change this value to 0 to run this test
 test_allergies_test_28  =: monad define
-  Description@.1 ('allergic to chocolate and something else')
-  Order@.1 (28)
+  Description=: 'allergic to chocolate and something else'
+
 
   NB. item     =. 'chocolate'
   NB. score    =. 112
@@ -318,8 +311,8 @@ test_allergies_test_28  =: monad define
 
 allergies_test_29_ignore=: 1 NB. Change this value to 0 to run this test
 test_allergies_test_29  =: monad define
-  Description@.1 ('allergic to something, but not chocolate')
-  Order@.1 (29)
+  Description=: 'allergic to something, but not chocolate'
+
 
   NB. item     =. 'chocolate'
   NB. score    =. 80
@@ -329,8 +322,8 @@ test_allergies_test_29  =: monad define
 
 allergies_test_30_ignore=: 1 NB. Change this value to 0 to run this test
 test_allergies_test_30  =: monad define
-  Description@.1 ('allergic to everything')
-  Order@.1 (30)
+  Description=: 'allergic to everything'
+
 
   NB. item     =. 'chocolate'
   NB. score    =. 255
@@ -340,8 +333,8 @@ test_allergies_test_30  =: monad define
 
 allergies_test_31_ignore=: 1 NB. Change this value to 0 to run this test
 test_allergies_test_31  =: monad define
-  Description@.1 ('not allergic to anything')
-  Order@.1 (31)
+  Description=: 'not allergic to anything'
+
 
   NB. item     =. 'pollen'
   NB. score    =. 0
@@ -351,8 +344,8 @@ test_allergies_test_31  =: monad define
 
 allergies_test_32_ignore=: 1 NB. Change this value to 0 to run this test
 test_allergies_test_32  =: monad define
-  Description@.1 ('allergic only to pollen')
-  Order@.1 (32)
+  Description=: 'allergic only to pollen'
+
 
   NB. item     =. 'pollen'
   NB. score    =. 64
@@ -362,8 +355,8 @@ test_allergies_test_32  =: monad define
 
 allergies_test_33_ignore=: 1 NB. Change this value to 0 to run this test
 test_allergies_test_33  =: monad define
-  Description@.1 ('allergic to pollen and something else')
-  Order@.1 (33)
+  Description=: 'allergic to pollen and something else'
+
 
   NB. item     =. 'pollen'
   NB. score    =. 224
@@ -373,8 +366,8 @@ test_allergies_test_33  =: monad define
 
 allergies_test_34_ignore=: 1 NB. Change this value to 0 to run this test
 test_allergies_test_34  =: monad define
-  Description@.1 ('allergic to something, but not pollen')
-  Order@.1 (34)
+  Description=: 'allergic to something, but not pollen'
+
 
   NB. item     =. 'pollen'
   NB. score    =. 160
@@ -384,8 +377,8 @@ test_allergies_test_34  =: monad define
 
 allergies_test_35_ignore=: 1 NB. Change this value to 0 to run this test
 test_allergies_test_35  =: monad define
-  Description@.1 ('allergic to everything')
-  Order@.1 (35)
+  Description=: 'allergic to everything'
+
 
   NB. item     =. 'pollen'
   NB. score    =. 255
@@ -395,8 +388,8 @@ test_allergies_test_35  =: monad define
 
 allergies_test_36_ignore=: 1 NB. Change this value to 0 to run this test
 test_allergies_test_36  =: monad define
-  Description@.1 ('not allergic to anything')
-  Order@.1 (36)
+  Description=: 'not allergic to anything'
+
 
   NB. item     =. 'cats'
   NB. score    =. 0
@@ -406,8 +399,8 @@ test_allergies_test_36  =: monad define
 
 allergies_test_37_ignore=: 1 NB. Change this value to 0 to run this test
 test_allergies_test_37  =: monad define
-  Description@.1 ('allergic only to cats')
-  Order@.1 (37)
+  Description=: 'allergic only to cats'
+
 
   NB. item     =. 'cats'
   NB. score    =. 128
@@ -417,8 +410,8 @@ test_allergies_test_37  =: monad define
 
 allergies_test_38_ignore=: 1 NB. Change this value to 0 to run this test
 test_allergies_test_38  =: monad define
-  Description@.1 ('allergic to cats and something else')
-  Order@.1 (38)
+  Description=: 'allergic to cats and something else'
+
 
   NB. item     =. 'cats'
   NB. score    =. 192
@@ -428,8 +421,8 @@ test_allergies_test_38  =: monad define
 
 allergies_test_39_ignore=: 1 NB. Change this value to 0 to run this test
 test_allergies_test_39  =: monad define
-  Description@.1 ('allergic to something, but not cats')
-  Order@.1 (39)
+  Description=: 'allergic to something, but not cats'
+
 
   NB. item     =. 'cats'
   NB. score    =. 64
@@ -439,8 +432,8 @@ test_allergies_test_39  =: monad define
 
 allergies_test_40_ignore=: 1 NB. Change this value to 0 to run this test
 test_allergies_test_40  =: monad define
-  Description@.1 ('allergic to everything')
-  Order@.1 (40)
+  Description=: 'allergic to everything'
+
 
   NB. item     =. 'cats'
   NB. score    =. 255
@@ -450,8 +443,8 @@ test_allergies_test_40  =: monad define
 
 allergies_test_41_ignore=: 1 NB. Change this value to 0 to run this test
 test_allergies_test_41  =: monad define
-  Description@.1 ('no allergies')
-  Order@.1 (41)
+  Description=: 'no allergies'
+
 
   NB. score    =. 0
   NB. expected =. ''
@@ -460,91 +453,91 @@ test_allergies_test_41  =: monad define
 
 allergies_test_42_ignore=: 1 NB. Change this value to 0 to run this test
 test_allergies_test_42  =: monad define
-  Description@.1 ('just eggs')
-  Order@.1 (42)
+  Description=: 'just eggs'
+
 
   NB. score    =. 1
-  NB. expected =. (,<'eggs')
-  assert (,<'eggs') -: list 1
+  NB. expected =. (,<'eggs'
+  assert (,<'eggs' -: list 1
 )
 
 allergies_test_43_ignore=: 1 NB. Change this value to 0 to run this test
 test_allergies_test_43  =: monad define
-  Description@.1 ('just peanuts')
-  Order@.1 (43)
+  Description=: 'just peanuts'
+
 
   NB. score    =. 2
-  NB. expected =. (,<'peanuts')
-  assert (,<'peanuts') -: list 2
+  NB. expected =. (,<'peanuts'
+  assert (,<'peanuts' -: list 2
 )
 
 allergies_test_44_ignore=: 1 NB. Change this value to 0 to run this test
 test_allergies_test_44  =: monad define
-  Description@.1 ('just strawberries')
-  Order@.1 (44)
+  Description=: 'just strawberries'
+
 
   NB. score    =. 8
-  NB. expected =. (,<'strawberries')
-  assert (,<'strawberries') -: list 8
+  NB. expected =. (,<'strawberries'
+  assert (,<'strawberries' -: list 8
 )
 
 allergies_test_45_ignore=: 1 NB. Change this value to 0 to run this test
 test_allergies_test_45  =: monad define
-  Description@.1 ('eggs and peanuts')
-  Order@.1 (45)
+  Description=: 'eggs and peanuts'
+
 
   NB. score    =. 3
   NB. expected =. 'eggs';'peanuts'
-  assert ('eggs';'peanuts') -: list 3
+  assert ('eggs';'peanuts' -: list 3
 )
 
 allergies_test_46_ignore=: 1 NB. Change this value to 0 to run this test
 test_allergies_test_46  =: monad define
-  Description@.1 ('more than eggs but not peanuts')
-  Order@.1 (46)
+  Description=: 'more than eggs but not peanuts'
+
 
   NB. score    =. 5
   NB. expected =. 'eggs';'shellfish'
-  assert ('eggs';'shellfish') -: list 5
+  assert ('eggs';'shellfish' -: list 5
 )
 
 allergies_test_47_ignore=: 1 NB. Change this value to 0 to run this test
 test_allergies_test_47  =: monad define
-  Description@.1 ('lots of stuff')
-  Order@.1 (47)
+  Description=: 'lots of stuff'
+
 
   NB. score    =. 248
   NB. expected =. 'strawberries';'tomatoes';'chocolate';'pollen';'cats'
-  assert ('strawberries';'tomatoes';'chocolate';'pollen';'cats') -: list 248
+  assert ('strawberries';'tomatoes';'chocolate';'pollen';'cats' -: list 248
 )
 
 allergies_test_48_ignore=: 1 NB. Change this value to 0 to run this test
 test_allergies_test_48  =: monad define
-  Description@.1 ('everything')
-  Order@.1 (48)
+  Description=: 'everything'
+
 
   NB. score    =. 255
   NB. expected =. 'eggs';'peanuts';'shellfish';'strawberries';'tomatoes';'chocolate';'pollen';'cats'
-  assert ('eggs';'peanuts';'shellfish';'strawberries';'tomatoes';'chocolate';'pollen';'cats') -: list 255
+  assert ('eggs';'peanuts';'shellfish';'strawberries';'tomatoes';'chocolate';'pollen';'cats' -: list 255
 )
 
 allergies_test_49_ignore=: 1 NB. Change this value to 0 to run this test
 test_allergies_test_49  =: monad define
-  Description@.1 ('no allergen score parts')
-  Order@.1 (49)
+  Description=: 'no allergen score parts'
+
 
   NB. score    =. 509
   NB. expected =. 'eggs';'shellfish';'strawberries';'tomatoes';'chocolate';'pollen';'cats'
-  assert ('eggs';'shellfish';'strawberries';'tomatoes';'chocolate';'pollen';'cats') -: list 509
+  assert ('eggs';'shellfish';'strawberries';'tomatoes';'chocolate';'pollen';'cats' -: list 509
 )
 
 allergies_test_50_ignore=: 1 NB. Change this value to 0 to run this test
 test_allergies_test_50  =: monad define
-  Description@.1 ('no allergen score parts without highest valid score')
-  Order@.1 (50)
+  Description=: 'no allergen score parts without highest valid score'
+
 
   NB. score    =. 257
-  NB. expected =. (,<'eggs')
-  assert (,<'eggs') -: list 257
+  NB. expected =. (,<'eggs'
+  assert (,<'eggs' -: list 257
 )
 
