@@ -1,7 +1,7 @@
 most_common_word =: monad define
   words  =. cut tolower y
   unique =. ~. words
-  counts =. +/"1 unique =/ words
+  counts =. #/.~ words
   top    =. >./ counts
   best   =. (counts i. top) {:: unique
   '"', best, '" appears ', (": top), ' times'
