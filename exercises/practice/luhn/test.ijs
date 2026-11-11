@@ -1,17 +1,10 @@
 load 'luhn.ijs'
 
 
-before_all=: monad define  
-  (]Description =: (3 : 'descriptions=: i.0')`(3 : 'descriptions=: descriptions , < y'))@.0 ''
-  (]Order       =: (3 : 'order=: i.0')`(3 : 'order=: order , < y'))@.0 ''
-  (]Task        =: (3 : 'tasks=: i.0')`(3 : 'tasks=: tasks , < y'))@.0 '' 
-)
-
-
 luhn_test_01_ignore=: 0
 test_luhn_test_01  =: monad define
-  Description@.1 ('single digit strings can not be valid')
-  Order@.1 (1)
+  Description=: 'single digit strings can not be valid'
+
 
   NB. value    =. '1'
   NB. expected =. 0
@@ -20,8 +13,8 @@ test_luhn_test_01  =: monad define
 
 luhn_test_02_ignore=: 1 NB. Change this value to 0 to run this test
 test_luhn_test_02  =: monad define
-  Description@.1 ('a single zero is invalid')
-  Order@.1 (2)
+  Description=: 'a single zero is invalid'
+
 
   NB. value    =. '0'
   NB. expected =. 0
@@ -30,8 +23,8 @@ test_luhn_test_02  =: monad define
 
 luhn_test_03_ignore=: 1 NB. Change this value to 0 to run this test
 test_luhn_test_03  =: monad define
-  Description@.1 ('a simple valid SIN that remains valid if reversed')
-  Order@.1 (3)
+  Description=: 'a simple valid SIN that remains valid if reversed'
+
 
   NB. value    =. '059'
   NB. expected =. 1
@@ -40,8 +33,8 @@ test_luhn_test_03  =: monad define
 
 luhn_test_04_ignore=: 1 NB. Change this value to 0 to run this test
 test_luhn_test_04  =: monad define
-  Description@.1 ('a simple valid SIN that becomes invalid if reversed')
-  Order@.1 (4)
+  Description=: 'a simple valid SIN that becomes invalid if reversed'
+
 
   NB. value    =. '59'
   NB. expected =. 1
@@ -50,8 +43,8 @@ test_luhn_test_04  =: monad define
 
 luhn_test_05_ignore=: 1 NB. Change this value to 0 to run this test
 test_luhn_test_05  =: monad define
-  Description@.1 ('a valid Canadian SIN')
-  Order@.1 (5)
+  Description=: 'a valid Canadian SIN'
+
 
   NB. value    =. '055 444 285'
   NB. expected =. 1
@@ -60,8 +53,8 @@ test_luhn_test_05  =: monad define
 
 luhn_test_06_ignore=: 1 NB. Change this value to 0 to run this test
 test_luhn_test_06  =: monad define
-  Description@.1 ('invalid Canadian SIN')
-  Order@.1 (6)
+  Description=: 'invalid Canadian SIN'
+
 
   NB. value    =. '055 444 286'
   NB. expected =. 0
@@ -70,8 +63,8 @@ test_luhn_test_06  =: monad define
 
 luhn_test_07_ignore=: 1 NB. Change this value to 0 to run this test
 test_luhn_test_07  =: monad define
-  Description@.1 ('invalid credit card')
-  Order@.1 (7)
+  Description=: 'invalid credit card'
+
 
   NB. value    =. '8273 1232 7352 0569'
   NB. expected =. 0
@@ -80,8 +73,8 @@ test_luhn_test_07  =: monad define
 
 luhn_test_08_ignore=: 1 NB. Change this value to 0 to run this test
 test_luhn_test_08  =: monad define
-  Description@.1 ('invalid long number with an even remainder')
-  Order@.1 (8)
+  Description=: 'invalid long number with an even remainder'
+
 
   NB. value    =. '1 2345 6789 1234 5678 9012'
   NB. expected =. 0
@@ -90,8 +83,8 @@ test_luhn_test_08  =: monad define
 
 luhn_test_09_ignore=: 1 NB. Change this value to 0 to run this test
 test_luhn_test_09  =: monad define
-  Description@.1 ('invalid long number with a remainder divisible by 5')
-  Order@.1 (9)
+  Description=: 'invalid long number with a remainder divisible by 5'
+
 
   NB. value    =. '1 2345 6789 1234 5678 9013'
   NB. expected =. 0
@@ -100,8 +93,8 @@ test_luhn_test_09  =: monad define
 
 luhn_test_10_ignore=: 1 NB. Change this value to 0 to run this test
 test_luhn_test_10  =: monad define
-  Description@.1 ('valid number with an even number of digits')
-  Order@.1 (10)
+  Description=: 'valid number with an even number of digits'
+
 
   NB. value    =. '095 245 88'
   NB. expected =. 1
@@ -110,8 +103,8 @@ test_luhn_test_10  =: monad define
 
 luhn_test_11_ignore=: 1 NB. Change this value to 0 to run this test
 test_luhn_test_11  =: monad define
-  Description@.1 ('valid number with an odd number of spaces')
-  Order@.1 (11)
+  Description=: 'valid number with an odd number of spaces'
+
 
   NB. value    =. '234 567 891 234'
   NB. expected =. 1
@@ -120,8 +113,8 @@ test_luhn_test_11  =: monad define
 
 luhn_test_12_ignore=: 1 NB. Change this value to 0 to run this test
 test_luhn_test_12  =: monad define
-  Description@.1 ('valid strings with a non-digit added at the end become invalid')
-  Order@.1 (12)
+  Description=: 'valid strings with a non-digit added at the end become invalid'
+
 
   NB. value    =. '059a'
   NB. expected =. 0
@@ -130,8 +123,8 @@ test_luhn_test_12  =: monad define
 
 luhn_test_13_ignore=: 1 NB. Change this value to 0 to run this test
 test_luhn_test_13  =: monad define
-  Description@.1 ('valid strings with punctuation included become invalid')
-  Order@.1 (13)
+  Description=: 'valid strings with punctuation included become invalid'
+
 
   NB. value    =. '055-444-285'
   NB. expected =. 0
@@ -140,8 +133,8 @@ test_luhn_test_13  =: monad define
 
 luhn_test_14_ignore=: 1 NB. Change this value to 0 to run this test
 test_luhn_test_14  =: monad define
-  Description@.1 ('valid strings with symbols included become invalid')
-  Order@.1 (14)
+  Description=: 'valid strings with symbols included become invalid'
+
 
   NB. value    =. '055# 444$ 285'
   NB. expected =. 0
@@ -150,8 +143,8 @@ test_luhn_test_14  =: monad define
 
 luhn_test_15_ignore=: 1 NB. Change this value to 0 to run this test
 test_luhn_test_15  =: monad define
-  Description@.1 ('single zero with space is invalid')
-  Order@.1 (15)
+  Description=: 'single zero with space is invalid'
+
 
   NB. value    =. ' 0'
   NB. expected =. 0
@@ -160,8 +153,8 @@ test_luhn_test_15  =: monad define
 
 luhn_test_16_ignore=: 1 NB. Change this value to 0 to run this test
 test_luhn_test_16  =: monad define
-  Description@.1 ('more than a single zero is valid')
-  Order@.1 (16)
+  Description=: 'more than a single zero is valid'
+
 
   NB. value    =. '0000 0'
   NB. expected =. 1
@@ -170,8 +163,8 @@ test_luhn_test_16  =: monad define
 
 luhn_test_17_ignore=: 1 NB. Change this value to 0 to run this test
 test_luhn_test_17  =: monad define
-  Description@.1 ('input digit 9 is correctly converted to output digit 9')
-  Order@.1 (17)
+  Description=: 'input digit 9 is correctly converted to output digit 9'
+
 
   NB. value    =. '091'
   NB. expected =. 1
@@ -180,8 +173,8 @@ test_luhn_test_17  =: monad define
 
 luhn_test_18_ignore=: 1 NB. Change this value to 0 to run this test
 test_luhn_test_18  =: monad define
-  Description@.1 ('very long input is valid')
-  Order@.1 (18)
+  Description=: 'very long input is valid'
+
 
   NB. value    =. '9999999999 9999999999 9999999999 9999999999'
   NB. expected =. 1
@@ -190,8 +183,8 @@ test_luhn_test_18  =: monad define
 
 luhn_test_19_ignore=: 1 NB. Change this value to 0 to run this test
 test_luhn_test_19  =: monad define
-  Description@.1 ('valid luhn with an odd number of digits and non zero first digit')
-  Order@.1 (19)
+  Description=: 'valid luhn with an odd number of digits and non zero first digit'
+
 
   NB. value    =. '109'
   NB. expected =. 1
@@ -200,8 +193,8 @@ test_luhn_test_19  =: monad define
 
 luhn_test_20_ignore=: 1 NB. Change this value to 0 to run this test
 test_luhn_test_20  =: monad define
-  Description@.1 ('using ascii value for non-doubled non-digit isn''t allowed')
-  Order@.1 (20)
+  Description=: 'using ascii value for non-doubled non-digit isn''t allowed'
+
 
   NB. value    =. '055b 444 285'
   NB. expected =. 0
@@ -210,8 +203,8 @@ test_luhn_test_20  =: monad define
 
 luhn_test_21_ignore=: 1 NB. Change this value to 0 to run this test
 test_luhn_test_21  =: monad define
-  Description@.1 ('using ascii value for doubled non-digit isn''t allowed')
-  Order@.1 (21)
+  Description=: 'using ascii value for doubled non-digit isn''t allowed'
+
 
   NB. value    =. ':9'
   NB. expected =. 0
@@ -220,8 +213,8 @@ test_luhn_test_21  =: monad define
 
 luhn_test_22_ignore=: 1 NB. Change this value to 0 to run this test
 test_luhn_test_22  =: monad define
-  Description@.1 ('non-numeric, non-space char in the middle with a sum that''s divisible by 10 isn''t allowed')
-  Order@.1 (22)
+  Description=: 'non-numeric, non-space char in the middle with a sum that''s divisible by 10 isn''t allowed'
+
 
   NB. value    =. '59%59'
   NB. expected =. 0

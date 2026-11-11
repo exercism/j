@@ -1,17 +1,10 @@
 load 'largest-series-product.ijs'
 
 
-before_all=: monad define  
-  (]Description =: (3 : 'descriptions=: i.0')`(3 : 'descriptions=: descriptions , < y'))@.0 ''
-  (]Order       =: (3 : 'order=: i.0')`(3 : 'order=: order , < y'))@.0 ''
-  (]Task        =: (3 : 'tasks=: i.0')`(3 : 'tasks=: tasks , < y'))@.0 '' 
-)
-
-
 largest_series_product_test_01_ignore=: 0
 test_largest_series_product_test_01  =: monad define
-  Description@.1 ('finds the largest product if span equals length')
-  Order@.1 (1)
+  Description=: 'finds the largest product if span equals length'
+
 
   NB. digits=. '29'
   NB. span=. 2
@@ -21,8 +14,8 @@ test_largest_series_product_test_01  =: monad define
 
 largest_series_product_test_02_ignore=: 1 NB. Change this value to 0 to run this test
 test_largest_series_product_test_02  =: monad define
-  Description@.1 ('can find the largest product of 2 with numbers in order')
-  Order@.1 (2)
+  Description=: 'can find the largest product of 2 with numbers in order'
+
 
   NB. digits=. '0123456789'
   NB. span=. 2
@@ -32,8 +25,8 @@ test_largest_series_product_test_02  =: monad define
 
 largest_series_product_test_03_ignore=: 1 NB. Change this value to 0 to run this test
 test_largest_series_product_test_03  =: monad define
-  Description@.1 ('can find the largest product of 2')
-  Order@.1 (3)
+  Description=: 'can find the largest product of 2'
+
 
   NB. digits=. '576802143'
   NB. span=. 2
@@ -43,8 +36,8 @@ test_largest_series_product_test_03  =: monad define
 
 largest_series_product_test_04_ignore=: 1 NB. Change this value to 0 to run this test
 test_largest_series_product_test_04  =: monad define
-  Description@.1 ('can find the largest product of 3 with numbers in order')
-  Order@.1 (4)
+  Description=: 'can find the largest product of 3 with numbers in order'
+
 
   NB. digits=. '0123456789'
   NB. span=. 3
@@ -54,8 +47,8 @@ test_largest_series_product_test_04  =: monad define
 
 largest_series_product_test_05_ignore=: 1 NB. Change this value to 0 to run this test
 test_largest_series_product_test_05  =: monad define
-  Description@.1 ('can find the largest product of 3')
-  Order@.1 (5)
+  Description=: 'can find the largest product of 3'
+
 
   NB. digits=. '1027839564'
   NB. span=. 3
@@ -65,8 +58,8 @@ test_largest_series_product_test_05  =: monad define
 
 largest_series_product_test_06_ignore=: 1 NB. Change this value to 0 to run this test
 test_largest_series_product_test_06  =: monad define
-  Description@.1 ('can find the largest product of 5 with numbers in order')
-  Order@.1 (6)
+  Description=: 'can find the largest product of 5 with numbers in order'
+
 
   NB. digits=. '0123456789'
   NB. span=. 5
@@ -76,8 +69,8 @@ test_largest_series_product_test_06  =: monad define
 
 largest_series_product_test_07_ignore=: 1 NB. Change this value to 0 to run this test
 test_largest_series_product_test_07  =: monad define
-  Description@.1 ('can get the largest product of a big number')
-  Order@.1 (7)
+  Description=: 'can get the largest product of a big number'
+
 
   NB. digits=. '73167176531330624919225119674426574742355349194934'
   NB. span=. 6
@@ -87,8 +80,8 @@ test_largest_series_product_test_07  =: monad define
 
 largest_series_product_test_08_ignore=: 1 NB. Change this value to 0 to run this test
 test_largest_series_product_test_08  =: monad define
-  Description@.1 ('reports zero if the only digits are zero')
-  Order@.1 (8)
+  Description=: 'reports zero if the only digits are zero'
+
 
   NB. digits=. '0000'
   NB. span=. 2
@@ -98,8 +91,8 @@ test_largest_series_product_test_08  =: monad define
 
 largest_series_product_test_09_ignore=: 1 NB. Change this value to 0 to run this test
 test_largest_series_product_test_09  =: monad define
-  Description@.1 ('reports zero if all spans include zero')
-  Order@.1 (9)
+  Description=: 'reports zero if all spans include zero'
+
 
   NB. digits=. '99099'
   NB. span=. 3
@@ -109,8 +102,8 @@ test_largest_series_product_test_09  =: monad define
 
 largest_series_product_test_11_ignore=: 1 NB. Change this value to 0 to run this test
 test_largest_series_product_test_11  =: monad define
-  Description@.1 ('reports 1 for empty string and empty product (0 span)')
-  Order@.1 (11)
+  Description=: 'reports 1 for empty string and empty product (0 span)'
+
 
   NB. digits=. ''
   NB. span=. 0
@@ -120,8 +113,8 @@ test_largest_series_product_test_11  =: monad define
 
 largest_series_product_test_12_ignore=: 1 NB. Change this value to 0 to run this test
 test_largest_series_product_test_12  =: monad define
-  Description@.1 ('reports 1 for nonempty string and empty product (0 span)')
-  Order@.1 (12)
+  Description=: 'reports 1 for nonempty string and empty product (0 span)'
+
 
   NB. digits=. '123'
   NB. span=. 0

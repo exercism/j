@@ -1,17 +1,10 @@
 load 'sum-of-multiples.ijs'
 
 
-before_all=: monad define  
-  (]Description =: (3 : 'descriptions=: i.0')`(3 : 'descriptions=: descriptions , < y'))@.0 ''
-  (]Order       =: (3 : 'order=: i.0')`(3 : 'order=: order , < y'))@.0 ''
-  (]Task        =: (3 : 'tasks=: i.0')`(3 : 'tasks=: tasks , < y'))@.0 '' 
-)
-
-
 sum_of_multiples_test_01_ignore=: 0
 test_sum_of_multiples_test_01  =: monad define
-  Description@.1 ('no multiples within limit')
-  Order@.1 (1)
+  Description=: 'no multiples within limit'
+
 
   NB. factors =. 3 5
   NB. limit   =. 1
@@ -21,8 +14,8 @@ test_sum_of_multiples_test_01  =: monad define
 
 sum_of_multiples_test_02_ignore=: 1 NB. Change this value to 0 to run this test
 test_sum_of_multiples_test_02  =: monad define
-  Description@.1 ('one factor has multiples within limit')
-  Order@.1 (2)
+  Description=: 'one factor has multiples within limit'
+
 
   NB. factors =. 3 5
   NB. limit   =. 4
@@ -32,8 +25,8 @@ test_sum_of_multiples_test_02  =: monad define
 
 sum_of_multiples_test_03_ignore=: 1 NB. Change this value to 0 to run this test
 test_sum_of_multiples_test_03  =: monad define
-  Description@.1 ('more than one multiple within limit')
-  Order@.1 (3)
+  Description=: 'more than one multiple within limit'
+
 
   NB. factors =. ,3
   NB. limit   =. 7
@@ -43,8 +36,8 @@ test_sum_of_multiples_test_03  =: monad define
 
 sum_of_multiples_test_04_ignore=: 1 NB. Change this value to 0 to run this test
 test_sum_of_multiples_test_04  =: monad define
-  Description@.1 ('more than one factor with multiples within limit')
-  Order@.1 (4)
+  Description=: 'more than one factor with multiples within limit'
+
 
   NB. factors =. 3 5
   NB. limit   =. 10
@@ -54,8 +47,8 @@ test_sum_of_multiples_test_04  =: monad define
 
 sum_of_multiples_test_05_ignore=: 1 NB. Change this value to 0 to run this test
 test_sum_of_multiples_test_05  =: monad define
-  Description@.1 ('each multiple is only counted once')
-  Order@.1 (5)
+  Description=: 'each multiple is only counted once'
+
 
   NB. factors =. 3 5
   NB. limit   =. 100
@@ -65,8 +58,8 @@ test_sum_of_multiples_test_05  =: monad define
 
 sum_of_multiples_test_06_ignore=: 1 NB. Change this value to 0 to run this test
 test_sum_of_multiples_test_06  =: monad define
-  Description@.1 ('a much larger limit')
-  Order@.1 (6)
+  Description=: 'a much larger limit'
+
 
   NB. factors =. 3 5
   NB. limit   =. 100
@@ -76,8 +69,8 @@ test_sum_of_multiples_test_06  =: monad define
 
 sum_of_multiples_test_07_ignore=: 1 NB. Change this value to 0 to run this test
 test_sum_of_multiples_test_07  =: monad define
-  Description@.1 ('three factors')
-  Order@.1 (7)
+  Description=: 'three factors'
+
 
   NB. factors =. 7 13 17
   NB. limit   =. 20
@@ -87,8 +80,8 @@ test_sum_of_multiples_test_07  =: monad define
 
 sum_of_multiples_test_08_ignore=: 1 NB. Change this value to 0 to run this test
 test_sum_of_multiples_test_08  =: monad define
-  Description@.1 ('factors not relatively prime')
-  Order@.1 (8)
+  Description=: 'factors not relatively prime'
+
 
   NB. factors =. 4 6
   NB. limit   =. 15
@@ -98,8 +91,8 @@ test_sum_of_multiples_test_08  =: monad define
 
 sum_of_multiples_test_09_ignore=: 1 NB. Change this value to 0 to run this test
 test_sum_of_multiples_test_09  =: monad define
-  Description@.1 ('some pairs of factors relatively prime and some not')
-  Order@.1 (9)
+  Description=: 'some pairs of factors relatively prime and some not'
+
 
   NB. factors =. 5 6 8
   NB. limit   =. 150
@@ -109,8 +102,8 @@ test_sum_of_multiples_test_09  =: monad define
 
 sum_of_multiples_test_10_ignore=: 1 NB. Change this value to 0 to run this test
 test_sum_of_multiples_test_10  =: monad define
-  Description@.1 ('one factor is a multiple of another')
-  Order@.1 (10)
+  Description=: 'one factor is a multiple of another'
+
 
   NB. factors =. 5 25
   NB. limit   =. 51
@@ -120,8 +113,8 @@ test_sum_of_multiples_test_10  =: monad define
 
 sum_of_multiples_test_11_ignore=: 1 NB. Change this value to 0 to run this test
 test_sum_of_multiples_test_11  =: monad define
-  Description@.1 ('much larger factors')
-  Order@.1 (11)
+  Description=: 'much larger factors'
+
 
   NB. factors =. 43 47
   NB. limit   =. 10000
@@ -131,8 +124,8 @@ test_sum_of_multiples_test_11  =: monad define
 
 sum_of_multiples_test_12_ignore=: 1 NB. Change this value to 0 to run this test
 test_sum_of_multiples_test_12  =: monad define
-  Description@.1 ('all numbers are multiples of 1')
-  Order@.1 (12)
+  Description=: 'all numbers are multiples of 1'
+
 
   NB. factors =. .1
   NB. limit   =. 100
@@ -142,8 +135,8 @@ test_sum_of_multiples_test_12  =: monad define
 
 sum_of_multiples_test_13_ignore=: 1 NB. Change this value to 0 to run this test
 test_sum_of_multiples_test_13  =: monad define
-  Description@.1 ('no factors means an empty sum')
-  Order@.1 (13)
+  Description=: 'no factors means an empty sum'
+
 
   NB. factors =. ''
   NB. limit   =. 10000
@@ -153,8 +146,8 @@ test_sum_of_multiples_test_13  =: monad define
 
 sum_of_multiples_test_14_ignore=: 1 NB. Change this value to 0 to run this test
 test_sum_of_multiples_test_14  =: monad define
-  Description@.1 ('the only multiple of 0 is 0')
-  Order@.1 (14)
+  Description=: 'the only multiple of 0 is 0'
+
 
   NB. factors =. ,0
   NB. limit   =. 1
@@ -164,8 +157,8 @@ test_sum_of_multiples_test_14  =: monad define
 
 sum_of_multiples_test_15_ignore=: 1 NB. Change this value to 0 to run this test
 test_sum_of_multiples_test_15  =: monad define
-  Description@.1 ('the factor 0 does not affect the sum of multiples of other factors')
-  Order@.1 (15)
+  Description=: 'the factor 0 does not affect the sum of multiples of other factors'
+
 
   NB. factors =. 3 0
   NB. limit   =. 4
@@ -175,8 +168,8 @@ test_sum_of_multiples_test_15  =: monad define
 
 sum_of_multiples_test_16_ignore=: 1 NB. Change this value to 0 to run this test
 test_sum_of_multiples_test_16  =: monad define
-  Description@.1 ('solutions using include-exclude must extend to cardinality greater than 3')
-  Order@.1 (16)
+  Description=: 'solutions using include-exclude must extend to cardinality greater than 3'
+
 
   NB. factors =. 2 3 5 7 11
   NB. limit   =. 10000

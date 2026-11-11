@@ -1,18 +1,16 @@
 load 'space-age.ijs'
 
-equal_within  =: {{ |@- <:!.0 m * >.&| }}
 
 before_all=: monad define  
-  (]Description =: (3 : 'descriptions=: i.0')`(3 : 'descriptions=: descriptions , < y'))@.0 ''
-  (]Order       =: (3 : 'order=: i.0')`(3 : 'order=: order , < y'))@.0 ''
-  (]Task        =: (3 : 'tasks=: i.0')`(3 : 'tasks=: tasks , < y'))@.0 ''
+  equal_within=: {{ |@- <:!.0 m * >.&| }}
+  0
 )
 
 
 space_age_test_01_ignore=: 0
 test_space_age_test_01  =: monad define
-  Description@.1 ('age on Earth')
-  Order@.1 (1)
+  Description=: 'age on Earth'
+
 
   NB. planet=. 'Earth'
   NB. seconds=. 1000000000
@@ -22,8 +20,8 @@ test_space_age_test_01  =: monad define
 
 space_age_test_02_ignore=: 1 NB. Change this value to 0 to run this test
 test_space_age_test_02  =: monad define
-  Description@.1 ('age on Mercury')
-  Order@.1 (2)
+  Description=: 'age on Mercury'
+
 
   NB. planet=. 'Mercury'
   NB. seconds=. 2134835688
@@ -33,8 +31,8 @@ test_space_age_test_02  =: monad define
 
 space_age_test_03_ignore=: 1 NB. Change this value to 0 to run this test
 test_space_age_test_03  =: monad define
-  Description@.1 ('age on Venus')
-  Order@.1 (3)
+  Description=: 'age on Venus'
+
 
   NB. planet=. 'Venus'
   NB. seconds=. 189839836
@@ -44,8 +42,8 @@ test_space_age_test_03  =: monad define
 
 space_age_test_04_ignore=: 1 NB. Change this value to 0 to run this test
 test_space_age_test_04  =: monad define
-  Description@.1 ('age on Mars')
-  Order@.1 (4)
+  Description=: 'age on Mars'
+
 
   NB. planet=. 'Mars'
   NB. seconds=. 2129871239
@@ -55,8 +53,8 @@ test_space_age_test_04  =: monad define
 
 space_age_test_05_ignore=: 1 NB. Change this value to 0 to run this test
 test_space_age_test_05  =: monad define
-  Description@.1 ('age on Jupiter')
-  Order@.1 (5)
+  Description=: 'age on Jupiter'
+
 
   NB. planet=. 'Jupiter'
   NB. seconds=. 901876382
@@ -66,8 +64,8 @@ test_space_age_test_05  =: monad define
 
 space_age_test_06_ignore=: 1 NB. Change this value to 0 to run this test
 test_space_age_test_06  =: monad define
-  Description@.1 ('age on Saturn')
-  Order@.1 (6)
+  Description=: 'age on Saturn'
+
 
   NB. planet=. 'Saturn'
   NB. seconds=. 2000000000
@@ -77,8 +75,8 @@ test_space_age_test_06  =: monad define
 
 space_age_test_07_ignore=: 1 NB. Change this value to 0 to run this test
 test_space_age_test_07  =: monad define
-  Description@.1 ('age on Uranus')
-  Order@.1 (7)
+  Description=: 'age on Uranus'
+
 
   NB. planet=. 'Uranus'
   NB. seconds=. 1210123456
@@ -88,8 +86,8 @@ test_space_age_test_07  =: monad define
 
 space_age_test_08_ignore=: 1 NB. Change this value to 0 to run this test
 test_space_age_test_08  =: monad define
-  Description@.1 ('age on Neptune')
-  Order@.1 (8)
+  Description=: 'age on Neptune'
+
 
   NB. planet=. 'Neptune'
   NB. seconds=. 1821023456
@@ -100,8 +98,8 @@ test_space_age_test_08  =: monad define
 space_age_test_09_ignore=: 1 NB. Change this value to 0 to run this test
 space_age_test_09_expect=: 'index error'
 test_space_age_test_09  =: monad define
-  Description@.1 ('invalid planet causes error')
-  Order@.1 (9)
+  Description=: 'invalid planet causes error'
+
 
   NB. planet=. 'Sun'
   NB. seconds=. 680804807

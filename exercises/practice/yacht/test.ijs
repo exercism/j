@@ -1,17 +1,10 @@
 load 'yacht.ijs'
 
 
-before_all=: monad define  
-  (]Description =: (3 : 'descriptions=: i.0')`(3 : 'descriptions=: descriptions , < y'))@.0 ''
-  (]Order       =: (3 : 'order=: i.0')`(3 : 'order=: order , < y'))@.0 ''
-  (]Task        =: (3 : 'tasks=: i.0')`(3 : 'tasks=: tasks , < y'))@.0 '' 
-)
-
-
 yacht_test_01_ignore=: 0
 test_yacht_test_01  =: monad define
-  Description@.1 ('Yacht')
-  Order@.1 (1)
+  Description=: 'Yacht'
+
 
   NB. dice=. 5 5 5 5 5
   NB. category=. 'yacht'
@@ -21,8 +14,8 @@ test_yacht_test_01  =: monad define
 
 yacht_test_02_ignore=: 1 NB. Change this value to 0 to run this test
 test_yacht_test_02  =: monad define
-  Description@.1 ('Not Yacht')
-  Order@.1 (2)
+  Description=: 'Not Yacht'
+
 
   NB. dice=. 1 3 3 2 5
   NB. category=. 'yacht'
@@ -32,8 +25,8 @@ test_yacht_test_02  =: monad define
 
 yacht_test_03_ignore=: 1 NB. Change this value to 0 to run this test
 test_yacht_test_03  =: monad define
-  Description@.1 ('Ones')
-  Order@.1 (3)
+  Description=: 'Ones'
+
 
   NB. dice=. 1 1 1 3 5
   NB. category=. 'ones'
@@ -43,8 +36,8 @@ test_yacht_test_03  =: monad define
 
 yacht_test_04_ignore=: 1 NB. Change this value to 0 to run this test
 test_yacht_test_04  =: monad define
-  Description@.1 ('Ones, out of order')
-  Order@.1 (4)
+  Description=: 'Ones, out of order'
+
 
   NB. dice=. 3 1 1 5 1
   NB. category=. 'ones'
@@ -54,8 +47,8 @@ test_yacht_test_04  =: monad define
 
 yacht_test_05_ignore=: 1 NB. Change this value to 0 to run this test
 test_yacht_test_05  =: monad define
-  Description@.1 ('No ones')
-  Order@.1 (5)
+  Description=: 'No ones'
+
 
   NB. dice=. 4 3 6 5 5
   NB. category=. 'ones'
@@ -65,8 +58,8 @@ test_yacht_test_05  =: monad define
 
 yacht_test_06_ignore=: 1 NB. Change this value to 0 to run this test
 test_yacht_test_06  =: monad define
-  Description@.1 ('Twos')
-  Order@.1 (6)
+  Description=: 'Twos'
+
 
   NB. dice=. 2 3 4 5 6
   NB. category=. 'twos'
@@ -76,8 +69,8 @@ test_yacht_test_06  =: monad define
 
 yacht_test_07_ignore=: 1 NB. Change this value to 0 to run this test
 test_yacht_test_07  =: monad define
-  Description@.1 ('Fours')
-  Order@.1 (7)
+  Description=: 'Fours'
+
 
   NB. dice=. 1 4 1 4 1
   NB. category=. 'fours'
@@ -87,8 +80,8 @@ test_yacht_test_07  =: monad define
 
 yacht_test_08_ignore=: 1 NB. Change this value to 0 to run this test
 test_yacht_test_08  =: monad define
-  Description@.1 ('Yacht counted as threes')
-  Order@.1 (8)
+  Description=: 'Yacht counted as threes'
+
 
   NB. dice=. 3 3 3 3 3
   NB. category=. 'threes'
@@ -98,8 +91,8 @@ test_yacht_test_08  =: monad define
 
 yacht_test_09_ignore=: 1 NB. Change this value to 0 to run this test
 test_yacht_test_09  =: monad define
-  Description@.1 ('Yacht of 3s counted as fives')
-  Order@.1 (9)
+  Description=: 'Yacht of 3s counted as fives'
+
 
   NB. dice=. 3 3 3 3 3
   NB. category=. 'fives'
@@ -109,8 +102,8 @@ test_yacht_test_09  =: monad define
 
 yacht_test_10_ignore=: 1 NB. Change this value to 0 to run this test
 test_yacht_test_10  =: monad define
-  Description@.1 ('Fives')
-  Order@.1 (10)
+  Description=: 'Fives'
+
 
   NB. dice=. 1 5 3 5 3
   NB. category=. 'fives'
@@ -120,8 +113,8 @@ test_yacht_test_10  =: monad define
 
 yacht_test_11_ignore=: 1 NB. Change this value to 0 to run this test
 test_yacht_test_11  =: monad define
-  Description@.1 ('Sixes')
-  Order@.1 (11)
+  Description=: 'Sixes'
+
 
   NB. dice=. 2 3 4 5 6
   NB. category=. 'sixes'
@@ -131,8 +124,8 @@ test_yacht_test_11  =: monad define
 
 yacht_test_12_ignore=: 1 NB. Change this value to 0 to run this test
 test_yacht_test_12  =: monad define
-  Description@.1 ('Full house two small, three big')
-  Order@.1 (12)
+  Description=: 'Full house two small, three big'
+
 
   NB. dice=. 2 2 4 4 4
   NB. category=. 'full_house'
@@ -142,8 +135,8 @@ test_yacht_test_12  =: monad define
 
 yacht_test_13_ignore=: 1 NB. Change this value to 0 to run this test
 test_yacht_test_13  =: monad define
-  Description@.1 ('Full house three small, two big')
-  Order@.1 (13)
+  Description=: 'Full house three small, two big'
+
 
   NB. dice=. 5 3 3 5 3
   NB. category=. 'full_house'
@@ -153,8 +146,8 @@ test_yacht_test_13  =: monad define
 
 yacht_test_14_ignore=: 1 NB. Change this value to 0 to run this test
 test_yacht_test_14  =: monad define
-  Description@.1 ('Two pair is not a full_house')
-  Order@.1 (14)
+  Description=: 'Two pair is not a full_house'
+
 
   NB. dice=. 2 2 4 4 5
   NB. category=. 'full_house'
@@ -164,8 +157,8 @@ test_yacht_test_14  =: monad define
 
 yacht_test_15_ignore=: 1 NB. Change this value to 0 to run this test
 test_yacht_test_15  =: monad define
-  Description@.1 ('Four of a kind is not a full_house')
-  Order@.1 (15)
+  Description=: 'Four of a kind is not a full_house'
+
 
   NB. dice=. 1 4 4 4 4
   NB. category=. 'full_house'
@@ -175,8 +168,8 @@ test_yacht_test_15  =: monad define
 
 yacht_test_16_ignore=: 1 NB. Change this value to 0 to run this test
 test_yacht_test_16  =: monad define
-  Description@.1 ('Yacht is not a full_house')
-  Order@.1 (16)
+  Description=: 'Yacht is not a full_house'
+
 
   NB. dice=. 2 2 2 2 2
   NB. category=. 'full_house'
@@ -186,8 +179,8 @@ test_yacht_test_16  =: monad define
 
 yacht_test_17_ignore=: 1 NB. Change this value to 0 to run this test
 test_yacht_test_17  =: monad define
-  Description@.1 ('Four of a Kind')
-  Order@.1 (17)
+  Description=: 'Four of a Kind'
+
 
   NB. dice=. 6 6 4 6 6
   NB. category=. 'four_of_a_kind'
@@ -197,8 +190,8 @@ test_yacht_test_17  =: monad define
 
 yacht_test_18_ignore=: 1 NB. Change this value to 0 to run this test
 test_yacht_test_18  =: monad define
-  Description@.1 ('Yacht can be scored as Four of a Kind')
-  Order@.1 (18)
+  Description=: 'Yacht can be scored as Four of a Kind'
+
 
   NB. dice=. 3 3 3 3 3
   NB. category=. 'four_of_a_kind'
@@ -208,8 +201,8 @@ test_yacht_test_18  =: monad define
 
 yacht_test_19_ignore=: 1 NB. Change this value to 0 to run this test
 test_yacht_test_19  =: monad define
-  Description@.1 ('Full house is not Four of a Kind')
-  Order@.1 (19)
+  Description=: 'Full house is not Four of a Kind'
+
 
   NB. dice=. 3 3 3 5 5
   NB. category=. 'four_of_a_kind'
@@ -219,8 +212,8 @@ test_yacht_test_19  =: monad define
 
 yacht_test_20_ignore=: 1 NB. Change this value to 0 to run this test
 test_yacht_test_20  =: monad define
-  Description@.1 ('Little Straight')
-  Order@.1 (20)
+  Description=: 'Little Straight'
+
 
   NB. dice=. 3 5 4 1 2
   NB. category=. 'little_straight'
@@ -230,8 +223,8 @@ test_yacht_test_20  =: monad define
 
 yacht_test_21_ignore=: 1 NB. Change this value to 0 to run this test
 test_yacht_test_21  =: monad define
-  Description@.1 ('Little Straight as Big Straight')
-  Order@.1 (21)
+  Description=: 'Little Straight as Big Straight'
+
 
   NB. dice=. 1 2 3 4 5
   NB. category=. 'big_straight'
@@ -241,8 +234,8 @@ test_yacht_test_21  =: monad define
 
 yacht_test_22_ignore=: 1 NB. Change this value to 0 to run this test
 test_yacht_test_22  =: monad define
-  Description@.1 ('Four in order but not a little_straight')
-  Order@.1 (22)
+  Description=: 'Four in order but not a little_straight'
+
 
   NB. dice=. 1 1 2 3 4
   NB. category=. 'little_straight'
@@ -252,8 +245,8 @@ test_yacht_test_22  =: monad define
 
 yacht_test_23_ignore=: 1 NB. Change this value to 0 to run this test
 test_yacht_test_23  =: monad define
-  Description@.1 ('No pairs but not a little_straight')
-  Order@.1 (23)
+  Description=: 'No pairs but not a little_straight'
+
 
   NB. dice=. 1 2 3 4 6
   NB. category=. 'little_straight'
@@ -263,8 +256,8 @@ test_yacht_test_23  =: monad define
 
 yacht_test_24_ignore=: 1 NB. Change this value to 0 to run this test
 test_yacht_test_24  =: monad define
-  Description@.1 ('Minimum is 1, maximum is 5, but not a little_straight')
-  Order@.1 (24)
+  Description=: 'Minimum is 1, maximum is 5, but not a little_straight'
+
 
   NB. dice=. 1 1 3 4 5
   NB. category=. 'little_straight'
@@ -274,8 +267,8 @@ test_yacht_test_24  =: monad define
 
 yacht_test_25_ignore=: 1 NB. Change this value to 0 to run this test
 test_yacht_test_25  =: monad define
-  Description@.1 ('Big Straight')
-  Order@.1 (25)
+  Description=: 'Big Straight'
+
 
   NB. dice=. 4 6 2 5 3
   NB. category=. 'big_straight'
@@ -285,8 +278,8 @@ test_yacht_test_25  =: monad define
 
 yacht_test_26_ignore=: 1 NB. Change this value to 0 to run this test
 test_yacht_test_26  =: monad define
-  Description@.1 ('Big Straight as little_straight')
-  Order@.1 (26)
+  Description=: 'Big Straight as little_straight'
+
 
   NB. dice=. 6 5 4 3 2
   NB. category=. 'little_straight'
@@ -296,8 +289,8 @@ test_yacht_test_26  =: monad define
 
 yacht_test_27_ignore=: 1 NB. Change this value to 0 to run this test
 test_yacht_test_27  =: monad define
-  Description@.1 ('No pairs but not a big_straight')
-  Order@.1 (27)
+  Description=: 'No pairs but not a big_straight'
+
 
   NB. dice=. 6 5 4 3 1
   NB. category=. 'big_straight'
@@ -307,8 +300,8 @@ test_yacht_test_27  =: monad define
 
 yacht_test_28_ignore=: 1 NB. Change this value to 0 to run this test
 test_yacht_test_28  =: monad define
-  Description@.1 ('Choice')
-  Order@.1 (28)
+  Description=: 'Choice'
+
 
   NB. dice=. 3 3 5 6 6
   NB. category=. 'choice'
@@ -318,8 +311,8 @@ test_yacht_test_28  =: monad define
 
 yacht_test_29_ignore=: 1 NB. Change this value to 0 to run this test
 test_yacht_test_29  =: monad define
-  Description@.1 ('Yacht as choice')
-  Order@.1 (29)
+  Description=: 'Yacht as choice'
+
 
   NB. dice=. 2 2 2 2 2
   NB. category=. 'choice'

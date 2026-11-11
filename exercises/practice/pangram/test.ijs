@@ -1,17 +1,10 @@
 load 'pangram.ijs'
 
 
-before_all=: monad define  
-  (]Description =: (3 : 'descriptions=: i.0')`(3 : 'descriptions=: descriptions , < y'))@.0 ''
-  (]Order       =: (3 : 'order=: i.0')`(3 : 'order=: order , < y'))@.0 ''
-  (]Task        =: (3 : 'tasks=: i.0')`(3 : 'tasks=: tasks , < y'))@.0 '' 
-)
-
-
 pangram_test_01_ignore=: 0
 test_pangram_test_01  =: monad define
-  Description@.1 ('empty sentence')
-  Order@.1 (1)
+  Description=: 'empty sentence'
+
 
   NB. sentence=. ''
   NB. expected=. 0
@@ -20,8 +13,8 @@ test_pangram_test_01  =: monad define
 
 pangram_test_02_ignore=: 1 NB. Change this value to 0 to run this test
 test_pangram_test_02  =: monad define
-  Description@.1 ('perfect lower case')
-  Order@.1 (2)
+  Description=: 'perfect lower case'
+
 
   NB. sentence=. 'abcdefghijklmnopqrstuvwxyz'
   NB. expected=. 1
@@ -30,8 +23,8 @@ test_pangram_test_02  =: monad define
 
 pangram_test_03_ignore=: 1 NB. Change this value to 0 to run this test
 test_pangram_test_03  =: monad define
-  Description@.1 ('only lower case')
-  Order@.1 (3)
+  Description=: 'only lower case'
+
 
   NB. sentence=. 'the quick brown fox jumps over the lazy dog'
   NB. expected=. 1
@@ -40,8 +33,8 @@ test_pangram_test_03  =: monad define
 
 pangram_test_04_ignore=: 1 NB. Change this value to 0 to run this test
 test_pangram_test_04  =: monad define
-  Description@.1 ('missing the letter ''x''')
-  Order@.1 (4)
+  Description=: 'missing the letter ''x'''
+
 
   NB. sentence=. 'a quick movement of the enemy will jeopardize five gunboats'
   NB. expected=. 0
@@ -50,8 +43,8 @@ test_pangram_test_04  =: monad define
 
 pangram_test_05_ignore=: 1 NB. Change this value to 0 to run this test
 test_pangram_test_05  =: monad define
-  Description@.1 ('missing the letter ''h''')
-  Order@.1 (5)
+  Description=: 'missing the letter ''h'''
+
 
   NB. sentence=. 'five boxing wizards jump quickly at it'
   NB. expected=. 0
@@ -60,8 +53,8 @@ test_pangram_test_05  =: monad define
 
 pangram_test_06_ignore=: 1 NB. Change this value to 0 to run this test
 test_pangram_test_06  =: monad define
-  Description@.1 ('with underscores')
-  Order@.1 (6)
+  Description=: 'with underscores'
+
 
   NB. sentence=. 'the_quick_brown_fox_jumps_over_the_lazy_dog'
   NB. expected=. 1
@@ -70,8 +63,8 @@ test_pangram_test_06  =: monad define
 
 pangram_test_07_ignore=: 1 NB. Change this value to 0 to run this test
 test_pangram_test_07  =: monad define
-  Description@.1 ('with numbers')
-  Order@.1 (7)
+  Description=: 'with numbers'
+
 
   NB. sentence=. 'the 1 quick brown fox jumps over the 2 lazy dogs'
   NB. expected=. 1
@@ -80,8 +73,8 @@ test_pangram_test_07  =: monad define
 
 pangram_test_08_ignore=: 1 NB. Change this value to 0 to run this test
 test_pangram_test_08  =: monad define
-  Description@.1 ('missing letters replaced by numbers')
-  Order@.1 (8)
+  Description=: 'missing letters replaced by numbers'
+
 
   NB. sentence=. '7h3 qu1ck brown fox jumps ov3r 7h3 lazy dog'
   NB. expected=. 0
@@ -90,8 +83,8 @@ test_pangram_test_08  =: monad define
 
 pangram_test_09_ignore=: 1 NB. Change this value to 0 to run this test
 test_pangram_test_09  =: monad define
-  Description@.1 ('mixed case and punctuation')
-  Order@.1 (9)
+  Description=: 'mixed case and punctuation'
+
 
   NB. sentence=. '"Five quacking Zephyrs jolt my wax bed."'
   NB. expected=. 1
@@ -100,8 +93,8 @@ test_pangram_test_09  =: monad define
 
 pangram_test_10_ignore=: 1 NB. Change this value to 0 to run this test
 test_pangram_test_10  =: monad define
-  Description@.1 ('a-m and A-M are 26 different characters but not a pangram')
-  Order@.1 (10)
+  Description=: 'a-m and A-M are 26 different characters but not a pangram'
+
 
   NB. sentence=. 'abcdefghijklm ABCDEFGHIJKLM'
   NB. expected=. 0

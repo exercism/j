@@ -1,17 +1,10 @@
 load 'darts.ijs'
 
 
-before_all=: monad define
-  (]Description =: (3 : 'descriptions=: i.0')`(3 : 'descriptions=: descriptions , < y'))@.0 ''
-  (]Order       =: (3 : 'order=: i.0')`(3 : 'order=: order , < y'))@.0 ''
-  (]Task        =: (3 : 'tasks=: i.0')`(3 : 'tasks=: tasks , < y'))@.0 '' 
-)
-
-
 darts_test_01_ignore=: 0
 test_darts_test_01  =: monad define
-  Description@.1 ('Missed target')
-  Order@.1 (1)
+  Description=: 'Missed target'
+
 
   NB. x=. _9
   NB. y=. 9
@@ -21,8 +14,8 @@ test_darts_test_01  =: monad define
 
 darts_test_02_ignore=: 1 NB. Change this value to 0 to run this test
 test_darts_test_02  =: monad define
-  Description@.1 ('On the outer circle')
-  Order@.1 (2)
+  Description=: 'On the outer circle'
+
 
   NB. x=. 0
   NB. y=. 10
@@ -32,8 +25,8 @@ test_darts_test_02  =: monad define
 
 darts_test_03_ignore=: 1 NB. Change this value to 0 to run this test
 test_darts_test_03  =: monad define
-  Description@.1 ('On the middle circle')
-  Order@.1 (3)
+  Description=: 'On the middle circle'
+
 
   NB. x=. _5
   NB. y=. 0
@@ -43,8 +36,8 @@ test_darts_test_03  =: monad define
 
 darts_test_04_ignore=: 1 NB. Change this value to 0 to run this test
 test_darts_test_04  =: monad define
-  Description@.1 ('On the inner circle')
-  Order@.1 (4)
+  Description=: 'On the inner circle'
+
 
   NB. x=. 0
   NB. y=. _1
@@ -54,8 +47,8 @@ test_darts_test_04  =: monad define
 
 darts_test_05_ignore=: 1 NB. Change this value to 0 to run this test
 test_darts_test_05  =: monad define
-  Description@.1 ('Exactly on center')
-  Order@.1 (5)
+  Description=: 'Exactly on center'
+
 
   NB. x=. 0
   NB. y=. 0
@@ -65,8 +58,8 @@ test_darts_test_05  =: monad define
 
 darts_test_06_ignore=: 1 NB. Change this value to 0 to run this test
 test_darts_test_06  =: monad define
-  Description@.1 ('Near the center')
-  Order@.1 (6)
+  Description=: 'Near the center'
+
 
   NB. x=. _0.100000000000000006
   NB. y=. _0.100000000000000006
@@ -76,8 +69,8 @@ test_darts_test_06  =: monad define
 
 darts_test_07_ignore=: 1 NB. Change this value to 0 to run this test
 test_darts_test_07  =: monad define
-  Description@.1 ('Just within the inner circle')
-  Order@.1 (7)
+  Description=: 'Just within the inner circle'
+
 
   NB. x=. 0.699999999999999956
   NB. y=. 0.699999999999999956
@@ -87,8 +80,8 @@ test_darts_test_07  =: monad define
 
 darts_test_08_ignore=: 1 NB. Change this value to 0 to run this test
 test_darts_test_08  =: monad define
-  Description@.1 ('Just outside the inner circle')
-  Order@.1 (8)
+  Description=: 'Just outside the inner circle'
+
 
   NB. x=. 0.800000000000000044
   NB. y=. _0.800000000000000044
@@ -98,8 +91,8 @@ test_darts_test_08  =: monad define
 
 darts_test_09_ignore=: 1 NB. Change this value to 0 to run this test
 test_darts_test_09  =: monad define
-  Description@.1 ('Just within the middle circle')
-  Order@.1 (9)
+  Description=: 'Just within the middle circle'
+
 
   NB. x=. _3.5
   NB. y=. 3.5
@@ -109,8 +102,8 @@ test_darts_test_09  =: monad define
 
 darts_test_10_ignore=: 1 NB. Change this value to 0 to run this test
 test_darts_test_10  =: monad define
-  Description@.1 ('Just outside the middle circle')
-  Order@.1 (10)
+  Description=: 'Just outside the middle circle'
+
 
   NB. x=. _3.60000000000000009
   NB. y=. _3.60000000000000009
@@ -120,8 +113,8 @@ test_darts_test_10  =: monad define
 
 darts_test_11_ignore=: 1 NB. Change this value to 0 to run this test
 test_darts_test_11  =: monad define
-  Description@.1 ('Just within the outer circle')
-  Order@.1 (11)
+  Description=: 'Just within the outer circle'
+
 
   NB. x=. _7
   NB. y=. 7
@@ -131,8 +124,8 @@ test_darts_test_11  =: monad define
 
 darts_test_12_ignore=: 1 NB. Change this value to 0 to run this test
 test_darts_test_12  =: monad define
-  Description@.1 ('Just outside the outer circle')
-  Order@.1 (12)
+  Description=: 'Just outside the outer circle'
+
 
   NB. x=. 7.09999999999999964
   NB. y=. _7.09999999999999964
@@ -142,8 +135,8 @@ test_darts_test_12  =: monad define
 
 darts_test_13_ignore=: 1 NB. Change this value to 0 to run this test
 test_darts_test_13  =: monad define
-  Description@.1 ('Asymmetric position between the inner and middle circles')
-  Order@.1 (13)
+  Description=: 'Asymmetric position between the inner and middle circles'
+
 
   NB. x=. 0.5
   NB. y=. _4

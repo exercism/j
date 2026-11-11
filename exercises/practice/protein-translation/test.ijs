@@ -1,17 +1,9 @@
 load 'protein-translation.ijs'
 
 
-before_all=: monad define  
-  (]Description =: (3 : 'descriptions=: i.0')`(3 : 'descriptions=: descriptions , < y'))@.0 ''
-  (]Order       =: (3 : 'order=: i.0')`(3 : 'order=: order , < y'))@.0 ''
-  (]Task        =: (3 : 'tasks=: i.0')`(3 : 'tasks=: tasks , < y'))@.0 '' 
-)
-
-
 protein_translation_test_01_ignore=: 0
 test_protein_translation_test_01  =: monad define
-  Description@.1 ('Empty RNA sequence results in no proteins')
-  Order@.1 (1)
+  Description=: 'Empty RNA sequence results in no proteins'
 
   NB. strand   =. ''
   NB. expected =. ''
@@ -20,8 +12,7 @@ test_protein_translation_test_01  =: monad define
 
 protein_translation_test_02_ignore=: 1 NB. Change this value to 0 to run this test
 test_protein_translation_test_02  =: monad define
-  Description@.1 ('Methionine RNA sequence')
-  Order@.1 (2)
+  Description=: 'Methionine RNA sequence'
 
   NB. strand   =. 'AUG'
   NB. expected =. (,<'Methionine')
@@ -30,8 +21,7 @@ test_protein_translation_test_02  =: monad define
 
 protein_translation_test_03_ignore=: 1 NB. Change this value to 0 to run this test
 test_protein_translation_test_03  =: monad define
-  Description@.1 ('Phenylalanine RNA sequence 1')
-  Order@.1 (3)
+  Description=: 'Phenylalanine RNA sequence 1'
 
   NB. strand   =. 'UUU'
   NB. expected =. (,<'Phenylalanine')
@@ -40,8 +30,7 @@ test_protein_translation_test_03  =: monad define
 
 protein_translation_test_04_ignore=: 1 NB. Change this value to 0 to run this test
 test_protein_translation_test_04  =: monad define
-  Description@.1 ('Phenylalanine RNA sequence 2')
-  Order@.1 (4)
+  Description=: 'Phenylalanine RNA sequence 2'
 
   NB. strand   =. 'UUC'
   NB. expected =. (,<'Phenylalanine')
@@ -50,8 +39,7 @@ test_protein_translation_test_04  =: monad define
 
 protein_translation_test_05_ignore=: 1 NB. Change this value to 0 to run this test
 test_protein_translation_test_05  =: monad define
-  Description@.1 ('Leucine RNA sequence 1')
-  Order@.1 (5)
+  Description=: 'Leucine RNA sequence 1'
 
   NB. strand   =. 'UUA'
   NB. expected =. (,<'Leucine')
@@ -60,8 +48,7 @@ test_protein_translation_test_05  =: monad define
 
 protein_translation_test_06_ignore=: 1 NB. Change this value to 0 to run this test
 test_protein_translation_test_06  =: monad define
-  Description@.1 ('Leucine RNA sequence 2')
-  Order@.1 (6)
+  Description=: 'Leucine RNA sequence 2'
 
   NB. strand   =. 'UUG'
   NB. expected =. (,<'Leucine')
@@ -70,8 +57,7 @@ test_protein_translation_test_06  =: monad define
 
 protein_translation_test_07_ignore=: 1 NB. Change this value to 0 to run this test
 test_protein_translation_test_07  =: monad define
-  Description@.1 ('Serine RNA sequence 1')
-  Order@.1 (7)
+  Description=: 'Serine RNA sequence 1'
 
   NB. strand   =. 'UCU'
   NB. expected =. (,<'Serine')
@@ -80,8 +66,7 @@ test_protein_translation_test_07  =: monad define
 
 protein_translation_test_08_ignore=: 1 NB. Change this value to 0 to run this test
 test_protein_translation_test_08  =: monad define
-  Description@.1 ('Serine RNA sequence 2')
-  Order@.1 (8)
+  Description=: 'Serine RNA sequence 2'
 
   NB. strand   =. 'UCC'
   NB. expected =. (,<'Serine')
@@ -90,8 +75,7 @@ test_protein_translation_test_08  =: monad define
 
 protein_translation_test_09_ignore=: 1 NB. Change this value to 0 to run this test
 test_protein_translation_test_09  =: monad define
-  Description@.1 ('Serine RNA sequence 3')
-  Order@.1 (9)
+  Description=: 'Serine RNA sequence 3'
 
   NB. strand   =. 'UCA'
   NB. expected =. (,<'Serine')
@@ -100,8 +84,7 @@ test_protein_translation_test_09  =: monad define
 
 protein_translation_test_10_ignore=: 1 NB. Change this value to 0 to run this test
 test_protein_translation_test_10  =: monad define
-  Description@.1 ('Serine RNA sequence 4')
-  Order@.1 (10)
+  Description=: 'Serine RNA sequence 4'
 
   NB. strand   =. 'UCG'
   NB. expected =. (,<'Serine')
@@ -110,8 +93,7 @@ test_protein_translation_test_10  =: monad define
 
 protein_translation_test_11_ignore=: 1 NB. Change this value to 0 to run this test
 test_protein_translation_test_11  =: monad define
-  Description@.1 ('Tyrosine RNA sequence 1')
-  Order@.1 (11)
+  Description=: 'Tyrosine RNA sequence 1'
 
   NB. strand   =. 'UAU'
   NB. expected =. (,<'Tyrosine')
@@ -120,8 +102,7 @@ test_protein_translation_test_11  =: monad define
 
 protein_translation_test_12_ignore=: 1 NB. Change this value to 0 to run this test
 test_protein_translation_test_12  =: monad define
-  Description@.1 ('Tyrosine RNA sequence 2')
-  Order@.1 (12)
+  Description=: 'Tyrosine RNA sequence 2'
 
   NB. strand   =. 'UAC'
   NB. expected =. (,<'Tyrosine')
@@ -130,8 +111,7 @@ test_protein_translation_test_12  =: monad define
 
 protein_translation_test_13_ignore=: 1 NB. Change this value to 0 to run this test
 test_protein_translation_test_13  =: monad define
-  Description@.1 ('Cysteine RNA sequence 1')
-  Order@.1 (13)
+  Description=: 'Cysteine RNA sequence 1'
 
   NB. strand   =. 'UGU'
   NB. expected =. (,<'Cysteine')
@@ -140,8 +120,7 @@ test_protein_translation_test_13  =: monad define
 
 protein_translation_test_14_ignore=: 1 NB. Change this value to 0 to run this test
 test_protein_translation_test_14  =: monad define
-  Description@.1 ('Cysteine RNA sequence 2')
-  Order@.1 (14)
+  Description=: 'Cysteine RNA sequence 2'
 
   NB. strand   =. 'UGC'
   NB. expected =. (,<'Cysteine')
@@ -150,8 +129,7 @@ test_protein_translation_test_14  =: monad define
 
 protein_translation_test_15_ignore=: 1 NB. Change this value to 0 to run this test
 test_protein_translation_test_15  =: monad define
-  Description@.1 ('Tryptophan RNA sequence')
-  Order@.1 (15)
+  Description=: 'Tryptophan RNA sequence'
 
   NB. strand   =. 'UGG'
   NB. expected =. (,<'Tryptophan')
@@ -160,8 +138,7 @@ test_protein_translation_test_15  =: monad define
 
 protein_translation_test_16_ignore=: 1 NB. Change this value to 0 to run this test
 test_protein_translation_test_16  =: monad define
-  Description@.1 ('STOP codon RNA sequence 1')
-  Order@.1 (16)
+  Description=: 'STOP codon RNA sequence 1'
 
   NB. strand   =. 'UAA'
   NB. expected =. ''
@@ -170,8 +147,7 @@ test_protein_translation_test_16  =: monad define
 
 protein_translation_test_17_ignore=: 1 NB. Change this value to 0 to run this test
 test_protein_translation_test_17  =: monad define
-  Description@.1 ('STOP codon RNA sequence 2')
-  Order@.1 (17)
+  Description=: 'STOP codon RNA sequence 2'
 
   NB. strand   =. 'UAG'
   NB. expected =. ''
@@ -180,8 +156,7 @@ test_protein_translation_test_17  =: monad define
 
 protein_translation_test_18_ignore=: 1 NB. Change this value to 0 to run this test
 test_protein_translation_test_18  =: monad define
-  Description@.1 ('STOP codon RNA sequence 3')
-  Order@.1 (18)
+  Description=: 'STOP codon RNA sequence 3'
 
   NB. strand   =. 'UGA'
   NB. expected =. ''
@@ -190,8 +165,7 @@ test_protein_translation_test_18  =: monad define
 
 protein_translation_test_19_ignore=: 1 NB. Change this value to 0 to run this test
 test_protein_translation_test_19  =: monad define
-  Description@.1 ('Sequence of two protein codons translates into proteins')
-  Order@.1 (19)
+  Description=: 'Sequence of two protein codons translates into proteins'
 
   NB. strand   =. 'UUUUUU'
   NB. expected =. 'Phenylalanine';'Phenylalanine'
@@ -200,8 +174,7 @@ test_protein_translation_test_19  =: monad define
 
 protein_translation_test_20_ignore=: 1 NB. Change this value to 0 to run this test
 test_protein_translation_test_20  =: monad define
-  Description@.1 ('Sequence of two different protein codons translates into proteins')
-  Order@.1 (20)
+  Description=: 'Sequence of two different protein codons translates into proteins'
 
   NB. strand   =. 'UUAUUG'
   NB. expected =. 'Leucine';'Leucine'
@@ -210,8 +183,7 @@ test_protein_translation_test_20  =: monad define
 
 protein_translation_test_21_ignore=: 1 NB. Change this value to 0 to run this test
 test_protein_translation_test_21  =: monad define
-  Description@.1 ('Translate RNA strand into correct protein list')
-  Order@.1 (21)
+  Description=: 'Translate RNA strand into correct protein list'
 
   NB. strand   =. 'AUGUUUUGG'
   NB. expected =. 'Methionine';'Phenylalanine';'Tryptophan'
@@ -220,8 +192,7 @@ test_protein_translation_test_21  =: monad define
 
 protein_translation_test_22_ignore=: 1 NB. Change this value to 0 to run this test
 test_protein_translation_test_22  =: monad define
-  Description@.1 ('Translation stops if STOP codon at beginning of sequence')
-  Order@.1 (22)
+  Description=: 'Translation stops if STOP codon at beginning of sequence'
 
   NB. strand   =. 'UAGUGG'
   NB. expected =. ''
@@ -230,8 +201,7 @@ test_protein_translation_test_22  =: monad define
 
 protein_translation_test_23_ignore=: 1 NB. Change this value to 0 to run this test
 test_protein_translation_test_23  =: monad define
-  Description@.1 ('Translation stops if STOP codon at end of two-codon sequence')
-  Order@.1 (23)
+  Description=: 'Translation stops if STOP codon at end of two-codon sequence'
 
   NB. strand   =. 'UGGUAG'
   NB. expected =. ,<'Tryptophan'
@@ -240,8 +210,7 @@ test_protein_translation_test_23  =: monad define
 
 protein_translation_test_24_ignore=: 1 NB. Change this value to 0 to run this test
 test_protein_translation_test_24  =: monad define
-  Description@.1 ('Translation stops if STOP codon at end of three-codon sequence')
-  Order@.1 (24)
+  Description=: 'Translation stops if STOP codon at end of three-codon sequence'
 
   NB. strand   =. 'AUGUUUUAA'
   NB. expected =. 'Methionine';'Phenylalanine'
@@ -250,8 +219,7 @@ test_protein_translation_test_24  =: monad define
 
 protein_translation_test_25_ignore=: 1 NB. Change this value to 0 to run this test
 test_protein_translation_test_25  =: monad define
-  Description@.1 ('Translation stops if STOP codon in middle of three-codon sequence')
-  Order@.1 (25)
+  Description=: 'Translation stops if STOP codon in middle of three-codon sequence'
 
   NB. strand   =. 'UGGUAGUGG'
   NB. expected =. ,<'Tryptophan'
@@ -260,8 +228,7 @@ test_protein_translation_test_25  =: monad define
 
 protein_translation_test_26_ignore=: 1 NB. Change this value to 0 to run this test
 test_protein_translation_test_26  =: monad define
-  Description@.1 ('Translation stops if STOP codon in middle of six-codon sequence')
-  Order@.1 (26)
+  Description=: 'Translation stops if STOP codon in middle of six-codon sequence'
 
   NB. strand   =. 'UGGUGUUAUUAAUGGUUU'
   NB. expected =. 'Tryptophan';'Cysteine';'Tyrosine'
@@ -270,8 +237,7 @@ test_protein_translation_test_26  =: monad define
 
 protein_translation_test_27_ignore=: 1 NB. Change this value to 0 to run this test
 test_protein_translation_test_327  =: monad define
-  Description@.1 ('Incomplete RNA sequence can translate if valid until a STOP codon')
-  Order@.1 (27)
+  Description=: 'Incomplete RNA sequence can translate if valid until a STOP codon'
 
   NB. strand   =. 'UUCUUCUAAUGGU'
   NB. expected =. 'Phenylalanine';'Phenylalanine'
